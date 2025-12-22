@@ -1,0 +1,34 @@
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\data\in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+client 0 graph condensation
+Counter({4: 210, 3: 191, 2: 176, 0: 153, 1: 107})
+syn_adj: (418, 418) syn_x: torch.Size([418, 932])
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+client 1 graph condensation
+Counter({3: 214, 4: 207, 2: 199, 1: 125, 0: 59})
+syn_adj: (402, 402) syn_x: torch.Size([402, 932])
+client 2 graph condensation
+Counter({3: 185, 2: 166, 1: 163, 4: 143, 0: 67})
+syn_adj: (362, 362) syn_x: torch.Size([362, 932])
+client 3 graph condensation
+Counter({4: 258, 3: 198, 1: 189, 2: 118, 0: 100})
+syn_adj: (431, 431) syn_x: torch.Size([431, 932])
+client 4 graph condensation
+Counter({4: 163, 2: 155, 3: 118, 1: 83, 0: 46})
+syn_adj: (282, 282) syn_x: torch.Size([282, 932])
+round # 0		sampled_clients: [0, 1, 2, 3, 4]
+[server]	loss_train: 1.3411	loss_val: 1.6172	loss_test: 1.6490
+[server]	loss_train: 1.2458	loss_val: 1.5566	loss_test: 1.6186
+[server]	loss_train: 1.2945	loss_val: 1.6455	loss_test: 1.6305
+[server]	loss_train: 1.3191	loss_val: 1.5437	loss_test: 1.5531
+[server]	loss_train: 1.2886	loss_val: 1.4335	loss_test: 1.5334
+Traceback (most recent call last):
+  File "G:\Code\python\FedGM\main.py", line 32, in <module>
+    trainer.train()
+  File "G:\Code\python\FedGM\flcore\trainer.py", line 75, in train
+    self.evaluate()
+  File "G:\Code\python\FedGM\flcore\trainer.py", line 168, in evaluate
+    if evaluation_result[f"current_val_{self.args.metrics[0]}"] > self.evaluation_result[f"best_val_{self.args.metrics[0]}"]:
+                                        ~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

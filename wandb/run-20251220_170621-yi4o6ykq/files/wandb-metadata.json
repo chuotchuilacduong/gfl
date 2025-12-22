@@ -1,0 +1,68 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "CPython 3.11.14",
+  "startedAt": "2025-12-20T10:06:21.674395Z",
+  "args": [
+    "--scenario",
+    "subgraph_fl",
+    "--simulation_mode",
+    "subgraph_fl_label_skew",
+    "--dataset",
+    "Actor",
+    "--model",
+    "gcn",
+    "--task",
+    "node_cls",
+    "--num_epochs",
+    "3",
+    "--num_rounds",
+    "100",
+    "--lr",
+    "0.001",
+    "--louvain_resolution",
+    "1",
+    "--seed",
+    "2024",
+    "--gpuid",
+    "0",
+    "--debug",
+    "False",
+    "--fl_algorithm",
+    "fedgm",
+    "--num_clients",
+    "5",
+    "--evaluation_mode",
+    "global_model_on_local_data"
+  ],
+  "program": "G:\\Code\\python\\FedGM\\main.py",
+  "codePath": "main.py",
+  "codePathLocal": "main.py",
+  "email": "ducnguyen27925@gmail.com",
+  "root": "G:\\Code\\python\\FedGM",
+  "host": "DESKTOP-S7RSO8B",
+  "executable": "G:\\conda\\envs\\gfl\\python.exe",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "269176795136",
+      "used": "76626939904"
+    }
+  },
+  "memory": {
+    "total": "16309932032"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "memoryTotal": "8585740288",
+      "cudaCores": 3072,
+      "architecture": "Ada",
+      "uuid": "GPU-6b8e0867-783a-aa72-5102-0770dab13d02"
+    }
+  ],
+  "cudaVersion": "12.9",
+  "writerId": "nybgaccbrqo7p5qqv84y6iqhyeuitk2a"
+}

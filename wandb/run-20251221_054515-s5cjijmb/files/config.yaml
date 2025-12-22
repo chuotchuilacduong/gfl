@@ -1,0 +1,195 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            uk1xiha5n6pbz7qbtr4nt9i8g1bsf54r:
+                args:
+                    - --scenario
+                    - subgraph_fl
+                    - --simulation_mode
+                    - subgraph_fl_label_skew
+                    - --dataset
+                    - Actor
+                    - --model
+                    - gcn
+                    - --task
+                    - node_cls
+                    - --num_epochs
+                    - "3"
+                    - --num_rounds
+                    - "100"
+                    - --lr
+                    - "0.001"
+                    - --louvain_resolution
+                    - "1"
+                    - --seed
+                    - "2024"
+                    - --gpuid
+                    - "0"
+                    - --metrics
+                    - accuracy
+                    - --debug
+                    - "False"
+                    - --fl_algorithm
+                    - fedavg
+                    - --num_clients
+                    - "5"
+                    - --evaluation_mode
+                    - local_model_on_local_data
+                codePath: main.py
+                codePathLocal: main.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "12.9"
+                disk:
+                    /:
+                        total: "269176795136"
+                        used: "76643196928"
+                email: ducnguyen27925@gmail.com
+                executable: G:\conda\envs\gfl\python.exe
+                gpu: NVIDIA GeForce RTX 4060 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 3072
+                      memoryTotal: "8585740288"
+                      name: NVIDIA GeForce RTX 4060 Laptop GPU
+                      uuid: GPU-6b8e0867-783a-aa72-5102-0770dab13d02
+                host: DESKTOP-S7RSO8B
+                memory:
+                    total: "16309932032"
+                os: Windows-10-10.0.22631-SP0
+                program: G:\Code\python\FedGM\main.py
+                python: CPython 3.11.14
+                root: G:\Code\python\FedGM
+                startedAt: "2025-12-20T22:45:15.606450Z"
+                writerId: uk1xiha5n6pbz7qbtr4nt9i8g1bsf54r
+        m: []
+        python_version: 3.11.14
+        t:
+            "1":
+                - 1
+                - 77
+            "2":
+                - 1
+                - 5
+                - 53
+                - 77
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.11.14
+            "5": 0.23.0
+            "8":
+                - 2
+                - 3
+            "12": 0.23.0
+            "13": windows-amd64
+batch_size:
+    value: 128
+client_frac:
+    value: 1
+comm_cost:
+    value: false
+condense_iters:
+    value: 100
+dataset:
+    value:
+        - Actor
+debug:
+    value: true
+dirichlet_alpha:
+    value: 10
+dirichlet_try_cnt:
+    value: 100
+dp_epsilon:
+    value: 0
+dp_mech:
+    value: no_dp
+dp_q:
+    value: 0.1
+dropout:
+    value: 0
+evaluation_mode:
+    value: local_model_on_local_data
+feature_mask_prob:
+    value: 0.1
+fl_algorithm:
+    value: fedavg
+gpuid:
+    value: 0
+grad_clip:
+    value: 1
+hete_injection_ratio:
+    value: 0
+hid_dim:
+    value: 256
+homo_injection_ratio:
+    value: 0
+least_samples:
+    value: 5
+local_epochs:
+    value: 3
+log_name:
+    value: null
+log_root:
+    value: null
+louvain_delta:
+    value: 20
+louvain_resolution:
+    value: 1
+lr:
+    value: 0.001
+max_degree:
+    value: 5
+max_epsilon:
+    value: 20
+metis_num_coms:
+    value: 100
+metrics:
+    value:
+        - accuracy
+model:
+    value:
+        - gcn
+model_param:
+    value: false
+noise_scale:
+    value: 1
+num_clients:
+    value: 5
+num_clusters:
+    value: 7
+num_epochs:
+    value: 3
+num_global_syn_nodes:
+    value: 100
+num_layers:
+    value: 2
+num_rounds:
+    value: 100
+optim:
+    value: adam
+processing:
+    value: raw
+processing_percentage:
+    value: 0.1
+root:
+    value: /home/zhanghao/fgl/OpenFGL/openfgl/dataset
+scenario:
+    value: subgraph_fl
+seed:
+    value: 2024
+server_condense_iters:
+    value: 200
+simulation_mode:
+    value: subgraph_fl_label_skew
+task:
+    value: node_cls
+train_val_test:
+    value: default_split
+use_cuda:
+    value: true
+weight_decay:
+    value: 0.0005

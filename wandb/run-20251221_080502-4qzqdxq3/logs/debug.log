@@ -1,0 +1,26 @@
+2025-12-21 08:05:02,039 INFO    MainThread:8060 [wandb_setup.py:_flush():80] Current SDK version is 0.23.0
+2025-12-21 08:05:02,039 INFO    MainThread:8060 [wandb_setup.py:_flush():80] Configure stats pid to 8060
+2025-12-21 08:05:02,040 INFO    MainThread:8060 [wandb_setup.py:_flush():80] Loading settings from C:\Users\ADMIN\.config\wandb\settings
+2025-12-21 08:05:02,040 INFO    MainThread:8060 [wandb_setup.py:_flush():80] Loading settings from G:\Code\python\FedGM\wandb\settings
+2025-12-21 08:05:02,040 INFO    MainThread:8060 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-12-21 08:05:02,040 INFO    MainThread:8060 [wandb_init.py:setup_run_log_directory():713] Logging user logs to G:\Code\python\FedGM\wandb\run-20251221_080502-4qzqdxq3\logs\debug.log
+2025-12-21 08:05:02,040 INFO    MainThread:8060 [wandb_init.py:setup_run_log_directory():714] Logging internal logs to G:\Code\python\FedGM\wandb\run-20251221_080502-4qzqdxq3\logs\debug-internal.log
+2025-12-21 08:05:02,040 INFO    MainThread:8060 [wandb_init.py:init():840] calling init triggers
+2025-12-21 08:05:02,041 INFO    MainThread:8060 [wandb_init.py:init():845] wandb.init called with sweep_config: {}
+config: {'use_cuda': True, 'gpuid': 0, 'seed': 2024, 'root': '/home/zhanghao/fgl/OpenFGL/openfgl/dataset', 'scenario': 'subgraph_fl', 'dataset': ['Chameleon'], 'processing': 'raw', 'processing_percentage': 0.1, 'feature_mask_prob': 0.1, 'dp_epsilon': 0.0, 'homo_injection_ratio': 0.0, 'hete_injection_ratio': 0.0, 'num_clients': 10, 'num_rounds': 100, 'fl_algorithm': 'fedgm', 'client_frac': 1.0, 'simulation_mode': 'subgraph_fl_label_skew', 'dirichlet_alpha': 10, 'dirichlet_try_cnt': 100, 'least_samples': 5, 'louvain_resolution': 1.0, 'louvain_delta': 20, 'metis_num_coms': 100, 'task': 'node_cls', 'num_clusters': 7, 'train_val_test': 'default_split', 'num_epochs': 3, 'dropout': 0.0, 'lr': 0.001, 'optim': 'adam', 'weight_decay': 0.0005, 'batch_size': 128, 'model': ['gcn'], 'num_layers': 2, 'hid_dim': 256, 'metrics': ['accuracy'], 'evaluation_mode': 'global_model_on_local_data', 'dp_mech': 'no_dp', 'noise_scale': 1.0, 'grad_clip': 1.0, 'dp_q': 0.1, 'max_degree': 5, 'max_epsilon': 20, 'debug': True, 'log_root': None, 'log_name': None, 'comm_cost': False, 'model_param': False, 'num_global_syn_nodes': 100, 'server_condense_iters': 200, 'condense_iters': 100, 'local_epochs': 3, '_wandb': {}}
+2025-12-21 08:05:02,041 INFO    MainThread:8060 [wandb_init.py:init():888] starting backend
+2025-12-21 08:05:04,344 INFO    MainThread:8060 [wandb_init.py:init():891] sending inform_init request
+2025-12-21 08:05:04,358 INFO    MainThread:8060 [wandb_init.py:init():899] backend started and connected
+2025-12-21 08:05:04,379 INFO    MainThread:8060 [wandb_init.py:init():969] updated telemetry
+2025-12-21 08:05:04,382 INFO    MainThread:8060 [wandb_init.py:init():993] communicating run to backend with 90.0 second timeout
+2025-12-21 08:05:05,803 INFO    MainThread:8060 [wandb_init.py:init():1040] starting run threads in backend
+2025-12-21 08:05:05,915 INFO    MainThread:8060 [wandb_run.py:_console_start():2504] atexit reg
+2025-12-21 08:05:05,915 INFO    MainThread:8060 [wandb_run.py:_redirect():2352] redirect: wrap_raw
+2025-12-21 08:05:05,916 INFO    MainThread:8060 [wandb_run.py:_redirect():2421] Wrapping output streams.
+2025-12-21 08:05:05,916 INFO    MainThread:8060 [wandb_run.py:_redirect():2444] Redirects installed.
+2025-12-21 08:05:05,922 INFO    MainThread:8060 [wandb_init.py:init():1080] run started, returning control to user process
+2025-12-21 08:17:07,041 INFO    MainThread:8060 [wandb_run.py:_finish():2270] finishing run chuotchuilacduong-hanoi-university-of-science-and-technology/FGL-Experiment/4qzqdxq3
+2025-12-21 08:17:07,041 INFO    MainThread:8060 [wandb_run.py:_atexit_cleanup():2469] got exitcode: 0
+2025-12-21 08:17:07,042 INFO    MainThread:8060 [wandb_run.py:_restore():2451] restore
+2025-12-21 08:17:07,042 INFO    MainThread:8060 [wandb_run.py:_restore():2457] restore done
+2025-12-21 08:17:08,900 INFO    MainThread:8060 [wandb_run.py:_footer_sync_info():3853] logging synced files

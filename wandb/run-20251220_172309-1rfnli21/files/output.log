@@ -1,0 +1,77 @@
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\data\in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+client 0 graph condensation
+Counter({2: 65, 4: 52, 0: 49, 3: 38, 1: 22})
+syn_adj: (113, 113) syn_x: torch.Size([113, 932])
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+client 1 graph condensation
+Counter({2: 68, 3: 42, 4: 40, 0: 18, 1: 16})
+syn_adj: (92, 92) syn_x: torch.Size([92, 932])
+client 2 graph condensation
+Counter({4: 91, 3: 38, 1: 35, 2: 34, 0: 22})
+syn_adj: (110, 110) syn_x: torch.Size([110, 932])
+client 3 graph condensation
+Counter({4: 54, 3: 38, 0: 32, 2: 24, 1: 15})
+syn_adj: (81, 81) syn_x: torch.Size([81, 932])
+client 4 graph condensation
+Counter({3: 67, 4: 52, 2: 44, 1: 37, 0: 14})
+syn_adj: (107, 107) syn_x: torch.Size([107, 932])
+client 5 graph condensation
+Counter({3: 43, 4: 40, 2: 34, 1: 30, 0: 16})
+syn_adj: (81, 81) syn_x: torch.Size([81, 932])
+Traceback (most recent call last):
+  File "G:\Code\python\FedGM\main.py", line 31, in <module>
+    trainer = FGLTrainer(args)
+              ^^^^^^^^^^^^^^^^
+  File "G:\Code\python\FedGM\flcore\trainer.py", line 44, in __init__
+    self.clients = [load_client(args, client_id, fgl_dataset.local_data[client_id], fgl_dataset.processed_dir, self.message_pool, self.device) for client_id in range(self.args.num_clients)]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\Code\python\FedGM\flcore\trainer.py", line 44, in <listcomp>
+    self.clients = [load_client(args, client_id, fgl_dataset.local_data[client_id], fgl_dataset.processed_dir, self.message_pool, self.device) for client_id in range(self.args.num_clients)]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\Code\python\FedGM\utils\basic_utils.py", line 85, in load_client
+    return FedGMClient(args, client_id, data, data_dir, message_pool, device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\Code\python\FedGM\flcore\fedgm\client.py", line 54, in __init__
+    self.gradient_match(self.task.splitted_data, self.global_class_gradient, is_global = False)
+  File "G:\Code\python\FedGM\flcore\fedgm\client.py", line 220, in gradient_match
+    real_adj_norm = normalize_adj_tensor(real_adj, sparse=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\Code\python\FedGM\flcore\fedgm\utils.py", line 114, in normalize_adj_tensor
+    mx = normalize_adj(adj)
+         ^^^^^^^^^^^^^^^^^^
+  File "G:\Code\python\FedGM\flcore\fedgm\utils.py", line 182, in normalize_adj
+    mx = mx + sp.eye(mx.shape[0])
+         ~~~^~~~~~~~~~~~~~~~~~~~~
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_base.py", line 506, in __add__
+    return self._add_sparse(other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_base.py", line 481, in _add_sparse
+    return self.tocsr()._add_sparse(other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_compressed.py", line 356, in _add_sparse
+    return self._binopt(other, '_plus_')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_compressed.py", line 1368, in _binopt
+    other = self.__class__(other)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_compressed.py", line 35, in __init__
+    arg1 = arg1.asformat(self.format)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_base.py", line 409, in asformat
+    return convert_method(copy=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_base.py", line 976, in tocsr
+    return self.tocoo(copy=copy).tocsr(copy=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_coo.py", line 342, in tocsr
+    arrays = self._coo_to_compressed(csr_array._swap, copy=copy)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_coo.py", line 357, in _coo_to_compressed
+    if self.ndim == 1:
+       ^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\scipy\sparse\_base.py", line 69, in ndim
+    @property
+
+KeyboardInterrupt

@@ -1,0 +1,13 @@
+{"time":"2025-12-21T10:00:06.9129715+07:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-21T10:00:08.33166+07:00","level":"INFO","msg":"stream: created new stream","id":"e7pcer1q"}
+{"time":"2025-12-21T10:00:08.33166+07:00","level":"INFO","msg":"handler: started","stream_id":"e7pcer1q"}
+{"time":"2025-12-21T10:00:08.3370243+07:00","level":"INFO","msg":"stream: started","id":"e7pcer1q"}
+{"time":"2025-12-21T10:00:08.3375608+07:00","level":"INFO","msg":"sender: started","stream_id":"e7pcer1q"}
+{"time":"2025-12-21T10:00:08.3375608+07:00","level":"INFO","msg":"writer: started","stream_id":"e7pcer1q"}
+{"time":"2025-12-21T11:53:05.3687835+07:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/chuotchuilacduong-hanoi-university-of-science-and-technology/FGL-Experiment/e7pcer1q/file_stream\": unexpected EOF"}
+{"time":"2025-12-21T11:55:26.1740069+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-21T11:55:26.5410543+07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-12-21T11:55:26.5462972+07:00","level":"INFO","msg":"stream: closing","id":"e7pcer1q"}
+{"time":"2025-12-21T11:55:26.5462972+07:00","level":"INFO","msg":"handler: closed","stream_id":"e7pcer1q"}
+{"time":"2025-12-21T11:55:26.5462972+07:00","level":"INFO","msg":"sender: closed","stream_id":"e7pcer1q"}
+{"time":"2025-12-21T11:55:26.5462972+07:00","level":"INFO","msg":"stream: closed","id":"e7pcer1q"}

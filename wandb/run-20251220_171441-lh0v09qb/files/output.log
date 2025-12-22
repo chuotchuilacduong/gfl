@@ -1,0 +1,54 @@
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\data\in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+client 0 graph condensation
+Counter({4: 114, 1: 99, 0: 94, 2: 84, 3: 84})
+syn_adj: (237, 237) syn_x: torch.Size([237, 932])
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+client 1 graph condensation
+Counter({3: 105, 2: 101, 4: 73, 1: 44, 0: 36})
+syn_adj: (179, 179) syn_x: torch.Size([179, 932])
+client 2 graph condensation
+Counter({2: 136, 4: 110, 1: 100, 3: 67, 0: 41})
+syn_adj: (227, 227) syn_x: torch.Size([227, 932])
+client 3 graph condensation
+Counter({4: 131, 3: 117, 2: 110, 0: 61, 1: 44})
+syn_adj: (231, 231) syn_x: torch.Size([231, 932])
+client 4 graph condensation
+Counter({1: 115, 4: 101, 2: 77, 3: 74, 0: 28})
+syn_adj: (197, 197) syn_x: torch.Size([197, 932])
+client 5 graph condensation
+Counter({4: 98, 3: 97, 1: 67, 2: 67, 0: 31})
+syn_adj: (180, 180) syn_x: torch.Size([180, 932])
+client 6 graph condensation
+Counter({4: 139, 3: 135, 2: 66, 1: 55, 0: 27})
+syn_adj: (211, 211) syn_x: torch.Size([211, 932])
+client 7 graph condensation
+Counter({3: 92, 4: 87, 2: 59, 1: 37, 0: 32})
+syn_adj: (153, 153) syn_x: torch.Size([153, 932])
+client 8 graph condensation
+Counter({2: 66, 4: 62, 3: 52, 1: 45, 0: 27})
+syn_adj: (126, 126) syn_x: torch.Size([126, 932])
+client 9 graph condensation
+Counter({3: 82, 4: 65, 1: 61, 0: 48, 2: 47})
+syn_adj: (151, 151) syn_x: torch.Size([151, 932])
+round # 0		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[server]	loss_train: 1.3477	loss_val: 1.6124	loss_test: 1.5213
+[server]	loss_train: 1.2219	loss_val: 1.4805	loss_test: 1.4822
+[server]	loss_train: 1.2577	loss_val: 1.5253	loss_test: 1.5384
+[server]	loss_train: 1.3373	loss_val: 1.5326	loss_test: 1.4515
+[server]	loss_train: 1.2289	loss_val: 1.5956	loss_test: 1.4746
+[server]	loss_train: 1.1103	loss_val: 1.5275	loss_test: 1.5278
+[server]	loss_train: 1.1687	loss_val: 1.5410	loss_test: 1.4428
+[server]	loss_train: 1.3018	loss_val: 1.4802	loss_test: 1.5036
+[server]	loss_train: 1.1566	loss_val: 1.5003	loss_test: 1.4531
+[server]	loss_train: 1.2694	loss_val: 1.4866	loss_test: 1.5163
+Traceback (most recent call last):
+  File "G:\Code\python\FedGM\main.py", line 32, in <module>
+    trainer.train()
+  File "G:\Code\python\FedGM\flcore\trainer.py", line 75, in train
+    self.evaluate()
+  File "G:\Code\python\FedGM\flcore\trainer.py", line 168, in evaluate
+    if evaluation_result[f"current_val_{self.args.metrics[0]}"] > self.evaluation_result[f"best_val_{self.args.metrics[0]}"]:
+                                        ~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

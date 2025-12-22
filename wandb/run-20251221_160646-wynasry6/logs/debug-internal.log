@@ -1,0 +1,14 @@
+{"time":"2025-12-21T16:06:48.4852246+07:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-21T16:06:49.543334+07:00","level":"INFO","msg":"stream: created new stream","id":"wynasry6"}
+{"time":"2025-12-21T16:06:49.5438432+07:00","level":"INFO","msg":"handler: started","stream_id":"wynasry6"}
+{"time":"2025-12-21T16:06:49.5454409+07:00","level":"INFO","msg":"stream: started","id":"wynasry6"}
+{"time":"2025-12-21T16:06:49.5454409+07:00","level":"INFO","msg":"writer: started","stream_id":"wynasry6"}
+{"time":"2025-12-21T16:06:49.5454925+07:00","level":"INFO","msg":"sender: started","stream_id":"wynasry6"}
+{"time":"2025-12-21T16:07:05.2631955+07:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1939}
+{"time":"2025-12-21T16:07:05.4531604+07:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":28}
+{"time":"2025-12-21T16:07:07.3790326+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-21T16:07:07.7887011+07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-12-21T16:07:07.7945885+07:00","level":"INFO","msg":"stream: closing","id":"wynasry6"}
+{"time":"2025-12-21T16:07:07.7945885+07:00","level":"INFO","msg":"handler: closed","stream_id":"wynasry6"}
+{"time":"2025-12-21T16:07:07.7945885+07:00","level":"INFO","msg":"sender: closed","stream_id":"wynasry6"}
+{"time":"2025-12-21T16:07:07.7945885+07:00","level":"INFO","msg":"stream: closed","id":"wynasry6"}

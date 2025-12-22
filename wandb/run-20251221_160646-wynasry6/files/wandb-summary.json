@@ -1,0 +1,1 @@
+{"_step":99,"current_loss_train":0.4859062561509271,"current_loss_val":1.8032890054600565,"current_test_accuracy":0.4841262252462032,"current_loss_test":1.7985851028062922,"_wandb":{"runtime":16},"current_val_accuracy":0.4794234909558946,"_timestamp":1.7663080263934321e+09,"_runtime":16,"current_round":99}

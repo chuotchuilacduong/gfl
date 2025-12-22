@@ -1,0 +1,1632 @@
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\data\in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+client 0 graph condensation
+Counter({4: 72, 8: 61, 1: 55, 2: 31, 7: 14, 3: 13, 5: 8, 9: 6, 6: 5, 0: 4})
+syn_adj: (225, 225) syn_x: torch.Size([225, 767])
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+client 1 graph condensation
+Counter({4: 178, 1: 47, 2: 39, 0: 12, 3: 8})
+syn_adj: (238, 238) syn_x: torch.Size([238, 767])
+client 2 graph condensation
+Counter({4: 118, 8: 73, 1: 59, 2: 17, 3: 14, 5: 11, 6: 11, 7: 11, 0: 8})
+syn_adj: (270, 270) syn_x: torch.Size([270, 767])
+client 3 graph condensation
+Counter({4: 68, 1: 51, 8: 47, 7: 21, 2: 16, 3: 10, 6: 10, 9: 9, 0: 8, 5: 7})
+syn_adj: (207, 207) syn_x: torch.Size([207, 767])
+client 4 graph condensation
+Counter({4: 75, 8: 37, 1: 29, 2: 26, 7: 23, 9: 17, 0: 13, 6: 12, 3: 8, 5: 5})
+syn_adj: (205, 205) syn_x: torch.Size([205, 767])
+client 5 graph condensation
+Counter({4: 83, 8: 42, 1: 39, 2: 24, 7: 17, 9: 15, 6: 14, 3: 11, 0: 7, 5: 7})
+syn_adj: (217, 217) syn_x: torch.Size([217, 767])
+client 6 graph condensation
+Counter({4: 79, 1: 48, 8: 36, 2: 32, 7: 13, 6: 10, 9: 9, 3: 8, 0: 6, 5: 5})
+syn_adj: (206, 206) syn_x: torch.Size([206, 767])
+client 7 graph condensation
+Counter({4: 118, 8: 75, 2: 30, 7: 17, 1: 15, 0: 9, 3: 7, 6: 7, 5: 6})
+syn_adj: (238, 238) syn_x: torch.Size([238, 767])
+client 8 graph condensation
+Counter({4: 123, 1: 58, 2: 41, 7: 27, 3: 17, 6: 11, 0: 9, 5: 6})
+syn_adj: (245, 245) syn_x: torch.Size([245, 767])
+client 9 graph condensation
+Counter({4: 115, 8: 58, 1: 24, 2: 24, 7: 19, 6: 14, 3: 9, 0: 8, 5: 4})
+syn_adj: (231, 231) syn_x: torch.Size([231, 767])
+round # 0		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[Client 0] Eval: Train {'accuracy_train': 0.5092936802973977}, Val {'accuracy_val': 0.4227941176470588}, Test {'accuracy_test': 0.458029197080292}
+[Client 1] Eval: Train {'accuracy_train': 0.6267605633802817}, Val {'accuracy_val': 0.6256590509666081}, Test {'accuracy_test': 0.6256590509666081}
+[Client 2] Eval: Train {'accuracy_train': 0.48757763975155277}, Val {'accuracy_val': 0.4351851851851852}, Test {'accuracy_test': 0.4801223241590214}
+[Client 3] Eval: Train {'accuracy_train': 0.5020242914979757}, Val {'accuracy_val': 0.4146825396825397}, Test {'accuracy_test': 0.3806706114398422}
+[Client 4] Eval: Train {'accuracy_train': 0.32653061224489793}, Val {'accuracy_val': 0.3097165991902834}, Test {'accuracy_test': 0.30861723446893785}
+[Client 5] Eval: Train {'accuracy_train': 0.38223938223938225}, Val {'accuracy_val': 0.33524904214559387}, Test {'accuracy_test': 0.32447817836812143}
+[Client 6] Eval: Train {'accuracy_train': 0.43902439024390244}, Val {'accuracy_val': 0.34468937875751504}, Test {'accuracy_test': 0.34930139720558884}
+[Client 7] Eval: Train {'accuracy_train': 0.6373239436619719}, Val {'accuracy_val': 0.6156521739130435}, Test {'accuracy_test': 0.5951557093425606}
+[Client 8] Eval: Train {'accuracy_train': 0.4246575342465753}, Val {'accuracy_val': 0.41935483870967744}, Test {'accuracy_test': 0.41216216216216217}
+[Client 9] Eval: Train {'accuracy_train': 0.43272727272727274}, Val {'accuracy_val': 0.41335740072202165}, Test {'accuracy_test': 0.4154676258992806}
+curr_round: 0	curr_val_accuracy: 0.4377	curr_test_accuracy: 0.4400
+best_round: 0	best_val_accuracy: 0.4377	best_test_accuracy: 0.4400
+--------------------------------------------------
+round # 1		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.4275092936802974}, Val {'accuracy_val': 0.3915441176470588}, Test {'accuracy_test': 0.3978102189781022}
+[Client 1] Eval: Train {'accuracy_train': 0.6267605633802817}, Val {'accuracy_val': 0.6256590509666081}, Test {'accuracy_test': 0.6256590509666081}
+[Client 2] Eval: Train {'accuracy_train': 0.484472049689441}, Val {'accuracy_val': 0.44907407407407407}, Test {'accuracy_test': 0.4525993883792049}
+[Client 3] Eval: Train {'accuracy_train': 0.43724696356275305}, Val {'accuracy_val': 0.35912698412698413}, Test {'accuracy_test': 0.358974358974359}
+[Client 4] Eval: Train {'accuracy_train': 0.5306122448979592}, Val {'accuracy_val': 0.46153846153846156}, Test {'accuracy_test': 0.46893787575150303}
+[Client 5] Eval: Train {'accuracy_train': 0.5444015444015444}, Val {'accuracy_val': 0.4942528735632184}, Test {'accuracy_test': 0.4952561669829222}
+[Client 6] Eval: Train {'accuracy_train': 0.5121951219512195}, Val {'accuracy_val': 0.4288577154308617}, Test {'accuracy_test': 0.4491017964071856}
+[Client 7] Eval: Train {'accuracy_train': 0.5492957746478874}, Val {'accuracy_val': 0.542608695652174}, Test {'accuracy_test': 0.5311418685121108}
+[Client 8] Eval: Train {'accuracy_train': 0.5616438356164384}, Val {'accuracy_val': 0.5297113752122241}, Test {'accuracy_test': 0.5456081081081081}
+[Client 9] Eval: Train {'accuracy_train': 0.5890909090909091}, Val {'accuracy_val': 0.5577617328519856}, Test {'accuracy_test': 0.5377697841726619}
+curr_round: 1	curr_val_accuracy: 0.4864	curr_test_accuracy: 0.4885
+best_round: 1	best_val_accuracy: 0.4864	best_test_accuracy: 0.4885
+--------------------------------------------------
+round # 2		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.6765799256505576}, Val {'accuracy_val': 0.5992647058823529}, Test {'accuracy_test': 0.6003649635036497}
+[Client 1] Eval: Train {'accuracy_train': 0.6302816901408451}, Val {'accuracy_val': 0.6274165202108963}, Test {'accuracy_test': 0.6256590509666081}
+[Client 2] Eval: Train {'accuracy_train': 0.6024844720496895}, Val {'accuracy_val': 0.558641975308642}, Test {'accuracy_test': 0.5657492354740061}
+[Client 3] Eval: Train {'accuracy_train': 0.5910931174089069}, Val {'accuracy_val': 0.5456349206349206}, Test {'accuracy_test': 0.5226824457593688}
+[Client 4] Eval: Train {'accuracy_train': 0.5469387755102041}, Val {'accuracy_val': 0.451417004048583}, Test {'accuracy_test': 0.4729458917835671}
+[Client 5] Eval: Train {'accuracy_train': 0.5405405405405406}, Val {'accuracy_val': 0.49233716475095785}, Test {'accuracy_test': 0.4781783681214421}
+[Client 6] Eval: Train {'accuracy_train': 0.6544715447154471}, Val {'accuracy_val': 0.5410821643286573}, Test {'accuracy_test': 0.590818363273453}
+[Client 7] Eval: Train {'accuracy_train': 0.6338028169014085}, Val {'accuracy_val': 0.6086956521739131}, Test {'accuracy_test': 0.615916955017301}
+[Client 8] Eval: Train {'accuracy_train': 0.5308219178082192}, Val {'accuracy_val': 0.5246179966044142}, Test {'accuracy_test': 0.5320945945945946}
+[Client 9] Eval: Train {'accuracy_train': 0.5963636363636363}, Val {'accuracy_val': 0.5649819494584838}, Test {'accuracy_test': 0.5557553956834532}
+curr_round: 2	curr_val_accuracy: 0.5533	curr_test_accuracy: 0.5576
+best_round: 2	best_val_accuracy: 0.5533	best_test_accuracy: 0.5576
+--------------------------------------------------
+round # 3		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.6914498141263941}, Val {'accuracy_val': 0.6011029411764706}, Test {'accuracy_test': 0.6131386861313869}
+[Client 1] Eval: Train {'accuracy_train': 0.6514084507042254}, Val {'accuracy_val': 0.6291739894551845}, Test {'accuracy_test': 0.6344463971880492}
+[Client 2] Eval: Train {'accuracy_train': 0.6024844720496895}, Val {'accuracy_val': 0.5617283950617284}, Test {'accuracy_test': 0.5703363914373089}
+[Client 3] Eval: Train {'accuracy_train': 0.6194331983805668}, Val {'accuracy_val': 0.5595238095238095}, Test {'accuracy_test': 0.534516765285996}
+[Client 4] Eval: Train {'accuracy_train': 0.6040816326530613}, Val {'accuracy_val': 0.5647773279352226}, Test {'accuracy_test': 0.5571142284569138}
+[Client 5] Eval: Train {'accuracy_train': 0.5637065637065637}, Val {'accuracy_val': 0.5363984674329502}, Test {'accuracy_test': 0.5199240986717267}
+[Client 6] Eval: Train {'accuracy_train': 0.6991869918699187}, Val {'accuracy_val': 0.6012024048096193}, Test {'accuracy_test': 0.6307385229540918}
+[Client 7] Eval: Train {'accuracy_train': 0.6443661971830986}, Val {'accuracy_val': 0.64}, Test {'accuracy_test': 0.6366782006920415}
+[Client 8] Eval: Train {'accuracy_train': 0.6198630136986302}, Val {'accuracy_val': 0.6044142614601019}, Test {'accuracy_test': 0.5861486486486487}
+[Client 9] Eval: Train {'accuracy_train': 0.5963636363636363}, Val {'accuracy_val': 0.5812274368231047}, Test {'accuracy_test': 0.5827338129496403}
+curr_round: 3	curr_val_accuracy: 0.5886	curr_test_accuracy: 0.5873
+best_round: 3	best_val_accuracy: 0.5886	best_test_accuracy: 0.5873
+--------------------------------------------------
+round # 4		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.7100371747211895}, Val {'accuracy_val': 0.6231617647058824}, Test {'accuracy_test': 0.6624087591240876}
+[Client 1] Eval: Train {'accuracy_train': 0.6795774647887324}, Val {'accuracy_val': 0.655536028119508}, Test {'accuracy_test': 0.6766256590509666}
+[Client 2] Eval: Train {'accuracy_train': 0.6211180124223602}, Val {'accuracy_val': 0.5725308641975309}, Test {'accuracy_test': 0.5902140672782875}
+[Client 3] Eval: Train {'accuracy_train': 0.6558704453441295}, Val {'accuracy_val': 0.5674603174603174}, Test {'accuracy_test': 0.5364891518737672}
+[Client 4] Eval: Train {'accuracy_train': 0.6408163265306123}, Val {'accuracy_val': 0.6093117408906883}, Test {'accuracy_test': 0.6292585170340681}
+[Client 5] Eval: Train {'accuracy_train': 0.6254826254826255}, Val {'accuracy_val': 0.5766283524904214}, Test {'accuracy_test': 0.5654648956356736}
+[Client 6] Eval: Train {'accuracy_train': 0.7317073170731707}, Val {'accuracy_val': 0.627254509018036}, Test {'accuracy_test': 0.6427145708582834}
+[Client 7] Eval: Train {'accuracy_train': 0.6866197183098591}, Val {'accuracy_val': 0.6591304347826087}, Test {'accuracy_test': 0.6678200692041523}
+[Client 8] Eval: Train {'accuracy_train': 0.6712328767123288}, Val {'accuracy_val': 0.66723259762309}, Test {'accuracy_test': 0.6587837837837838}
+[Client 9] Eval: Train {'accuracy_train': 0.610909090909091}, Val {'accuracy_val': 0.5956678700361011}, Test {'accuracy_test': 0.5971223021582733}
+curr_round: 4	curr_val_accuracy: 0.6158	curr_test_accuracy: 0.6234
+best_round: 4	best_val_accuracy: 0.6158	best_test_accuracy: 0.6234
+--------------------------------------------------
+round # 5		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.6951672862453532}, Val {'accuracy_val': 0.6397058823529411}, Test {'accuracy_test': 0.6806569343065694}
+[Client 1] Eval: Train {'accuracy_train': 0.7429577464788732}, Val {'accuracy_val': 0.6977152899824253}, Test {'accuracy_test': 0.7170474516695958}
+[Client 2] Eval: Train {'accuracy_train': 0.6242236024844721}, Val {'accuracy_val': 0.595679012345679}, Test {'accuracy_test': 0.6009174311926605}
+[Client 3] Eval: Train {'accuracy_train': 0.6842105263157895}, Val {'accuracy_val': 0.6190476190476191}, Test {'accuracy_test': 0.5838264299802761}
+[Client 4] Eval: Train {'accuracy_train': 0.6530612244897959}, Val {'accuracy_val': 0.6214574898785425}, Test {'accuracy_test': 0.6412825651302605}
+[Client 5] Eval: Train {'accuracy_train': 0.6563706563706564}, Val {'accuracy_val': 0.5977011494252874}, Test {'accuracy_test': 0.5958254269449715}
+[Client 6] Eval: Train {'accuracy_train': 0.7276422764227642}, Val {'accuracy_val': 0.6452905811623246}, Test {'accuracy_test': 0.6506986027944112}
+[Client 7] Eval: Train {'accuracy_train': 0.7112676056338029}, Val {'accuracy_val': 0.6904347826086956}, Test {'accuracy_test': 0.6885813148788927}
+[Client 8] Eval: Train {'accuracy_train': 0.6986301369863014}, Val {'accuracy_val': 0.6825127334465195}, Test {'accuracy_test': 0.6824324324324325}
+[Client 9] Eval: Train {'accuracy_train': 0.64}, Val {'accuracy_val': 0.628158844765343}, Test {'accuracy_test': 0.6223021582733813}
+curr_round: 5	curr_val_accuracy: 0.6422	curr_test_accuracy: 0.6470
+best_round: 5	best_val_accuracy: 0.6422	best_test_accuracy: 0.6470
+--------------------------------------------------
+round # 6		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.7100371747211895}, Val {'accuracy_val': 0.6397058823529411}, Test {'accuracy_test': 0.6916058394160584}
+[Client 1] Eval: Train {'accuracy_train': 0.8098591549295775}, Val {'accuracy_val': 0.7574692442882249}, Test {'accuracy_test': 0.7943760984182777}
+[Client 2] Eval: Train {'accuracy_train': 0.6335403726708074}, Val {'accuracy_val': 0.6064814814814815}, Test {'accuracy_test': 0.617737003058104}
+[Client 3] Eval: Train {'accuracy_train': 0.7125506072874493}, Val {'accuracy_val': 0.6746031746031746}, Test {'accuracy_test': 0.6410256410256411}
+[Client 4] Eval: Train {'accuracy_train': 0.6530612244897959}, Val {'accuracy_val': 0.6255060728744939}, Test {'accuracy_test': 0.6312625250501002}
+[Client 5] Eval: Train {'accuracy_train': 0.6911196911196911}, Val {'accuracy_val': 0.6494252873563219}, Test {'accuracy_test': 0.6394686907020873}
+[Client 6] Eval: Train {'accuracy_train': 0.7642276422764228}, Val {'accuracy_val': 0.6673346693386774}, Test {'accuracy_test': 0.6786427145708582}
+[Client 7] Eval: Train {'accuracy_train': 0.7112676056338029}, Val {'accuracy_val': 0.7043478260869566}, Test {'accuracy_test': 0.7006920415224913}
+[Client 8] Eval: Train {'accuracy_train': 0.7465753424657534}, Val {'accuracy_val': 0.7402376910016978}, Test {'accuracy_test': 0.7364864864864865}
+[Client 9] Eval: Train {'accuracy_train': 0.7018181818181818}, Val {'accuracy_val': 0.6877256317689531}, Test {'accuracy_test': 0.6780575539568345}
+curr_round: 6	curr_val_accuracy: 0.6757	curr_test_accuracy: 0.6817
+best_round: 6	best_val_accuracy: 0.6757	best_test_accuracy: 0.6817
+--------------------------------------------------
+round # 7		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.6988847583643123}, Val {'accuracy_val': 0.6470588235294118}, Test {'accuracy_test': 0.6934306569343066}
+[Client 1] Eval: Train {'accuracy_train': 0.823943661971831}, Val {'accuracy_val': 0.7662565905096661}, Test {'accuracy_test': 0.8172231985940246}
+[Client 2] Eval: Train {'accuracy_train': 0.6677018633540373}, Val {'accuracy_val': 0.6219135802469136}, Test {'accuracy_test': 0.6269113149847095}
+[Client 3] Eval: Train {'accuracy_train': 0.7368421052631579}, Val {'accuracy_val': 0.6825396825396826}, Test {'accuracy_test': 0.6528599605522682}
+[Client 4] Eval: Train {'accuracy_train': 0.6653061224489796}, Val {'accuracy_val': 0.6477732793522267}, Test {'accuracy_test': 0.6613226452905812}
+[Client 5] Eval: Train {'accuracy_train': 0.7027027027027027}, Val {'accuracy_val': 0.6762452107279694}, Test {'accuracy_test': 0.6679316888045541}
+[Client 6] Eval: Train {'accuracy_train': 0.7601626016260162}, Val {'accuracy_val': 0.6693386773547094}, Test {'accuracy_test': 0.6826347305389222}
+[Client 7] Eval: Train {'accuracy_train': 0.75}, Val {'accuracy_val': 0.7217391304347827}, Test {'accuracy_test': 0.7179930795847751}
+[Client 8] Eval: Train {'accuracy_train': 0.75}, Val {'accuracy_val': 0.7504244482173175}, Test {'accuracy_test': 0.7398648648648649}
+[Client 9] Eval: Train {'accuracy_train': 0.7345454545454545}, Val {'accuracy_val': 0.7256317689530686}, Test {'accuracy_test': 0.7014388489208633}
+curr_round: 7	curr_val_accuracy: 0.6913	curr_test_accuracy: 0.6967
+best_round: 7	best_val_accuracy: 0.6913	best_test_accuracy: 0.6967
+--------------------------------------------------
+round # 8		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.7026022304832714}, Val {'accuracy_val': 0.6580882352941176}, Test {'accuracy_test': 0.7025547445255474}
+[Client 1] Eval: Train {'accuracy_train': 0.8556338028169014}, Val {'accuracy_val': 0.7803163444639719}, Test {'accuracy_test': 0.8347978910369068}
+[Client 2] Eval: Train {'accuracy_train': 0.6863354037267081}, Val {'accuracy_val': 0.6373456790123457}, Test {'accuracy_test': 0.6574923547400612}
+[Client 3] Eval: Train {'accuracy_train': 0.7408906882591093}, Val {'accuracy_val': 0.6865079365079365}, Test {'accuracy_test': 0.6646942800788954}
+[Client 4] Eval: Train {'accuracy_train': 0.7020408163265306}, Val {'accuracy_val': 0.6720647773279352}, Test {'accuracy_test': 0.6933867735470942}
+[Client 5] Eval: Train {'accuracy_train': 0.7413127413127413}, Val {'accuracy_val': 0.6954022988505747}, Test {'accuracy_test': 0.6869070208728653}
+[Client 6] Eval: Train {'accuracy_train': 0.7723577235772358}, Val {'accuracy_val': 0.6673346693386774}, Test {'accuracy_test': 0.6906187624750499}
+[Client 7] Eval: Train {'accuracy_train': 0.7570422535211268}, Val {'accuracy_val': 0.7269565217391304}, Test {'accuracy_test': 0.7231833910034602}
+[Client 8] Eval: Train {'accuracy_train': 0.7568493150684932}, Val {'accuracy_val': 0.7504244482173175}, Test {'accuracy_test': 0.7432432432432432}
+[Client 9] Eval: Train {'accuracy_train': 0.7490909090909091}, Val {'accuracy_val': 0.7472924187725631}, Test {'accuracy_test': 0.7212230215827338}
+curr_round: 8	curr_val_accuracy: 0.7026	curr_test_accuracy: 0.7124
+best_round: 8	best_val_accuracy: 0.7026	best_test_accuracy: 0.7124
+--------------------------------------------------
+round # 9		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.7137546468401487}, Val {'accuracy_val': 0.6672794117647058}, Test {'accuracy_test': 0.7062043795620438}
+[Client 1] Eval: Train {'accuracy_train': 0.8626760563380281}, Val {'accuracy_val': 0.7838312829525483}, Test {'accuracy_test': 0.836555360281195}
+[Client 2] Eval: Train {'accuracy_train': 0.7080745341614907}, Val {'accuracy_val': 0.654320987654321}, Test {'accuracy_test': 0.6651376146788991}
+[Client 3] Eval: Train {'accuracy_train': 0.7732793522267206}, Val {'accuracy_val': 0.7003968253968254}, Test {'accuracy_test': 0.6765285996055227}
+[Client 4] Eval: Train {'accuracy_train': 0.7306122448979592}, Val {'accuracy_val': 0.6781376518218624}, Test {'accuracy_test': 0.7134268537074149}
+[Client 5] Eval: Train {'accuracy_train': 0.7644787644787645}, Val {'accuracy_val': 0.710727969348659}, Test {'accuracy_test': 0.7039848197343453}
+[Client 6] Eval: Train {'accuracy_train': 0.7845528455284553}, Val {'accuracy_val': 0.6773547094188377}, Test {'accuracy_test': 0.6946107784431138}
+[Client 7] Eval: Train {'accuracy_train': 0.7746478873239436}, Val {'accuracy_val': 0.7513043478260869}, Test {'accuracy_test': 0.7474048442906575}
+[Client 8] Eval: Train {'accuracy_train': 0.7705479452054794}, Val {'accuracy_val': 0.7572156196943973}, Test {'accuracy_test': 0.7567567567567568}
+[Client 9] Eval: Train {'accuracy_train': 0.7527272727272727}, Val {'accuracy_val': 0.7454873646209387}, Test {'accuracy_test': 0.737410071942446}
+curr_round: 9	curr_val_accuracy: 0.7131	curr_test_accuracy: 0.7244
+best_round: 9	best_val_accuracy: 0.7131	best_test_accuracy: 0.7244
+--------------------------------------------------
+round # 10		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.7509293680297398}, Val {'accuracy_val': 0.7132352941176471}, Test {'accuracy_test': 0.7463503649635036}
+[Client 1] Eval: Train {'accuracy_train': 0.8626760563380281}, Val {'accuracy_val': 0.7996485061511424}, Test {'accuracy_test': 0.8400702987697716}
+[Client 2] Eval: Train {'accuracy_train': 0.7298136645962733}, Val {'accuracy_val': 0.6712962962962963}, Test {'accuracy_test': 0.6850152905198776}
+[Client 3] Eval: Train {'accuracy_train': 0.7975708502024291}, Val {'accuracy_val': 0.7242063492063492}, Test {'accuracy_test': 0.7080867850098619}
+[Client 4] Eval: Train {'accuracy_train': 0.7510204081632653}, Val {'accuracy_val': 0.7024291497975709}, Test {'accuracy_test': 0.7254509018036072}
+[Client 5] Eval: Train {'accuracy_train': 0.7722007722007722}, Val {'accuracy_val': 0.7203065134099617}, Test {'accuracy_test': 0.7115749525616698}
+[Client 6] Eval: Train {'accuracy_train': 0.7886178861788617}, Val {'accuracy_val': 0.6833667334669339}, Test {'accuracy_test': 0.7045908183632734}
+[Client 7] Eval: Train {'accuracy_train': 0.778169014084507}, Val {'accuracy_val': 0.76}, Test {'accuracy_test': 0.754325259515571}
+[Client 8] Eval: Train {'accuracy_train': 0.7773972602739726}, Val {'accuracy_val': 0.765704584040747}, Test {'accuracy_test': 0.7668918918918919}
+[Client 9] Eval: Train {'accuracy_train': 0.76}, Val {'accuracy_val': 0.7509025270758123}, Test {'accuracy_test': 0.7392086330935251}
+curr_round: 10	curr_val_accuracy: 0.7295	curr_test_accuracy: 0.7386
+best_round: 10	best_val_accuracy: 0.7295	best_test_accuracy: 0.7386
+--------------------------------------------------
+round # 11		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.7806691449814126}, Val {'accuracy_val': 0.7316176470588235}, Test {'accuracy_test': 0.7773722627737226}
+[Client 1] Eval: Train {'accuracy_train': 0.8697183098591549}, Val {'accuracy_val': 0.804920913884007}, Test {'accuracy_test': 0.843585237258348}
+[Client 2] Eval: Train {'accuracy_train': 0.7422360248447205}, Val {'accuracy_val': 0.6898148148148148}, Test {'accuracy_test': 0.7064220183486238}
+[Client 3] Eval: Train {'accuracy_train': 0.8097165991902834}, Val {'accuracy_val': 0.748015873015873}, Test {'accuracy_test': 0.7218934911242604}
+[Client 4] Eval: Train {'accuracy_train': 0.7714285714285715}, Val {'accuracy_val': 0.7226720647773279}, Test {'accuracy_test': 0.7394789579158316}
+[Client 5] Eval: Train {'accuracy_train': 0.7876447876447876}, Val {'accuracy_val': 0.7222222222222222}, Test {'accuracy_test': 0.7191650853889943}
+[Client 6] Eval: Train {'accuracy_train': 0.8170731707317073}, Val {'accuracy_val': 0.7094188376753507}, Test {'accuracy_test': 0.7325349301397206}
+[Client 7] Eval: Train {'accuracy_train': 0.7887323943661971}, Val {'accuracy_val': 0.7721739130434783}, Test {'accuracy_test': 0.7577854671280276}
+[Client 8] Eval: Train {'accuracy_train': 0.8082191780821918}, Val {'accuracy_val': 0.7826825127334465}, Test {'accuracy_test': 0.7837837837837838}
+[Client 9] Eval: Train {'accuracy_train': 0.76}, Val {'accuracy_val': 0.7509025270758123}, Test {'accuracy_test': 0.7482014388489209}
+curr_round: 11	curr_val_accuracy: 0.7437	curr_test_accuracy: 0.7535
+best_round: 11	best_val_accuracy: 0.7437	best_test_accuracy: 0.7535
+--------------------------------------------------
+round # 12		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.7992565055762082}, Val {'accuracy_val': 0.7518382352941176}, Test {'accuracy_test': 0.7937956204379562}
+[Client 1] Eval: Train {'accuracy_train': 0.8661971830985915}, Val {'accuracy_val': 0.8066783831282952}, Test {'accuracy_test': 0.843585237258348}
+[Client 2] Eval: Train {'accuracy_train': 0.7701863354037267}, Val {'accuracy_val': 0.7175925925925926}, Test {'accuracy_test': 0.72782874617737}
+[Client 3] Eval: Train {'accuracy_train': 0.8218623481781376}, Val {'accuracy_val': 0.7599206349206349}, Test {'accuracy_test': 0.7258382642998028}
+[Client 4] Eval: Train {'accuracy_train': 0.7918367346938775}, Val {'accuracy_val': 0.7388663967611336}, Test {'accuracy_test': 0.7555110220440882}
+[Client 5] Eval: Train {'accuracy_train': 0.7876447876447876}, Val {'accuracy_val': 0.7375478927203065}, Test {'accuracy_test': 0.7229601518026565}
+[Client 6] Eval: Train {'accuracy_train': 0.8211382113821138}, Val {'accuracy_val': 0.7254509018036072}, Test {'accuracy_test': 0.7445109780439122}
+[Client 7] Eval: Train {'accuracy_train': 0.8028169014084507}, Val {'accuracy_val': 0.7808695652173913}, Test {'accuracy_test': 0.7716262975778547}
+[Client 8] Eval: Train {'accuracy_train': 0.8253424657534246}, Val {'accuracy_val': 0.8030560271646859}, Test {'accuracy_test': 0.8141891891891891}
+[Client 9] Eval: Train {'accuracy_train': 0.7672727272727272}, Val {'accuracy_val': 0.7563176895306859}, Test {'accuracy_test': 0.7446043165467626}
+curr_round: 12	curr_val_accuracy: 0.7583	curr_test_accuracy: 0.7652
+best_round: 12	best_val_accuracy: 0.7583	best_test_accuracy: 0.7652
+--------------------------------------------------
+round # 13		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8104089219330854}, Val {'accuracy_val': 0.7591911764705882}, Test {'accuracy_test': 0.8138686131386861}
+[Client 1] Eval: Train {'accuracy_train': 0.8732394366197183}, Val {'accuracy_val': 0.8084358523725835}, Test {'accuracy_test': 0.843585237258348}
+[Client 2] Eval: Train {'accuracy_train': 0.7950310559006211}, Val {'accuracy_val': 0.7376543209876543}, Test {'accuracy_test': 0.7507645259938838}
+[Client 3] Eval: Train {'accuracy_train': 0.8380566801619433}, Val {'accuracy_val': 0.7619047619047619}, Test {'accuracy_test': 0.7317554240631163}
+[Client 4] Eval: Train {'accuracy_train': 0.8040816326530612}, Val {'accuracy_val': 0.7489878542510121}, Test {'accuracy_test': 0.7615230460921844}
+[Client 5] Eval: Train {'accuracy_train': 0.7953667953667953}, Val {'accuracy_val': 0.7413793103448276}, Test {'accuracy_test': 0.7305502846299811}
+[Client 6] Eval: Train {'accuracy_train': 0.8536585365853658}, Val {'accuracy_val': 0.7434869739478958}, Test {'accuracy_test': 0.7564870259481038}
+[Client 7] Eval: Train {'accuracy_train': 0.8098591549295775}, Val {'accuracy_val': 0.7860869565217391}, Test {'accuracy_test': 0.7820069204152249}
+[Client 8] Eval: Train {'accuracy_train': 0.8458904109589042}, Val {'accuracy_val': 0.8183361629881154}, Test {'accuracy_test': 0.8260135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.7854545454545454}, Val {'accuracy_val': 0.7635379061371841}, Test {'accuracy_test': 0.7446043165467626}
+curr_round: 13	curr_val_accuracy: 0.7675	curr_test_accuracy: 0.7751
+best_round: 13	best_val_accuracy: 0.7675	best_test_accuracy: 0.7751
+--------------------------------------------------
+round # 14		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8252788104089219}, Val {'accuracy_val': 0.7628676470588235}, Test {'accuracy_test': 0.8248175182481752}
+[Client 1] Eval: Train {'accuracy_train': 0.8732394366197183}, Val {'accuracy_val': 0.81195079086116}, Test {'accuracy_test': 0.843585237258348}
+[Client 2] Eval: Train {'accuracy_train': 0.8105590062111802}, Val {'accuracy_val': 0.7422839506172839}, Test {'accuracy_test': 0.764525993883792}
+[Client 3] Eval: Train {'accuracy_train': 0.8461538461538461}, Val {'accuracy_val': 0.7718253968253969}, Test {'accuracy_test': 0.73767258382643}
+[Client 4] Eval: Train {'accuracy_train': 0.8122448979591836}, Val {'accuracy_val': 0.7611336032388664}, Test {'accuracy_test': 0.781563126252505}
+[Client 5] Eval: Train {'accuracy_train': 0.7992277992277992}, Val {'accuracy_val': 0.7432950191570882}, Test {'accuracy_test': 0.7381404174573055}
+[Client 6] Eval: Train {'accuracy_train': 0.8658536585365854}, Val {'accuracy_val': 0.7555110220440882}, Test {'accuracy_test': 0.7604790419161677}
+[Client 7] Eval: Train {'accuracy_train': 0.8274647887323944}, Val {'accuracy_val': 0.7913043478260869}, Test {'accuracy_test': 0.7837370242214533}
+[Client 8] Eval: Train {'accuracy_train': 0.8561643835616438}, Val {'accuracy_val': 0.8234295415959253}, Test {'accuracy_test': 0.8344594594594594}
+[Client 9] Eval: Train {'accuracy_train': 0.7963636363636364}, Val {'accuracy_val': 0.7671480144404332}, Test {'accuracy_test': 0.7464028776978417}
+curr_round: 14	curr_val_accuracy: 0.7735	curr_test_accuracy: 0.7825
+best_round: 14	best_val_accuracy: 0.7735	best_test_accuracy: 0.7825
+--------------------------------------------------
+round # 15		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8327137546468402}, Val {'accuracy_val': 0.7647058823529411}, Test {'accuracy_test': 0.8284671532846716}
+[Client 1] Eval: Train {'accuracy_train': 0.8802816901408451}, Val {'accuracy_val': 0.8154657293497364}, Test {'accuracy_test': 0.843585237258348}
+[Client 2] Eval: Train {'accuracy_train': 0.8229813664596274}, Val {'accuracy_val': 0.7530864197530864}, Test {'accuracy_test': 0.7782874617737003}
+[Client 3] Eval: Train {'accuracy_train': 0.8582995951417004}, Val {'accuracy_val': 0.7777777777777778}, Test {'accuracy_test': 0.747534516765286}
+[Client 4] Eval: Train {'accuracy_train': 0.8244897959183674}, Val {'accuracy_val': 0.7692307692307693}, Test {'accuracy_test': 0.7975951903807615}
+[Client 5] Eval: Train {'accuracy_train': 0.803088803088803}, Val {'accuracy_val': 0.7452107279693486}, Test {'accuracy_test': 0.7400379506641366}
+[Client 6] Eval: Train {'accuracy_train': 0.8739837398373984}, Val {'accuracy_val': 0.7715430861723447}, Test {'accuracy_test': 0.7744510978043913}
+[Client 7] Eval: Train {'accuracy_train': 0.8345070422535211}, Val {'accuracy_val': 0.7947826086956522}, Test {'accuracy_test': 0.7906574394463668}
+[Client 8] Eval: Train {'accuracy_train': 0.8698630136986302}, Val {'accuracy_val': 0.8404074702886248}, Test {'accuracy_test': 0.839527027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8}, Val {'accuracy_val': 0.7707581227436823}, Test {'accuracy_test': 0.7535971223021583}
+curr_round: 15	curr_val_accuracy: 0.7808	curr_test_accuracy: 0.7903
+best_round: 15	best_val_accuracy: 0.7808	best_test_accuracy: 0.7903
+--------------------------------------------------
+round # 16		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8364312267657993}, Val {'accuracy_val': 0.7738970588235294}, Test {'accuracy_test': 0.8357664233576643}
+[Client 1] Eval: Train {'accuracy_train': 0.8873239436619719}, Val {'accuracy_val': 0.8172231985940246}, Test {'accuracy_test': 0.8471001757469244}
+[Client 2] Eval: Train {'accuracy_train': 0.8322981366459627}, Val {'accuracy_val': 0.7561728395061729}, Test {'accuracy_test': 0.7828746177370031}
+[Client 3] Eval: Train {'accuracy_train': 0.8704453441295547}, Val {'accuracy_val': 0.7956349206349206}, Test {'accuracy_test': 0.7593688362919132}
+[Client 4] Eval: Train {'accuracy_train': 0.8326530612244898}, Val {'accuracy_val': 0.7935222672064778}, Test {'accuracy_test': 0.8056112224448898}
+[Client 5] Eval: Train {'accuracy_train': 0.806949806949807}, Val {'accuracy_val': 0.7547892720306514}, Test {'accuracy_test': 0.7514231499051234}
+[Client 6] Eval: Train {'accuracy_train': 0.8739837398373984}, Val {'accuracy_val': 0.7775551102204409}, Test {'accuracy_test': 0.7784431137724551}
+[Client 7] Eval: Train {'accuracy_train': 0.8556338028169014}, Val {'accuracy_val': 0.8069565217391305}, Test {'accuracy_test': 0.7958477508650519}
+[Client 8] Eval: Train {'accuracy_train': 0.8767123287671232}, Val {'accuracy_val': 0.8505942275042445}, Test {'accuracy_test': 0.8597972972972973}
+[Client 9] Eval: Train {'accuracy_train': 0.8}, Val {'accuracy_val': 0.7870036101083032}, Test {'accuracy_test': 0.7589928057553957}
+curr_round: 16	curr_val_accuracy: 0.7915	curr_test_accuracy: 0.7984
+best_round: 16	best_val_accuracy: 0.7915	best_test_accuracy: 0.7984
+--------------------------------------------------
+round # 17		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8401486988847584}, Val {'accuracy_val': 0.7738970588235294}, Test {'accuracy_test': 0.8375912408759124}
+[Client 1] Eval: Train {'accuracy_train': 0.8908450704225352}, Val {'accuracy_val': 0.8172231985940246}, Test {'accuracy_test': 0.8471001757469244}
+[Client 2] Eval: Train {'accuracy_train': 0.8385093167701864}, Val {'accuracy_val': 0.7608024691358025}, Test {'accuracy_test': 0.7889908256880734}
+[Client 3] Eval: Train {'accuracy_train': 0.8866396761133604}, Val {'accuracy_val': 0.8095238095238095}, Test {'accuracy_test': 0.7652859960552268}
+[Client 4] Eval: Train {'accuracy_train': 0.8408163265306122}, Val {'accuracy_val': 0.8016194331983806}, Test {'accuracy_test': 0.8156312625250501}
+[Client 5] Eval: Train {'accuracy_train': 0.8223938223938224}, Val {'accuracy_val': 0.7586206896551724}, Test {'accuracy_test': 0.7609108159392789}
+[Client 6] Eval: Train {'accuracy_train': 0.8780487804878049}, Val {'accuracy_val': 0.7895791583166333}, Test {'accuracy_test': 0.7864271457085829}
+[Client 7] Eval: Train {'accuracy_train': 0.8591549295774648}, Val {'accuracy_val': 0.8104347826086956}, Test {'accuracy_test': 0.7975778546712803}
+[Client 8] Eval: Train {'accuracy_train': 0.886986301369863}, Val {'accuracy_val': 0.8573853989813243}, Test {'accuracy_test': 0.8648648648648649}
+[Client 9] Eval: Train {'accuracy_train': 0.8072727272727273}, Val {'accuracy_val': 0.796028880866426}, Test {'accuracy_test': 0.7679856115107914}
+curr_round: 17	curr_val_accuracy: 0.7975	curr_test_accuracy: 0.8040
+best_round: 17	best_val_accuracy: 0.7975	best_test_accuracy: 0.8040
+--------------------------------------------------
+round # 18		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8401486988847584}, Val {'accuracy_val': 0.7830882352941176}, Test {'accuracy_test': 0.8448905109489051}
+[Client 1] Eval: Train {'accuracy_train': 0.8943661971830986}, Val {'accuracy_val': 0.8242530755711776}, Test {'accuracy_test': 0.8488576449912126}
+[Client 2] Eval: Train {'accuracy_train': 0.8478260869565217}, Val {'accuracy_val': 0.7654320987654321}, Test {'accuracy_test': 0.7935779816513762}
+[Client 3] Eval: Train {'accuracy_train': 0.8947368421052632}, Val {'accuracy_val': 0.8154761904761905}, Test {'accuracy_test': 0.7712031558185405}
+[Client 4] Eval: Train {'accuracy_train': 0.8367346938775511}, Val {'accuracy_val': 0.8117408906882592}, Test {'accuracy_test': 0.8276553106212425}
+[Client 5] Eval: Train {'accuracy_train': 0.8262548262548263}, Val {'accuracy_val': 0.7624521072796935}, Test {'accuracy_test': 0.7722960151802657}
+[Client 6] Eval: Train {'accuracy_train': 0.8861788617886179}, Val {'accuracy_val': 0.7915831663326653}, Test {'accuracy_test': 0.8003992015968064}
+[Client 7] Eval: Train {'accuracy_train': 0.8661971830985915}, Val {'accuracy_val': 0.8139130434782609}, Test {'accuracy_test': 0.7993079584775087}
+[Client 8] Eval: Train {'accuracy_train': 0.8904109589041096}, Val {'accuracy_val': 0.8590831918505942}, Test {'accuracy_test': 0.8716216216216216}
+[Client 9] Eval: Train {'accuracy_train': 0.8145454545454546}, Val {'accuracy_val': 0.796028880866426}, Test {'accuracy_test': 0.7715827338129496}
+curr_round: 18	curr_val_accuracy: 0.8023	curr_test_accuracy: 0.8107
+best_round: 18	best_val_accuracy: 0.8023	best_test_accuracy: 0.8107
+--------------------------------------------------
+round # 19		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8513011152416357}, Val {'accuracy_val': 0.7830882352941176}, Test {'accuracy_test': 0.8448905109489051}
+[Client 1] Eval: Train {'accuracy_train': 0.9014084507042254}, Val {'accuracy_val': 0.8295254833040422}, Test {'accuracy_test': 0.8506151142355008}
+[Client 2] Eval: Train {'accuracy_train': 0.8571428571428571}, Val {'accuracy_val': 0.7716049382716049}, Test {'accuracy_test': 0.7981651376146789}
+[Client 3] Eval: Train {'accuracy_train': 0.8987854251012146}, Val {'accuracy_val': 0.8194444444444444}, Test {'accuracy_test': 0.7790927021696252}
+[Client 4] Eval: Train {'accuracy_train': 0.8448979591836735}, Val {'accuracy_val': 0.8097165991902834}, Test {'accuracy_test': 0.8316633266533067}
+[Client 5] Eval: Train {'accuracy_train': 0.8262548262548263}, Val {'accuracy_val': 0.7701149425287356}, Test {'accuracy_test': 0.7817836812144212}
+[Client 6] Eval: Train {'accuracy_train': 0.8943089430894309}, Val {'accuracy_val': 0.7955911823647295}, Test {'accuracy_test': 0.8003992015968064}
+[Client 7] Eval: Train {'accuracy_train': 0.8697183098591549}, Val {'accuracy_val': 0.8208695652173913}, Test {'accuracy_test': 0.8062283737024222}
+[Client 8] Eval: Train {'accuracy_train': 0.8904109589041096}, Val {'accuracy_val': 0.8590831918505942}, Test {'accuracy_test': 0.875}
+[Client 9] Eval: Train {'accuracy_train': 0.8181818181818182}, Val {'accuracy_val': 0.7996389891696751}, Test {'accuracy_test': 0.7715827338129496}
+curr_round: 19	curr_val_accuracy: 0.8059	curr_test_accuracy: 0.8145
+best_round: 19	best_val_accuracy: 0.8059	best_test_accuracy: 0.8145
+--------------------------------------------------
+round # 20		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.862453531598513}, Val {'accuracy_val': 0.7886029411764706}, Test {'accuracy_test': 0.8485401459854015}
+[Client 1] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.8347978910369068}, Test {'accuracy_test': 0.8541300527240774}
+[Client 2] Eval: Train {'accuracy_train': 0.8571428571428571}, Val {'accuracy_val': 0.7777777777777778}, Test {'accuracy_test': 0.8058103975535168}
+[Client 3] Eval: Train {'accuracy_train': 0.8987854251012146}, Val {'accuracy_val': 0.8353174603174603}, Test {'accuracy_test': 0.7790927021696252}
+[Client 4] Eval: Train {'accuracy_train': 0.8489795918367347}, Val {'accuracy_val': 0.819838056680162}, Test {'accuracy_test': 0.8396793587174348}
+[Client 5] Eval: Train {'accuracy_train': 0.8416988416988417}, Val {'accuracy_val': 0.7796934865900383}, Test {'accuracy_test': 0.7855787476280834}
+[Client 6] Eval: Train {'accuracy_train': 0.9024390243902439}, Val {'accuracy_val': 0.7995991983967936}, Test {'accuracy_test': 0.8063872255489022}
+[Client 7] Eval: Train {'accuracy_train': 0.8697183098591549}, Val {'accuracy_val': 0.8226086956521739}, Test {'accuracy_test': 0.8131487889273357}
+[Client 8] Eval: Train {'accuracy_train': 0.8972602739726028}, Val {'accuracy_val': 0.8590831918505942}, Test {'accuracy_test': 0.8766891891891891}
+[Client 9] Eval: Train {'accuracy_train': 0.8327272727272728}, Val {'accuracy_val': 0.8086642599277978}, Test {'accuracy_test': 0.7751798561151079}
+curr_round: 20	curr_val_accuracy: 0.8125	curr_test_accuracy: 0.8190
+best_round: 20	best_val_accuracy: 0.8125	best_test_accuracy: 0.8190
+--------------------------------------------------
+round # 21		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8661710037174721}, Val {'accuracy_val': 0.7959558823529411}, Test {'accuracy_test': 0.8558394160583942}
+[Client 1] Eval: Train {'accuracy_train': 0.9084507042253521}, Val {'accuracy_val': 0.8418277680140598}, Test {'accuracy_test': 0.8541300527240774}
+[Client 2] Eval: Train {'accuracy_train': 0.8571428571428571}, Val {'accuracy_val': 0.779320987654321}, Test {'accuracy_test': 0.8103975535168195}
+[Client 3] Eval: Train {'accuracy_train': 0.9068825910931174}, Val {'accuracy_val': 0.8373015873015873}, Test {'accuracy_test': 0.7869822485207101}
+[Client 4] Eval: Train {'accuracy_train': 0.8489795918367347}, Val {'accuracy_val': 0.8238866396761133}, Test {'accuracy_test': 0.8517034068136272}
+[Client 5] Eval: Train {'accuracy_train': 0.8571428571428571}, Val {'accuracy_val': 0.7854406130268199}, Test {'accuracy_test': 0.7874762808349146}
+[Client 6] Eval: Train {'accuracy_train': 0.9105691056910569}, Val {'accuracy_val': 0.8056112224448898}, Test {'accuracy_test': 0.810379241516966}
+[Client 7] Eval: Train {'accuracy_train': 0.8697183098591549}, Val {'accuracy_val': 0.8243478260869566}, Test {'accuracy_test': 0.8200692041522492}
+[Client 8] Eval: Train {'accuracy_train': 0.910958904109589}, Val {'accuracy_val': 0.865874363327674}, Test {'accuracy_test': 0.8800675675675675}
+[Client 9] Eval: Train {'accuracy_train': 0.8327272727272728}, Val {'accuracy_val': 0.8122743682310469}, Test {'accuracy_test': 0.7769784172661871}
+curr_round: 21	curr_val_accuracy: 0.8170	curr_test_accuracy: 0.8239
+best_round: 21	best_val_accuracy: 0.8170	best_test_accuracy: 0.8239
+--------------------------------------------------
+round # 22		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8698884758364313}, Val {'accuracy_val': 0.8014705882352942}, Test {'accuracy_test': 0.8594890510948905}
+[Client 1] Eval: Train {'accuracy_train': 0.9084507042253521}, Val {'accuracy_val': 0.8471001757469244}, Test {'accuracy_test': 0.8576449912126538}
+[Client 2] Eval: Train {'accuracy_train': 0.8695652173913043}, Val {'accuracy_val': 0.7808641975308642}, Test {'accuracy_test': 0.8149847094801224}
+[Client 3] Eval: Train {'accuracy_train': 0.9149797570850202}, Val {'accuracy_val': 0.8373015873015873}, Test {'accuracy_test': 0.7909270216962525}
+[Client 4] Eval: Train {'accuracy_train': 0.8571428571428571}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8557114228456913}
+[Client 5] Eval: Train {'accuracy_train': 0.8571428571428571}, Val {'accuracy_val': 0.7873563218390804}, Test {'accuracy_test': 0.7855787476280834}
+[Client 6] Eval: Train {'accuracy_train': 0.9146341463414634}, Val {'accuracy_val': 0.8056112224448898}, Test {'accuracy_test': 0.812375249500998}
+[Client 7] Eval: Train {'accuracy_train': 0.8767605633802817}, Val {'accuracy_val': 0.8278260869565217}, Test {'accuracy_test': 0.8217993079584776}
+[Client 8] Eval: Train {'accuracy_train': 0.9178082191780822}, Val {'accuracy_val': 0.8794567062818336}, Test {'accuracy_test': 0.8783783783783784}
+[Client 9] Eval: Train {'accuracy_train': 0.8363636363636363}, Val {'accuracy_val': 0.8122743682310469}, Test {'accuracy_test': 0.7877697841726619}
+curr_round: 22	curr_val_accuracy: 0.8212	curr_test_accuracy: 0.8270
+best_round: 22	best_val_accuracy: 0.8212	best_test_accuracy: 0.8270
+--------------------------------------------------
+round # 23		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8773234200743495}, Val {'accuracy_val': 0.8014705882352942}, Test {'accuracy_test': 0.8631386861313869}
+[Client 1] Eval: Train {'accuracy_train': 0.9119718309859155}, Val {'accuracy_val': 0.8488576449912126}, Test {'accuracy_test': 0.8576449912126538}
+[Client 2] Eval: Train {'accuracy_train': 0.8695652173913043}, Val {'accuracy_val': 0.7870370370370371}, Test {'accuracy_test': 0.8195718654434251}
+[Client 3] Eval: Train {'accuracy_train': 0.9190283400809717}, Val {'accuracy_val': 0.8392857142857143}, Test {'accuracy_test': 0.7889546351084813}
+[Client 4] Eval: Train {'accuracy_train': 0.8734693877551021}, Val {'accuracy_val': 0.8441295546558705}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8571428571428571}, Val {'accuracy_val': 0.7911877394636015}, Test {'accuracy_test': 0.7855787476280834}
+[Client 6] Eval: Train {'accuracy_train': 0.9186991869918699}, Val {'accuracy_val': 0.8036072144288577}, Test {'accuracy_test': 0.8203592814371258}
+[Client 7] Eval: Train {'accuracy_train': 0.8802816901408451}, Val {'accuracy_val': 0.8260869565217391}, Test {'accuracy_test': 0.828719723183391}
+[Client 8] Eval: Train {'accuracy_train': 0.9212328767123288}, Val {'accuracy_val': 0.8811544991511036}, Test {'accuracy_test': 0.8817567567567568}
+[Client 9] Eval: Train {'accuracy_train': 0.8363636363636363}, Val {'accuracy_val': 0.8122743682310469}, Test {'accuracy_test': 0.789568345323741}
+curr_round: 23	curr_val_accuracy: 0.8234	curr_test_accuracy: 0.8302
+best_round: 23	best_val_accuracy: 0.8234	best_test_accuracy: 0.8302
+--------------------------------------------------
+round # 24		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8773234200743495}, Val {'accuracy_val': 0.8051470588235294}, Test {'accuracy_test': 0.8631386861313869}
+[Client 1] Eval: Train {'accuracy_train': 0.9154929577464789}, Val {'accuracy_val': 0.8488576449912126}, Test {'accuracy_test': 0.8629173989455184}
+[Client 2] Eval: Train {'accuracy_train': 0.8695652173913043}, Val {'accuracy_val': 0.7885802469135802}, Test {'accuracy_test': 0.8195718654434251}
+[Client 3] Eval: Train {'accuracy_train': 0.9149797570850202}, Val {'accuracy_val': 0.8452380952380952}, Test {'accuracy_test': 0.7909270216962525}
+[Client 4] Eval: Train {'accuracy_train': 0.8816326530612245}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8571428571428571}, Val {'accuracy_val': 0.7911877394636015}, Test {'accuracy_test': 0.7893738140417458}
+[Client 6] Eval: Train {'accuracy_train': 0.9227642276422764}, Val {'accuracy_val': 0.8056112224448898}, Test {'accuracy_test': 0.8223552894211577}
+[Client 7] Eval: Train {'accuracy_train': 0.8802816901408451}, Val {'accuracy_val': 0.8278260869565217}, Test {'accuracy_test': 0.8356401384083045}
+[Client 8] Eval: Train {'accuracy_train': 0.9212328767123288}, Val {'accuracy_val': 0.8811544991511036}, Test {'accuracy_test': 0.8834459459459459}
+[Client 9] Eval: Train {'accuracy_train': 0.84}, Val {'accuracy_val': 0.8104693140794224}, Test {'accuracy_test': 0.7931654676258992}
+curr_round: 24	curr_val_accuracy: 0.8243	curr_test_accuracy: 0.8328
+best_round: 24	best_val_accuracy: 0.8243	best_test_accuracy: 0.8328
+--------------------------------------------------
+round # 25		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8810408921933085}, Val {'accuracy_val': 0.8088235294117647}, Test {'accuracy_test': 0.8631386861313869}
+[Client 1] Eval: Train {'accuracy_train': 0.926056338028169}, Val {'accuracy_val': 0.8541300527240774}, Test {'accuracy_test': 0.8646748681898067}
+[Client 2] Eval: Train {'accuracy_train': 0.8695652173913043}, Val {'accuracy_val': 0.7901234567901234}, Test {'accuracy_test': 0.8195718654434251}
+[Client 3] Eval: Train {'accuracy_train': 0.9190283400809717}, Val {'accuracy_val': 0.8452380952380952}, Test {'accuracy_test': 0.7850098619329389}
+[Client 4] Eval: Train {'accuracy_train': 0.8816326530612245}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.861003861003861}, Val {'accuracy_val': 0.7911877394636015}, Test {'accuracy_test': 0.7912713472485768}
+[Client 6] Eval: Train {'accuracy_train': 0.9227642276422764}, Val {'accuracy_val': 0.8096192384769539}, Test {'accuracy_test': 0.8263473053892215}
+[Client 7] Eval: Train {'accuracy_train': 0.8943661971830986}, Val {'accuracy_val': 0.831304347826087}, Test {'accuracy_test': 0.8373702422145328}
+[Client 8] Eval: Train {'accuracy_train': 0.928082191780822}, Val {'accuracy_val': 0.8811544991511036}, Test {'accuracy_test': 0.8817567567567568}
+[Client 9] Eval: Train {'accuracy_train': 0.8363636363636363}, Val {'accuracy_val': 0.8140794223826715}, Test {'accuracy_test': 0.7949640287769785}
+curr_round: 25	curr_val_accuracy: 0.8265	curr_test_accuracy: 0.8331
+best_round: 25	best_val_accuracy: 0.8265	best_test_accuracy: 0.8331
+--------------------------------------------------
+round # 26		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8847583643122676}, Val {'accuracy_val': 0.8106617647058824}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.926056338028169}, Val {'accuracy_val': 0.8523725834797891}, Test {'accuracy_test': 0.8681898066783831}
+[Client 2] Eval: Train {'accuracy_train': 0.8695652173913043}, Val {'accuracy_val': 0.7978395061728395}, Test {'accuracy_test': 0.8211009174311926}
+[Client 3] Eval: Train {'accuracy_train': 0.9149797570850202}, Val {'accuracy_val': 0.8492063492063492}, Test {'accuracy_test': 0.7889546351084813}
+[Client 4] Eval: Train {'accuracy_train': 0.8857142857142857}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.861003861003861}, Val {'accuracy_val': 0.7950191570881227}, Test {'accuracy_test': 0.7950664136622391}
+[Client 6] Eval: Train {'accuracy_train': 0.9227642276422764}, Val {'accuracy_val': 0.8136272545090181}, Test {'accuracy_test': 0.8303393213572854}
+[Client 7] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.831304347826087}, Test {'accuracy_test': 0.8391003460207612}
+[Client 8] Eval: Train {'accuracy_train': 0.9315068493150684}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8834459459459459}
+[Client 9] Eval: Train {'accuracy_train': 0.84}, Val {'accuracy_val': 0.8158844765342961}, Test {'accuracy_test': 0.7949640287769785}
+curr_round: 26	curr_val_accuracy: 0.8285	curr_test_accuracy: 0.8355
+best_round: 26	best_val_accuracy: 0.8285	best_test_accuracy: 0.8355
+--------------------------------------------------
+round # 27		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8847583643122676}, Val {'accuracy_val': 0.8069852941176471}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9295774647887324}, Val {'accuracy_val': 0.859402460456942}, Test {'accuracy_test': 0.8717047451669596}
+[Client 2] Eval: Train {'accuracy_train': 0.8757763975155279}, Val {'accuracy_val': 0.7962962962962963}, Test {'accuracy_test': 0.8226299694189603}
+[Client 3] Eval: Train {'accuracy_train': 0.9190283400809717}, Val {'accuracy_val': 0.8531746031746031}, Test {'accuracy_test': 0.7948717948717948}
+[Client 4] Eval: Train {'accuracy_train': 0.8979591836734694}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.8648648648648649}, Val {'accuracy_val': 0.7988505747126436}, Test {'accuracy_test': 0.7969639468690702}
+[Client 6] Eval: Train {'accuracy_train': 0.9227642276422764}, Val {'accuracy_val': 0.8136272545090181}, Test {'accuracy_test': 0.8363273453093812}
+[Client 7] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.831304347826087}, Test {'accuracy_test': 0.8373702422145328}
+[Client 8] Eval: Train {'accuracy_train': 0.9383561643835616}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8817567567567568}
+[Client 9] Eval: Train {'accuracy_train': 0.8436363636363636}, Val {'accuracy_val': 0.8176895306859205}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 27	curr_val_accuracy: 0.8294	curr_test_accuracy: 0.8375
+best_round: 27	best_val_accuracy: 0.8294	best_test_accuracy: 0.8375
+--------------------------------------------------
+round # 28		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8921933085501859}, Val {'accuracy_val': 0.8106617647058824}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9295774647887324}, Val {'accuracy_val': 0.8629173989455184}, Test {'accuracy_test': 0.875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.8757763975155279}, Val {'accuracy_val': 0.7993827160493827}, Test {'accuracy_test': 0.827217125382263}
+[Client 3] Eval: Train {'accuracy_train': 0.9190283400809717}, Val {'accuracy_val': 0.8511904761904762}, Test {'accuracy_test': 0.7948717948717948}
+[Client 4] Eval: Train {'accuracy_train': 0.9020408163265307}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8557114228456913}
+[Client 5] Eval: Train {'accuracy_train': 0.8687258687258688}, Val {'accuracy_val': 0.7969348659003831}, Test {'accuracy_test': 0.7969639468690702}
+[Client 6] Eval: Train {'accuracy_train': 0.9186991869918699}, Val {'accuracy_val': 0.8176352705410822}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.8347826086956521}, Test {'accuracy_test': 0.8442906574394463}
+[Client 8] Eval: Train {'accuracy_train': 0.9383561643835616}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8834459459459459}
+[Client 9] Eval: Train {'accuracy_train': 0.8436363636363636}, Val {'accuracy_val': 0.8176895306859205}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 28	curr_val_accuracy: 0.8308	curr_test_accuracy: 0.8398
+best_round: 28	best_val_accuracy: 0.8308	best_test_accuracy: 0.8398
+--------------------------------------------------
+round # 29		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8921933085501859}, Val {'accuracy_val': 0.8088235294117647}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9330985915492958}, Val {'accuracy_val': 0.8629173989455184}, Test {'accuracy_test': 0.8734622144112478}
+[Client 2] Eval: Train {'accuracy_train': 0.8757763975155279}, Val {'accuracy_val': 0.8055555555555556}, Test {'accuracy_test': 0.8302752293577982}
+[Client 3] Eval: Train {'accuracy_train': 0.9190283400809717}, Val {'accuracy_val': 0.8531746031746031}, Test {'accuracy_test': 0.7948717948717948}
+[Client 4] Eval: Train {'accuracy_train': 0.9020408163265307}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8557114228456913}
+[Client 5] Eval: Train {'accuracy_train': 0.8725868725868726}, Val {'accuracy_val': 0.8007662835249042}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.926829268292683}, Val {'accuracy_val': 0.8156312625250501}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.8365217391304348}, Test {'accuracy_test': 0.8494809688581315}
+[Client 8] Eval: Train {'accuracy_train': 0.9417808219178082}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.8436363636363636}, Val {'accuracy_val': 0.8194945848375451}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 29	curr_val_accuracy: 0.8325	curr_test_accuracy: 0.8415
+best_round: 29	best_val_accuracy: 0.8325	best_test_accuracy: 0.8415
+--------------------------------------------------
+round # 30		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8921933085501859}, Val {'accuracy_val': 0.8106617647058824}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9401408450704225}, Val {'accuracy_val': 0.8664323374340949}, Test {'accuracy_test': 0.8734622144112478}
+[Client 2] Eval: Train {'accuracy_train': 0.8757763975155279}, Val {'accuracy_val': 0.8101851851851852}, Test {'accuracy_test': 0.8318042813455657}
+[Client 3] Eval: Train {'accuracy_train': 0.9190283400809717}, Val {'accuracy_val': 0.8511904761904762}, Test {'accuracy_test': 0.7948717948717948}
+[Client 4] Eval: Train {'accuracy_train': 0.9020408163265307}, Val {'accuracy_val': 0.8380566801619433}, Test {'accuracy_test': 0.8577154308617234}
+[Client 5] Eval: Train {'accuracy_train': 0.8725868725868726}, Val {'accuracy_val': 0.8007662835249042}, Test {'accuracy_test': 0.8045540796963947}
+[Client 6] Eval: Train {'accuracy_train': 0.926829268292683}, Val {'accuracy_val': 0.8176352705410822}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8512110726643599}
+[Client 8] Eval: Train {'accuracy_train': 0.9417808219178082}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8834459459459459}
+[Client 9] Eval: Train {'accuracy_train': 0.8472727272727273}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.8057553956834532}
+curr_round: 30	curr_val_accuracy: 0.8345	curr_test_accuracy: 0.8425
+best_round: 30	best_val_accuracy: 0.8345	best_test_accuracy: 0.8425
+--------------------------------------------------
+round # 31		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8921933085501859}, Val {'accuracy_val': 0.8125}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9471830985915493}, Val {'accuracy_val': 0.8699472759226714}, Test {'accuracy_test': 0.8717047451669596}
+[Client 2] Eval: Train {'accuracy_train': 0.8819875776397516}, Val {'accuracy_val': 0.808641975308642}, Test {'accuracy_test': 0.8333333333333334}
+[Client 3] Eval: Train {'accuracy_train': 0.9190283400809717}, Val {'accuracy_val': 0.8531746031746031}, Test {'accuracy_test': 0.7988165680473372}
+[Client 4] Eval: Train {'accuracy_train': 0.9061224489795918}, Val {'accuracy_val': 0.8380566801619433}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.8725868725868726}, Val {'accuracy_val': 0.8026819923371648}, Test {'accuracy_test': 0.8045540796963947}
+[Client 6] Eval: Train {'accuracy_train': 0.926829268292683}, Val {'accuracy_val': 0.8196392785571143}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8529411764705882}
+[Client 8] Eval: Train {'accuracy_train': 0.9452054794520548}, Val {'accuracy_val': 0.8845500848896435}, Test {'accuracy_test': 0.8817567567567568}
+[Client 9] Eval: Train {'accuracy_train': 0.8472727272727273}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.8057553956834532}
+curr_round: 31	curr_val_accuracy: 0.8352	curr_test_accuracy: 0.8431
+best_round: 31	best_val_accuracy: 0.8352	best_test_accuracy: 0.8431
+--------------------------------------------------
+round # 32		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.895910780669145}, Val {'accuracy_val': 0.8143382352941176}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9471830985915493}, Val {'accuracy_val': 0.8646748681898067}, Test {'accuracy_test': 0.8769771528998243}
+[Client 2] Eval: Train {'accuracy_train': 0.8819875776397516}, Val {'accuracy_val': 0.8117283950617284}, Test {'accuracy_test': 0.8348623853211009}
+[Client 3] Eval: Train {'accuracy_train': 0.9190283400809717}, Val {'accuracy_val': 0.8511904761904762}, Test {'accuracy_test': 0.7988165680473372}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.8725868725868726}, Val {'accuracy_val': 0.8065134099616859}, Test {'accuracy_test': 0.8045540796963947}
+[Client 6] Eval: Train {'accuracy_train': 0.926829268292683}, Val {'accuracy_val': 0.8216432865731463}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.856401384083045}
+[Client 8] Eval: Train {'accuracy_train': 0.9452054794520548}, Val {'accuracy_val': 0.8896434634974533}, Test {'accuracy_test': 0.8817567567567568}
+[Client 9] Eval: Train {'accuracy_train': 0.8472727272727273}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.8057553956834532}
+curr_round: 32	curr_val_accuracy: 0.8365	curr_test_accuracy: 0.8438
+best_round: 32	best_val_accuracy: 0.8365	best_test_accuracy: 0.8438
+--------------------------------------------------
+round # 33		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.895910780669145}, Val {'accuracy_val': 0.8125}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9471830985915493}, Val {'accuracy_val': 0.8646748681898067}, Test {'accuracy_test': 0.8769771528998243}
+[Client 2] Eval: Train {'accuracy_train': 0.8850931677018633}, Val {'accuracy_val': 0.8101851851851852}, Test {'accuracy_test': 0.8363914373088684}
+[Client 3] Eval: Train {'accuracy_train': 0.9230769230769231}, Val {'accuracy_val': 0.8591269841269841}, Test {'accuracy_test': 0.796844181459566}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8764478764478765}, Val {'accuracy_val': 0.8084291187739464}, Test {'accuracy_test': 0.8045540796963947}
+[Client 6] Eval: Train {'accuracy_train': 0.926829268292683}, Val {'accuracy_val': 0.8276553106212425}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9049295774647887}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.856401384083045}
+[Client 8] Eval: Train {'accuracy_train': 0.9452054794520548}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8817567567567568}
+[Client 9] Eval: Train {'accuracy_train': 0.850909090909091}, Val {'accuracy_val': 0.8285198555956679}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 33	curr_val_accuracy: 0.8379	curr_test_accuracy: 0.8440
+best_round: 33	best_val_accuracy: 0.8379	best_test_accuracy: 0.8440
+--------------------------------------------------
+round # 34		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.895910780669145}, Val {'accuracy_val': 0.8180147058823529}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9507042253521126}, Val {'accuracy_val': 0.8664323374340949}, Test {'accuracy_test': 0.8787346221441125}
+[Client 2] Eval: Train {'accuracy_train': 0.8881987577639752}, Val {'accuracy_val': 0.8132716049382716}, Test {'accuracy_test': 0.8379204892966361}
+[Client 3] Eval: Train {'accuracy_train': 0.9271255060728745}, Val {'accuracy_val': 0.8591269841269841}, Test {'accuracy_test': 0.8007889546351085}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8380566801619433}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.888030888030888}, Val {'accuracy_val': 0.8084291187739464}, Test {'accuracy_test': 0.8064516129032258}
+[Client 6] Eval: Train {'accuracy_train': 0.926829268292683}, Val {'accuracy_val': 0.8276553106212425}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9084507042253521}, Val {'accuracy_val': 0.8382608695652174}, Test {'accuracy_test': 0.856401384083045}
+[Client 8] Eval: Train {'accuracy_train': 0.9486301369863014}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8834459459459459}
+[Client 9] Eval: Train {'accuracy_train': 0.8581818181818182}, Val {'accuracy_val': 0.8285198555956679}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 34	curr_val_accuracy: 0.8392	curr_test_accuracy: 0.8449
+best_round: 34	best_val_accuracy: 0.8392	best_test_accuracy: 0.8449
+--------------------------------------------------
+round # 35		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8996282527881041}, Val {'accuracy_val': 0.8143382352941176}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9471830985915493}, Val {'accuracy_val': 0.8664323374340949}, Test {'accuracy_test': 0.8787346221441125}
+[Client 2] Eval: Train {'accuracy_train': 0.8881987577639752}, Val {'accuracy_val': 0.8148148148148148}, Test {'accuracy_test': 0.8394495412844036}
+[Client 3] Eval: Train {'accuracy_train': 0.9311740890688259}, Val {'accuracy_val': 0.8571428571428571}, Test {'accuracy_test': 0.8027613412228797}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8380566801619433}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.888030888030888}, Val {'accuracy_val': 0.814176245210728}, Test {'accuracy_test': 0.8045540796963947}
+[Client 6] Eval: Train {'accuracy_train': 0.9308943089430894}, Val {'accuracy_val': 0.8276553106212425}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9119718309859155}, Val {'accuracy_val': 0.8382608695652174}, Test {'accuracy_test': 0.8581314878892734}
+[Client 8] Eval: Train {'accuracy_train': 0.952054794520548}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.8654545454545455}, Val {'accuracy_val': 0.8267148014440433}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 35	curr_val_accuracy: 0.8385	curr_test_accuracy: 0.8456
+best_round: 34	best_val_accuracy: 0.8392	best_test_accuracy: 0.8449
+--------------------------------------------------
+round # 36		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8996282527881041}, Val {'accuracy_val': 0.8235294117647058}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9507042253521126}, Val {'accuracy_val': 0.8681898066783831}, Test {'accuracy_test': 0.8787346221441125}
+[Client 2] Eval: Train {'accuracy_train': 0.8913043478260869}, Val {'accuracy_val': 0.8194444444444444}, Test {'accuracy_test': 0.8409785932721713}
+[Client 3] Eval: Train {'accuracy_train': 0.9271255060728745}, Val {'accuracy_val': 0.8551587301587301}, Test {'accuracy_test': 0.8047337278106509}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8380566801619433}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.8918918918918919}, Val {'accuracy_val': 0.8160919540229885}, Test {'accuracy_test': 0.8007590132827325}
+[Client 6] Eval: Train {'accuracy_train': 0.9308943089430894}, Val {'accuracy_val': 0.8296593186372746}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9190140845070423}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8581314878892734}
+[Client 8] Eval: Train {'accuracy_train': 0.952054794520548}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8834459459459459}
+[Client 9] Eval: Train {'accuracy_train': 0.8654545454545455}, Val {'accuracy_val': 0.8267148014440433}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 36	curr_val_accuracy: 0.8405	curr_test_accuracy: 0.8454
+best_round: 36	best_val_accuracy: 0.8405	best_test_accuracy: 0.8454
+--------------------------------------------------
+round # 37		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8996282527881041}, Val {'accuracy_val': 0.8180147058823529}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9577464788732394}, Val {'accuracy_val': 0.8681898066783831}, Test {'accuracy_test': 0.8804920913884007}
+[Client 2] Eval: Train {'accuracy_train': 0.8913043478260869}, Val {'accuracy_val': 0.8194444444444444}, Test {'accuracy_test': 0.845565749235474}
+[Client 3] Eval: Train {'accuracy_train': 0.9311740890688259}, Val {'accuracy_val': 0.8551587301587301}, Test {'accuracy_test': 0.8027613412228797}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8918918918918919}, Val {'accuracy_val': 0.8160919540229885}, Test {'accuracy_test': 0.8007590132827325}
+[Client 6] Eval: Train {'accuracy_train': 0.9390243902439024}, Val {'accuracy_val': 0.8296593186372746}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9225352112676056}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8598615916955017}
+[Client 8] Eval: Train {'accuracy_train': 0.958904109589041}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8654545454545455}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 37	curr_val_accuracy: 0.8392	curr_test_accuracy: 0.8465
+best_round: 36	best_val_accuracy: 0.8405	best_test_accuracy: 0.8454
+--------------------------------------------------
+round # 38		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.8996282527881041}, Val {'accuracy_val': 0.8253676470588235}, Test {'accuracy_test': 0.8759124087591241}
+[Client 1] Eval: Train {'accuracy_train': 0.9612676056338029}, Val {'accuracy_val': 0.8699472759226714}, Test {'accuracy_test': 0.8804920913884007}
+[Client 2] Eval: Train {'accuracy_train': 0.8944099378881988}, Val {'accuracy_val': 0.8194444444444444}, Test {'accuracy_test': 0.8470948012232415}
+[Client 3] Eval: Train {'accuracy_train': 0.9271255060728745}, Val {'accuracy_val': 0.8571428571428571}, Test {'accuracy_test': 0.8047337278106509}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.8918918918918919}, Val {'accuracy_val': 0.8199233716475096}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.926056338028169}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8615916955017301}
+[Client 8] Eval: Train {'accuracy_train': 0.952054794520548}, Val {'accuracy_val': 0.8845500848896435}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8654545454545455}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.8057553956834532}
+curr_round: 38	curr_val_accuracy: 0.8412	curr_test_accuracy: 0.8482
+best_round: 38	best_val_accuracy: 0.8412	best_test_accuracy: 0.8482
+--------------------------------------------------
+round # 39		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9033457249070632}, Val {'accuracy_val': 0.8198529411764706}, Test {'accuracy_test': 0.8740875912408759}
+[Client 1] Eval: Train {'accuracy_train': 0.9612676056338029}, Val {'accuracy_val': 0.8681898066783831}, Test {'accuracy_test': 0.8822495606326889}
+[Client 2] Eval: Train {'accuracy_train': 0.8944099378881988}, Val {'accuracy_val': 0.8194444444444444}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9311740890688259}, Val {'accuracy_val': 0.8611111111111112}, Test {'accuracy_test': 0.8027613412228797}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8918918918918919}, Val {'accuracy_val': 0.8180076628352491}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8356713426853707}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.926056338028169}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8615916955017301}
+[Client 8] Eval: Train {'accuracy_train': 0.958904109589041}, Val {'accuracy_val': 0.8845500848896435}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8654545454545455}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8075539568345323}
+curr_round: 39	curr_val_accuracy: 0.8408	curr_test_accuracy: 0.8485
+best_round: 38	best_val_accuracy: 0.8412	best_test_accuracy: 0.8482
+--------------------------------------------------
+round # 40		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9033457249070632}, Val {'accuracy_val': 0.8253676470588235}, Test {'accuracy_test': 0.8759124087591241}
+[Client 1] Eval: Train {'accuracy_train': 0.9612676056338029}, Val {'accuracy_val': 0.8681898066783831}, Test {'accuracy_test': 0.8822495606326889}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8194444444444444}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9271255060728745}, Val {'accuracy_val': 0.8571428571428571}, Test {'accuracy_test': 0.8027613412228797}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8918918918918919}, Val {'accuracy_val': 0.8218390804597702}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.926056338028169}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8615916955017301}
+[Client 8] Eval: Train {'accuracy_train': 0.9554794520547946}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8690909090909091}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8093525179856115}
+curr_round: 40	curr_val_accuracy: 0.8412	curr_test_accuracy: 0.8491
+best_round: 38	best_val_accuracy: 0.8412	best_test_accuracy: 0.8482
+--------------------------------------------------
+round # 41		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9033457249070632}, Val {'accuracy_val': 0.8253676470588235}, Test {'accuracy_test': 0.8740875912408759}
+[Client 1] Eval: Train {'accuracy_train': 0.9612676056338029}, Val {'accuracy_val': 0.8681898066783831}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8194444444444444}, Test {'accuracy_test': 0.8516819571865444}
+[Client 3] Eval: Train {'accuracy_train': 0.9311740890688259}, Val {'accuracy_val': 0.8630952380952381}, Test {'accuracy_test': 0.8086785009861933}
+[Client 4] Eval: Train {'accuracy_train': 0.9142857142857143}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.8918918918918919}, Val {'accuracy_val': 0.8199233716475096}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.926056338028169}, Val {'accuracy_val': 0.8382608695652174}, Test {'accuracy_test': 0.8633217993079585}
+[Client 8] Eval: Train {'accuracy_train': 0.958904109589041}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8918918918918919}
+[Client 9] Eval: Train {'accuracy_train': 0.8690909090909091}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8093525179856115}
+curr_round: 41	curr_val_accuracy: 0.8416	curr_test_accuracy: 0.8500
+best_round: 41	best_val_accuracy: 0.8416	best_test_accuracy: 0.8500
+--------------------------------------------------
+round # 42		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9033457249070632}, Val {'accuracy_val': 0.8235294117647058}, Test {'accuracy_test': 0.8740875912408759}
+[Client 1] Eval: Train {'accuracy_train': 0.9612676056338029}, Val {'accuracy_val': 0.8681898066783831}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8209876543209876}, Test {'accuracy_test': 0.8516819571865444}
+[Client 3] Eval: Train {'accuracy_train': 0.9271255060728745}, Val {'accuracy_val': 0.8611111111111112}, Test {'accuracy_test': 0.8067061143984221}
+[Client 4] Eval: Train {'accuracy_train': 0.9183673469387755}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.8996138996138996}, Val {'accuracy_val': 0.8218390804597702}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.926056338028169}, Val {'accuracy_val': 0.8382608695652174}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9554794520547946}, Val {'accuracy_val': 0.8845500848896435}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.8727272727272727}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.8093525179856115}
+curr_round: 42	curr_val_accuracy: 0.8416	curr_test_accuracy: 0.8494
+best_round: 42	best_val_accuracy: 0.8416	best_test_accuracy: 0.8494
+--------------------------------------------------
+round # 43		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9070631970260223}, Val {'accuracy_val': 0.8272058823529411}, Test {'accuracy_test': 0.8740875912408759}
+[Client 1] Eval: Train {'accuracy_train': 0.9612676056338029}, Val {'accuracy_val': 0.8699472759226714}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8194444444444444}, Test {'accuracy_test': 0.8516819571865444}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8630952380952381}, Test {'accuracy_test': 0.8126232741617357}
+[Client 4] Eval: Train {'accuracy_train': 0.9224489795918367}, Val {'accuracy_val': 0.8380566801619433}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8199233716475096}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9295774647887324}, Val {'accuracy_val': 0.8382608695652174}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9623287671232876}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8918918918918919}
+[Client 9] Eval: Train {'accuracy_train': 0.8727272727272727}, Val {'accuracy_val': 0.8176895306859205}, Test {'accuracy_test': 0.8057553956834532}
+curr_round: 43	curr_val_accuracy: 0.8419	curr_test_accuracy: 0.8509
+best_round: 43	best_val_accuracy: 0.8419	best_test_accuracy: 0.8509
+--------------------------------------------------
+round # 44		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9107806691449815}, Val {'accuracy_val': 0.8272058823529411}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9612676056338029}, Val {'accuracy_val': 0.8699472759226714}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8209876543209876}, Test {'accuracy_test': 0.8516819571865444}
+[Client 3] Eval: Train {'accuracy_train': 0.9271255060728745}, Val {'accuracy_val': 0.8630952380952381}, Test {'accuracy_test': 0.8086785009861933}
+[Client 4] Eval: Train {'accuracy_train': 0.926530612244898}, Val {'accuracy_val': 0.8421052631578947}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8996138996138996}, Val {'accuracy_val': 0.8218390804597702}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9295774647887324}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9623287671232876}, Val {'accuracy_val': 0.8879456706281834}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.8727272727272727}, Val {'accuracy_val': 0.8176895306859205}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 44	curr_val_accuracy: 0.8430	curr_test_accuracy: 0.8496
+best_round: 44	best_val_accuracy: 0.8430	best_test_accuracy: 0.8496
+--------------------------------------------------
+round # 45		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9144981412639405}, Val {'accuracy_val': 0.8272058823529411}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9647887323943662}, Val {'accuracy_val': 0.8699472759226714}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8225308641975309}, Test {'accuracy_test': 0.8532110091743119}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8126232741617357}
+[Client 4] Eval: Train {'accuracy_train': 0.9306122448979591}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8218390804597702}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9295774647887324}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9623287671232876}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8763636363636363}, Val {'accuracy_val': 0.8176895306859205}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 45	curr_val_accuracy: 0.8432	curr_test_accuracy: 0.8503
+best_round: 45	best_val_accuracy: 0.8432	best_test_accuracy: 0.8503
+--------------------------------------------------
+round # 46		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9144981412639405}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8717047451669596}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8547400611620795}
+[Client 3] Eval: Train {'accuracy_train': 0.9271255060728745}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8106508875739645}
+[Client 4] Eval: Train {'accuracy_train': 0.9306122448979591}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.9073359073359073}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8045540796963947}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9295774647887324}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9623287671232876}, Val {'accuracy_val': 0.8879456706281834}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.8763636363636363}, Val {'accuracy_val': 0.8158844765342961}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 46	curr_val_accuracy: 0.8441	curr_test_accuracy: 0.8505
+best_round: 46	best_val_accuracy: 0.8441	best_test_accuracy: 0.8505
+--------------------------------------------------
+round # 47		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9144981412639405}, Val {'accuracy_val': 0.8272058823529411}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8927943760984183}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8547400611620795}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8106508875739645}
+[Client 4] Eval: Train {'accuracy_train': 0.9346938775510204}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8256704980842912}, Test {'accuracy_test': 0.8026565464895635}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9330985915492958}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9623287671232876}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8763636363636363}, Val {'accuracy_val': 0.8140794223826715}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 47	curr_val_accuracy: 0.8443	curr_test_accuracy: 0.8510
+best_round: 47	best_val_accuracy: 0.8443	best_test_accuracy: 0.8510
+--------------------------------------------------
+round # 48		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8327205882352942}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8927943760984183}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8532110091743119}
+[Client 3] Eval: Train {'accuracy_train': 0.9311740890688259}, Val {'accuracy_val': 0.8630952380952381}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.9387755102040817}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8256704980842912}, Test {'accuracy_test': 0.8102466793168881}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9330985915492958}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9623287671232876}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.88}, Val {'accuracy_val': 0.8140794223826715}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 48	curr_val_accuracy: 0.8445	curr_test_accuracy: 0.8519
+best_round: 48	best_val_accuracy: 0.8445	best_test_accuracy: 0.8519
+--------------------------------------------------
+round # 49		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8927943760984183}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8516819571865444}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8126232741617357}
+[Client 4] Eval: Train {'accuracy_train': 0.9346938775510204}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8007590132827325}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9330985915492958}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9623287671232876}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8918918918918919}
+[Client 9] Eval: Train {'accuracy_train': 0.8836363636363637}, Val {'accuracy_val': 0.8158844765342961}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 49	curr_val_accuracy: 0.8448	curr_test_accuracy: 0.8507
+best_round: 49	best_val_accuracy: 0.8448	best_test_accuracy: 0.8507
+--------------------------------------------------
+round # 50		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8327205882352942}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8910369068541301}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8225308641975309}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9271255060728745}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.9387755102040817}, Val {'accuracy_val': 0.8441295546558705}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8218390804597702}, Test {'accuracy_test': 0.8121442125237192}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9330985915492958}, Val {'accuracy_val': 0.8382608695652174}, Test {'accuracy_test': 0.8650519031141869}
+[Client 8] Eval: Train {'accuracy_train': 0.9623287671232876}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8836363636363637}, Val {'accuracy_val': 0.8158844765342961}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 50	curr_val_accuracy: 0.8448	curr_test_accuracy: 0.8512
+best_round: 49	best_val_accuracy: 0.8448	best_test_accuracy: 0.8507
+--------------------------------------------------
+round # 51		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8327205882352942}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8717047451669596}, Test {'accuracy_test': 0.8910369068541301}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8225308641975309}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8630952380952381}, Test {'accuracy_test': 0.814595660749507}
+[Client 4] Eval: Train {'accuracy_train': 0.9346938775510204}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8256704980842912}, Test {'accuracy_test': 0.7988614800759013}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9330985915492958}, Val {'accuracy_val': 0.8382608695652174}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8836363636363637}, Val {'accuracy_val': 0.8158844765342961}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 51	curr_val_accuracy: 0.8436	curr_test_accuracy: 0.8501
+best_round: 49	best_val_accuracy: 0.8448	best_test_accuracy: 0.8507
+--------------------------------------------------
+round # 52		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8327205882352942}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8910369068541301}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9311740890688259}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.9346938775510204}, Val {'accuracy_val': 0.8481781376518218}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8237547892720306}, Test {'accuracy_test': 0.8102466793168881}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8416833667334669}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9330985915492958}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8158844765342961}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 52	curr_val_accuracy: 0.8459	curr_test_accuracy: 0.8514
+best_round: 52	best_val_accuracy: 0.8459	best_test_accuracy: 0.8514
+--------------------------------------------------
+round # 53		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8910369068541301}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8106508875739645}
+[Client 4] Eval: Train {'accuracy_train': 0.9346938775510204}, Val {'accuracy_val': 0.8380566801619433}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8918918918918919}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8045540796963947}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8416833667334669}, Test {'accuracy_test': 0.8483033932135728}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8896434634974533}, Test {'accuracy_test': 0.8918918918918919}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8194945848375451}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 53	curr_val_accuracy: 0.8450	curr_test_accuracy: 0.8507
+best_round: 52	best_val_accuracy: 0.8459	best_test_accuracy: 0.8514
+--------------------------------------------------
+round # 54		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8272058823529411}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8470948012232415}
+[Client 3] Eval: Train {'accuracy_train': 0.9311740890688259}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8205128205128205}
+[Client 4] Eval: Train {'accuracy_train': 0.9387755102040817}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.915057915057915}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8140417457305503}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8176895306859205}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 54	curr_val_accuracy: 0.8457	curr_test_accuracy: 0.8516
+best_round: 52	best_val_accuracy: 0.8459	best_test_accuracy: 0.8514
+--------------------------------------------------
+round # 55		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8470948012232415}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8126232741617357}
+[Client 4] Eval: Train {'accuracy_train': 0.9387755102040817}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8918918918918919}, Val {'accuracy_val': 0.8314176245210728}, Test {'accuracy_test': 0.8045540796963947}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8416833667334669}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8918918918918919}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 55	curr_val_accuracy: 0.8467	curr_test_accuracy: 0.8503
+best_round: 55	best_val_accuracy: 0.8467	best_test_accuracy: 0.8503
+--------------------------------------------------
+round # 56		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8253676470588235}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8225308641975309}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8244575936883629}
+[Client 4] Eval: Train {'accuracy_train': 0.9387755102040817}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.918918918918919}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8918918918918919}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 56	curr_val_accuracy: 0.8457	curr_test_accuracy: 0.8530
+best_round: 55	best_val_accuracy: 0.8467	best_test_accuracy: 0.8503
+--------------------------------------------------
+round # 57		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8253676470588235}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8256172839506173}, Test {'accuracy_test': 0.8470948012232415}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8126232741617357}
+[Client 4] Eval: Train {'accuracy_train': 0.9387755102040817}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8083491461100569}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.893581081081081}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 57	curr_val_accuracy: 0.8463	curr_test_accuracy: 0.8510
+best_round: 55	best_val_accuracy: 0.8467	best_test_accuracy: 0.8503
+--------------------------------------------------
+round # 58		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8209876543209876}, Test {'accuracy_test': 0.845565749235474}
+[Client 3] Eval: Train {'accuracy_train': 0.9352226720647774}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8244575936883629}
+[Client 4] Eval: Train {'accuracy_train': 0.9387755102040817}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.9266409266409267}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 58	curr_val_accuracy: 0.8470	curr_test_accuracy: 0.8521
+best_round: 58	best_val_accuracy: 0.8470	best_test_accuracy: 0.8521
+--------------------------------------------------
+round # 59		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8470948012232415}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.9428571428571428}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8064516129032258}
+[Client 6] Eval: Train {'accuracy_train': 0.9471544715447154}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9691780821917808}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8909090909090909}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 59	curr_val_accuracy: 0.8468	curr_test_accuracy: 0.8503
+best_round: 58	best_val_accuracy: 0.8470	best_test_accuracy: 0.8521
+--------------------------------------------------
+round # 60		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9182156133828996}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8717047451669596}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8256172839506173}, Test {'accuracy_test': 0.8440366972477065}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8205128205128205}
+[Client 4] Eval: Train {'accuracy_train': 0.9428571428571428}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.9266409266409267}, Val {'accuracy_val': 0.8352490421455939}, Test {'accuracy_test': 0.8235294117647058}
+[Client 6] Eval: Train {'accuracy_train': 0.9512195121951219}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9726027397260274}, Val {'accuracy_val': 0.8947368421052632}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 60	curr_val_accuracy: 0.8476	curr_test_accuracy: 0.8521
+best_round: 60	best_val_accuracy: 0.8476	best_test_accuracy: 0.8521
+--------------------------------------------------
+round # 61		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8717047451669596}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8256172839506173}, Test {'accuracy_test': 0.8440366972477065}
+[Client 3] Eval: Train {'accuracy_train': 0.9433198380566802}, Val {'accuracy_val': 0.871031746031746}, Test {'accuracy_test': 0.814595660749507}
+[Client 4] Eval: Train {'accuracy_train': 0.9510204081632653}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8996138996138996}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8064516129032258}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9726027397260274}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 61	curr_val_accuracy: 0.8470	curr_test_accuracy: 0.8496
+best_round: 60	best_val_accuracy: 0.8476	best_test_accuracy: 0.8521
+--------------------------------------------------
+round # 62		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8699472759226714}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8256172839506173}, Test {'accuracy_test': 0.8440366972477065}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.9428571428571428}, Val {'accuracy_val': 0.8502024291497976}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.9227799227799228}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8216318785578748}
+[Client 6] Eval: Train {'accuracy_train': 0.959349593495935}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8719723183391004}
+[Client 8] Eval: Train {'accuracy_train': 0.9726027397260274}, Val {'accuracy_val': 0.8947368421052632}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.8872727272727273}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 62	curr_val_accuracy: 0.8476	curr_test_accuracy: 0.8514
+best_round: 62	best_val_accuracy: 0.8476	best_test_accuracy: 0.8514
+--------------------------------------------------
+round # 63		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8699472759226714}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.845565749235474}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.814595660749507}
+[Client 4] Eval: Train {'accuracy_train': 0.9510204081632653}, Val {'accuracy_val': 0.8441295546558705}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8159392789373814}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8719723183391004}
+[Client 8] Eval: Train {'accuracy_train': 0.9726027397260274}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 63	curr_val_accuracy: 0.8463	curr_test_accuracy: 0.8512
+best_round: 62	best_val_accuracy: 0.8476	best_test_accuracy: 0.8514
+--------------------------------------------------
+round # 64		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8699472759226714}, Test {'accuracy_test': 0.8910369068541301}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.9428571428571428}, Val {'accuracy_val': 0.8502024291497976}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.9227799227799228}, Val {'accuracy_val': 0.8390804597701149}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8719723183391004}
+[Client 8] Eval: Train {'accuracy_train': 0.9726027397260274}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.7985611510791367}
+curr_round: 64	curr_val_accuracy: 0.8479	curr_test_accuracy: 0.8518
+best_round: 64	best_val_accuracy: 0.8479	best_test_accuracy: 0.8518
+--------------------------------------------------
+round # 65		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8717047451669596}, Test {'accuracy_test': 0.8927943760984183}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.8106508875739645}
+[Client 4] Eval: Train {'accuracy_train': 0.9469387755102041}, Val {'accuracy_val': 0.8441295546558705}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.8957528957528957}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9366197183098591}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9726027397260274}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 65	curr_val_accuracy: 0.8465	curr_test_accuracy: 0.8516
+best_round: 64	best_val_accuracy: 0.8479	best_test_accuracy: 0.8518
+--------------------------------------------------
+round # 66		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8717047451669596}, Test {'accuracy_test': 0.8927943760984183}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8205128205128205}
+[Client 4] Eval: Train {'accuracy_train': 0.9428571428571428}, Val {'accuracy_val': 0.8502024291497976}, Test {'accuracy_test': 0.8637274549098196}
+[Client 5] Eval: Train {'accuracy_train': 0.918918918918919}, Val {'accuracy_val': 0.8409961685823755}, Test {'accuracy_test': 0.8159392789373814}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9401408450704225}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9726027397260274}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.7985611510791367}
+curr_round: 66	curr_val_accuracy: 0.8483	curr_test_accuracy: 0.8523
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 67		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9683098591549296}, Val {'accuracy_val': 0.8717047451669596}, Test {'accuracy_test': 0.8927943760984183}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.814595660749507}
+[Client 4] Eval: Train {'accuracy_train': 0.9510204081632653}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8314176245210728}, Test {'accuracy_test': 0.8140417457305503}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.8356713426853707}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9401408450704225}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9726027397260274}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 67	curr_val_accuracy: 0.8468	curr_test_accuracy: 0.8516
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 68		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.8717047451669596}, Test {'accuracy_test': 0.8910369068541301}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8205128205128205}
+[Client 4] Eval: Train {'accuracy_train': 0.9428571428571428}, Val {'accuracy_val': 0.8502024291497976}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.918918918918919}, Val {'accuracy_val': 0.8409961685823755}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.843687374749499}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9401408450704225}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.976027397260274}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.7985611510791367}
+curr_round: 68	curr_val_accuracy: 0.8483	curr_test_accuracy: 0.8525
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 69		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8927943760984183}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.814595660749507}
+[Client 4] Eval: Train {'accuracy_train': 0.9469387755102041}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8314176245210728}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.959349593495935}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.976027397260274}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8249097472924187}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 69	curr_val_accuracy: 0.8468	curr_test_accuracy: 0.8516
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 70		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8910369068541301}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8240740740740741}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9392712550607287}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8205128205128205}
+[Client 4] Eval: Train {'accuracy_train': 0.9469387755102041}, Val {'accuracy_val': 0.8502024291497976}, Test {'accuracy_test': 0.8677354709418837}
+[Client 5] Eval: Train {'accuracy_train': 0.918918918918919}, Val {'accuracy_val': 0.8390804597701149}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.843687374749499}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.976027397260274}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 70	curr_val_accuracy: 0.8483	curr_test_accuracy: 0.8523
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 71		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.8734622144112478}, Test {'accuracy_test': 0.8910369068541301}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8256172839506173}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9473684210526315}, Val {'accuracy_val': 0.8690476190476191}, Test {'accuracy_test': 0.814595660749507}
+[Client 4] Eval: Train {'accuracy_train': 0.9469387755102041}, Val {'accuracy_val': 0.8441295546558705}, Test {'accuracy_test': 0.8617234468937875}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8314176245210728}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.959349593495935}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8719723183391004}
+[Client 8] Eval: Train {'accuracy_train': 0.976027397260274}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 71	curr_val_accuracy: 0.8467	curr_test_accuracy: 0.8519
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 72		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8256172839506173}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9433198380566802}, Val {'accuracy_val': 0.8611111111111112}, Test {'accuracy_test': 0.8224852071005917}
+[Client 4] Eval: Train {'accuracy_train': 0.9469387755102041}, Val {'accuracy_val': 0.8441295546558705}, Test {'accuracy_test': 0.8697394789579158}
+[Client 5] Eval: Train {'accuracy_train': 0.918918918918919}, Val {'accuracy_val': 0.8371647509578544}, Test {'accuracy_test': 0.8159392789373814}
+[Client 6] Eval: Train {'accuracy_train': 0.9552845528455285}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8719723183391004}
+[Client 8] Eval: Train {'accuracy_train': 0.976027397260274}, Val {'accuracy_val': 0.8913412563667232}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.9018181818181819}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 72	curr_val_accuracy: 0.8467	curr_test_accuracy: 0.8523
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 73		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8256172839506173}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9473684210526315}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.814595660749507}
+[Client 4] Eval: Train {'accuracy_train': 0.9510204081632653}, Val {'accuracy_val': 0.8421052631578947}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8314176245210728}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.9634146341463414}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8719723183391004}
+[Client 8] Eval: Train {'accuracy_train': 0.976027397260274}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.8945454545454545}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 73	curr_val_accuracy: 0.8465	curr_test_accuracy: 0.8516
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 74		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9219330855018587}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8667883211678832}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8256172839506173}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9433198380566802}, Val {'accuracy_val': 0.8630952380952381}, Test {'accuracy_test': 0.8224852071005917}
+[Client 4] Eval: Train {'accuracy_train': 0.9469387755102041}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8677354709418837}
+[Client 5] Eval: Train {'accuracy_train': 0.918918918918919}, Val {'accuracy_val': 0.8295019157088123}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.959349593495935}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8737024221453287}
+[Client 8] Eval: Train {'accuracy_train': 0.976027397260274}, Val {'accuracy_val': 0.8896434634974533}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.9018181818181819}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.7985611510791367}
+curr_round: 74	curr_val_accuracy: 0.8461	curr_test_accuracy: 0.8528
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 75		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9256505576208178}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8667883211678832}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.8975155279503105}, Val {'accuracy_val': 0.8271604938271605}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9473684210526315}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.9510204081632653}, Val {'accuracy_val': 0.8421052631578947}, Test {'accuracy_test': 0.8577154308617234}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8356713426853707}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8754325259515571}
+[Client 8] Eval: Train {'accuracy_train': 0.976027397260274}, Val {'accuracy_val': 0.8930390492359932}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.9018181818181819}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 75	curr_val_accuracy: 0.8461	curr_test_accuracy: 0.8518
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 76		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9256505576208178}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8667883211678832}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.9006211180124224}, Val {'accuracy_val': 0.8271604938271605}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.951417004048583}, Val {'accuracy_val': 0.8611111111111112}, Test {'accuracy_test': 0.8224852071005917}
+[Client 4] Eval: Train {'accuracy_train': 0.9591836734693877}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.915057915057915}, Val {'accuracy_val': 0.8295019157088123}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.959349593495935}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8754325259515571}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8896434634974533}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.9054545454545454}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 76	curr_val_accuracy: 0.8463	curr_test_accuracy: 0.8527
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 77		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9256505576208178}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.864963503649635}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.9006211180124224}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.845565749235474}
+[Client 3] Eval: Train {'accuracy_train': 0.9473684210526315}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.9591836734693877}, Val {'accuracy_val': 0.8441295546558705}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8256704980842912}, Test {'accuracy_test': 0.8140417457305503}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8356713426853707}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9436619718309859}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8771626297577855}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8896434634974533}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 77	curr_val_accuracy: 0.8459	curr_test_accuracy: 0.8514
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 78		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9256505576208178}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8667883211678832}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.9037267080745341}, Val {'accuracy_val': 0.8271604938271605}, Test {'accuracy_test': 0.845565749235474}
+[Client 3] Eval: Train {'accuracy_train': 0.951417004048583}, Val {'accuracy_val': 0.8591269841269841}, Test {'accuracy_test': 0.8224852071005917}
+[Client 4] Eval: Train {'accuracy_train': 0.9591836734693877}, Val {'accuracy_val': 0.8461538461538461}, Test {'accuracy_test': 0.8677354709418837}
+[Client 5] Eval: Train {'accuracy_train': 0.915057915057915}, Val {'accuracy_val': 0.8295019157088123}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.9634146341463414}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.9471830985915493}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8771626297577855}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8879456706281834}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.9054545454545454}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 78	curr_val_accuracy: 0.8459	curr_test_accuracy: 0.8525
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 79		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9256505576208178}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8892794376098418}
+[Client 2] Eval: Train {'accuracy_train': 0.9037267080745341}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8470948012232415}
+[Client 3] Eval: Train {'accuracy_train': 0.9473684210526315}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.9591836734693877}, Val {'accuracy_val': 0.8421052631578947}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8256704980842912}, Test {'accuracy_test': 0.8140417457305503}
+[Client 6] Eval: Train {'accuracy_train': 0.9715447154471545}, Val {'accuracy_val': 0.8356713426853707}, Test {'accuracy_test': 0.846307385229541}
+[Client 7] Eval: Train {'accuracy_train': 0.9507042253521126}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8771626297577855}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8879456706281834}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8039568345323741}
+curr_round: 79	curr_val_accuracy: 0.8459	curr_test_accuracy: 0.8525
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 80		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9256505576208178}, Val {'accuracy_val': 0.8327205882352942}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.9037267080745341}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8470948012232415}
+[Client 3] Eval: Train {'accuracy_train': 0.9554655870445344}, Val {'accuracy_val': 0.8591269841269841}, Test {'accuracy_test': 0.8224852071005917}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8522267206477733}, Test {'accuracy_test': 0.8677354709418837}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8295019157088123}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8396793587174348}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.9471830985915493}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8771626297577855}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8879456706281834}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.9054545454545454}, Val {'accuracy_val': 0.8194945848375451}, Test {'accuracy_test': 0.7985611510791367}
+curr_round: 80	curr_val_accuracy: 0.8468	curr_test_accuracy: 0.8528
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 81		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9256505576208178}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.9037267080745341}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.951417004048583}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.9073359073359073}, Val {'accuracy_val': 0.8295019157088123}, Test {'accuracy_test': 0.8159392789373814}
+[Client 6] Eval: Train {'accuracy_train': 0.9715447154471545}, Val {'accuracy_val': 0.8356713426853707}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.9507042253521126}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8754325259515571}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8902027027027027}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.802158273381295}
+curr_round: 81	curr_val_accuracy: 0.8459	curr_test_accuracy: 0.8521
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 82		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9330855018587361}, Val {'accuracy_val': 0.8327205882352942}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.9037267080745341}, Val {'accuracy_val': 0.8271604938271605}, Test {'accuracy_test': 0.8470948012232415}
+[Client 3] Eval: Train {'accuracy_train': 0.9554655870445344}, Val {'accuracy_val': 0.8611111111111112}, Test {'accuracy_test': 0.8224852071005917}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8522267206477733}, Test {'accuracy_test': 0.8677354709418837}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8314176245210728}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8416833667334669}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.9507042253521126}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8754325259515571}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8862478777589134}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.9090909090909091}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.7985611510791367}
+curr_round: 82	curr_val_accuracy: 0.8472	curr_test_accuracy: 0.8525
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 83		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.929368029739777}, Val {'accuracy_val': 0.8272058823529411}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.875219683655536}, Test {'accuracy_test': 0.8875219683655536}
+[Client 2] Eval: Train {'accuracy_train': 0.9037267080745341}, Val {'accuracy_val': 0.8271604938271605}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9554655870445344}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.840080971659919}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.9073359073359073}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8159392789373814}
+[Client 6] Eval: Train {'accuracy_train': 0.975609756097561}, Val {'accuracy_val': 0.8356713426853707}, Test {'accuracy_test': 0.844311377245509}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8754325259515571}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8845500848896435}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8231046931407943}, Test {'accuracy_test': 0.8003597122302158}
+curr_round: 83	curr_val_accuracy: 0.8452	curr_test_accuracy: 0.8516
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 84		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9330855018587361}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.8769771528998243}, Test {'accuracy_test': 0.8857644991212654}
+[Client 2] Eval: Train {'accuracy_train': 0.9037267080745341}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9554655870445344}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8224852071005917}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8522267206477733}, Test {'accuracy_test': 0.8677354709418837}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8737024221453287}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8845500848896435}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.9090909090909091}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 84	curr_val_accuracy: 0.8474	curr_test_accuracy: 0.8519
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 85		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9330855018587361}, Val {'accuracy_val': 0.8272058823529411}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.971830985915493}, Val {'accuracy_val': 0.8769771528998243}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.906832298136646}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9554655870445344}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8205128205128205}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8380566801619433}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.9073359073359073}, Val {'accuracy_val': 0.8256704980842912}, Test {'accuracy_test': 0.8159392789373814}
+[Client 6] Eval: Train {'accuracy_train': 0.975609756097561}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.8737024221453287}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8212996389891697}, Test {'accuracy_test': 0.7985611510791367}
+curr_round: 85	curr_val_accuracy: 0.8443	curr_test_accuracy: 0.8509
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 86		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9330855018587361}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9753521126760564}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.906832298136646}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9554655870445344}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8522267206477733}, Test {'accuracy_test': 0.8677354709418837}
+[Client 5] Eval: Train {'accuracy_train': 0.915057915057915}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.8434782608695652}, Test {'accuracy_test': 0.8719723183391004}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8194945848375451}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 86	curr_val_accuracy: 0.8472	curr_test_accuracy: 0.8512
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 87		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9330855018587361}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9753521126760564}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.906832298136646}, Val {'accuracy_val': 0.8317901234567902}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9595141700404858}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8360323886639676}, Test {'accuracy_test': 0.8597194388777555}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8237547892720306}, Test {'accuracy_test': 0.8159392789373814}
+[Client 6] Eval: Train {'accuracy_train': 0.975609756097561}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8719723183391004}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8176895306859205}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 87	curr_val_accuracy: 0.8443	curr_test_accuracy: 0.8503
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 88		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9330855018587361}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9753521126760564}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.906832298136646}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9554655870445344}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8502024291497976}, Test {'accuracy_test': 0.8677354709418837}
+[Client 5] Eval: Train {'accuracy_train': 0.915057915057915}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.8417391304347827}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8194945848375451}, Test {'accuracy_test': 0.7949640287769785}
+curr_round: 88	curr_val_accuracy: 0.8468	curr_test_accuracy: 0.8509
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 89		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9330855018587361}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9753521126760564}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.906832298136646}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9595141700404858}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8577154308617234}
+[Client 5] Eval: Train {'accuracy_train': 0.9034749034749034}, Val {'accuracy_val': 0.8256704980842912}, Test {'accuracy_test': 0.8159392789373814}
+[Client 6] Eval: Train {'accuracy_train': 0.975609756097561}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8845500848896435}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8140794223826715}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 89	curr_val_accuracy: 0.8445	curr_test_accuracy: 0.8500
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 90		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9368029739776952}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9753521126760564}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.9099378881987578}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9595141700404858}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8205128205128205}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8502024291497976}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.918918918918919}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8356713426853707}, Test {'accuracy_test': 0.8343313373253493}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8194945848375451}, Test {'accuracy_test': 0.7949640287769785}
+curr_round: 90	curr_val_accuracy: 0.8465	curr_test_accuracy: 0.8503
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 91		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9330855018587361}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9788732394366197}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8822495606326889}
+[Client 2] Eval: Train {'accuracy_train': 0.906832298136646}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9635627530364372}, Val {'accuracy_val': 0.8630952380952381}, Test {'accuracy_test': 0.814595660749507}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8557114228456913}
+[Client 5] Eval: Train {'accuracy_train': 0.9073359073359073}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.975609756097561}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8140794223826715}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 91	curr_val_accuracy: 0.8441	curr_test_accuracy: 0.8498
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 92		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9368029739776952}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8722627737226277}
+[Client 1] Eval: Train {'accuracy_train': 0.9788732394366197}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8822495606326889}
+[Client 2] Eval: Train {'accuracy_train': 0.9099378881987578}, Val {'accuracy_val': 0.8317901234567902}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9635627530364372}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.854251012145749}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.918918918918919}, Val {'accuracy_val': 0.8333333333333334}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.8363273453093812}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.8382608695652174}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8158844765342961}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 92	curr_val_accuracy: 0.8467	curr_test_accuracy: 0.8500
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 93		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9405204460966543}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9788732394366197}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8822495606326889}
+[Client 2] Eval: Train {'accuracy_train': 0.906832298136646}, Val {'accuracy_val': 0.8302469135802469}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9635627530364372}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8537074148296593}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.975609756097561}, Val {'accuracy_val': 0.8316633266533067}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.870242214532872}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8122743682310469}, Test {'accuracy_test': 0.7985611510791367}
+curr_round: 93	curr_val_accuracy: 0.8436	curr_test_accuracy: 0.8494
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 94		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9405204460966543}, Val {'accuracy_val': 0.8308823529411765}, Test {'accuracy_test': 0.8704379562043796}
+[Client 1] Eval: Train {'accuracy_train': 0.9788732394366197}, Val {'accuracy_val': 0.8787346221441125}, Test {'accuracy_test': 0.8822495606326889}
+[Client 2] Eval: Train {'accuracy_train': 0.9099378881987578}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9635627530364372}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8562753036437247}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.9227799227799228}, Val {'accuracy_val': 0.8295019157088123}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.8383233532934131}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8828522920203735}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8158844765342961}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 94	curr_val_accuracy: 0.8467	curr_test_accuracy: 0.8501
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 95		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9405204460966543}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9788732394366197}, Val {'accuracy_val': 0.8804920913884007}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.9099378881987578}, Val {'accuracy_val': 0.8302469135802469}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9676113360323887}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8165680473372781}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8340080971659919}, Test {'accuracy_test': 0.8557114228456913}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.9715447154471545}, Val {'accuracy_val': 0.8316633266533067}, Test {'accuracy_test': 0.8423153692614771}
+[Client 7] Eval: Train {'accuracy_train': 0.954225352112676}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8811544991511036}, Test {'accuracy_test': 0.8868243243243243}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8122743682310469}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 95	curr_val_accuracy: 0.8434	curr_test_accuracy: 0.8494
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 96		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9405204460966543}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9788732394366197}, Val {'accuracy_val': 0.8822495606326889}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.9099378881987578}, Val {'accuracy_val': 0.8287037037037037}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9635627530364372}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.9673469387755103}, Val {'accuracy_val': 0.854251012145749}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.9227799227799228}, Val {'accuracy_val': 0.8295019157088123}, Test {'accuracy_test': 0.8178368121442126}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8376753507014028}, Test {'accuracy_test': 0.8363273453093812}
+[Client 7] Eval: Train {'accuracy_train': 0.9577464788732394}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8811544991511036}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8104693140794224}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 96	curr_val_accuracy: 0.8459	curr_test_accuracy: 0.8501
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 97		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9442379182156134}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9788732394366197}, Val {'accuracy_val': 0.8822495606326889}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.9099378881987578}, Val {'accuracy_val': 0.8302469135802469}, Test {'accuracy_test': 0.8486238532110092}
+[Client 3] Eval: Train {'accuracy_train': 0.9676113360323887}, Val {'accuracy_val': 0.8650793650793651}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8319838056680162}, Test {'accuracy_test': 0.8557114228456913}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8275862068965517}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.9715447154471545}, Val {'accuracy_val': 0.8296593186372746}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.9577464788732394}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8811544991511036}, Test {'accuracy_test': 0.8885135135135135}
+[Client 9] Eval: Train {'accuracy_train': 0.9163636363636364}, Val {'accuracy_val': 0.8104693140794224}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 97	curr_val_accuracy: 0.8430	curr_test_accuracy: 0.8498
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 98		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9442379182156134}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9823943661971831}, Val {'accuracy_val': 0.8822495606326889}, Test {'accuracy_test': 0.8840070298769771}
+[Client 2] Eval: Train {'accuracy_train': 0.9099378881987578}, Val {'accuracy_val': 0.8302469135802469}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9635627530364372}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.9673469387755103}, Val {'accuracy_val': 0.8522267206477733}, Test {'accuracy_test': 0.8657314629258517}
+[Client 5] Eval: Train {'accuracy_train': 0.9227799227799228}, Val {'accuracy_val': 0.8314176245210728}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.967479674796748}, Val {'accuracy_val': 0.8336673346693386}, Test {'accuracy_test': 0.8363273453093812}
+[Client 7] Eval: Train {'accuracy_train': 0.9577464788732394}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8811544991511036}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.9127272727272727}, Val {'accuracy_val': 0.8086642599277978}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 98	curr_val_accuracy: 0.8456	curr_test_accuracy: 0.8501
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
+round # 99		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================
+
+[Client 0] Eval: Train {'accuracy_train': 0.9442379182156134}, Val {'accuracy_val': 0.8290441176470589}, Test {'accuracy_test': 0.8686131386861314}
+[Client 1] Eval: Train {'accuracy_train': 0.9823943661971831}, Val {'accuracy_val': 0.8822495606326889}, Test {'accuracy_test': 0.8857644991212654}
+[Client 2] Eval: Train {'accuracy_train': 0.9099378881987578}, Val {'accuracy_val': 0.8302469135802469}, Test {'accuracy_test': 0.8501529051987767}
+[Client 3] Eval: Train {'accuracy_train': 0.9676113360323887}, Val {'accuracy_val': 0.8670634920634921}, Test {'accuracy_test': 0.8185404339250493}
+[Client 4] Eval: Train {'accuracy_train': 0.963265306122449}, Val {'accuracy_val': 0.8319838056680162}, Test {'accuracy_test': 0.8557114228456913}
+[Client 5] Eval: Train {'accuracy_train': 0.9111969111969112}, Val {'accuracy_val': 0.8295019157088123}, Test {'accuracy_test': 0.8197343453510436}
+[Client 6] Eval: Train {'accuracy_train': 0.9715447154471545}, Val {'accuracy_val': 0.8296593186372746}, Test {'accuracy_test': 0.8403193612774451}
+[Client 7] Eval: Train {'accuracy_train': 0.9577464788732394}, Val {'accuracy_val': 0.84}, Test {'accuracy_test': 0.8685121107266436}
+[Client 8] Eval: Train {'accuracy_train': 0.9794520547945206}, Val {'accuracy_val': 0.8811544991511036}, Test {'accuracy_test': 0.8851351351351351}
+[Client 9] Eval: Train {'accuracy_train': 0.92}, Val {'accuracy_val': 0.8104693140794224}, Test {'accuracy_test': 0.7967625899280576}
+curr_round: 99	curr_val_accuracy: 0.8434	curr_test_accuracy: 0.8498
+best_round: 66	best_val_accuracy: 0.8483	best_test_accuracy: 0.8523
+--------------------------------------------------
