@@ -1,0 +1,254 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            4ry3f5h3sbgyjc14dvjd3ndr6b64z87s:
+                args:
+                    - --scenario
+                    - subgraph_fl
+                    - --simulation_mode
+                    - subgraph_fl_label_skew
+                    - --model
+                    - gcn
+                    - --task
+                    - node_cls
+                    - --num_epochs
+                    - "3"
+                    - --num_rounds
+                    - "100"
+                    - --louvain_resolution
+                    - "1"
+                    - --seed
+                    - "2026"
+                    - --gpuid
+                    - "0"
+                    - --metrics
+                    - accuracy
+                    - --debug
+                    - "False"
+                    - --fl_algorithm
+                    - hyperion
+                    - --num_clients
+                    - "10"
+                    - --evaluation_mode
+                    - local_model_on_local_data
+                    - --lr
+                    - "0.001"
+                    - --dataset
+                    - CiteSeer
+                codePath: FedGM\main.py
+                codePathLocal: main.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "12.9"
+                disk:
+                    /:
+                        total: "269176795136"
+                        used: "84845928448"
+                email: ducnguyen27925@gmail.com
+                executable: G:\conda\envs\gfl\python.exe
+                git:
+                    commit: 1472ef9a5cc1d33826bac089c70a93825dd73b0c
+                    remote: https://github.com/chuotchuilacduong/gfl.git
+                gpu: NVIDIA GeForce RTX 4060 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 3072
+                      memoryTotal: "8585740288"
+                      name: NVIDIA GeForce RTX 4060 Laptop GPU
+                      uuid: GPU-6b8e0867-783a-aa72-5102-0770dab13d02
+                host: DESKTOP-S7RSO8B
+                memory:
+                    total: "16309932032"
+                os: Windows-10-10.0.22631-SP0
+                program: G:\Code\python\FedGM\main.py
+                python: CPython 3.11.14
+                root: G:\Code\python\FedGM
+                startedAt: "2025-12-28T21:37:16.989409Z"
+                writerId: 4ry3f5h3sbgyjc14dvjd3ndr6b64z87s
+        m: []
+        python_version: 3.11.14
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+                - 77
+            "2":
+                - 1
+                - 5
+                - 53
+                - 77
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.11.14
+            "5": 0.23.0
+            "8":
+                - 2
+                - 3
+            "12": 0.23.0
+            "13": windows-amd64
+alpha:
+    value: 0.5
+batch_size:
+    value: 128
+client_frac:
+    value: 1
+clst:
+    value: 0.1
+comm_cost:
+    value: false
+condense_iters:
+    value: 100
+dataset:
+    value:
+        - CiteSeer
+debug:
+    value: true
+dirichlet_alpha:
+    value: 10
+dirichlet_try_cnt:
+    value: 100
+dp_epsilon:
+    value: 0
+dp_mech:
+    value: no_dp
+dp_q:
+    value: 0.1
+dropout:
+    value: 0
+evaluation_mode:
+    value: local_model_on_local_data
+feature_mask_prob:
+    value: 0.1
+fl_algorithm:
+    value: hyperion
+gpuid:
+    value: 0
+grad_clip:
+    value: 1
+head_deg_thres:
+    value: 10
+hete_injection_ratio:
+    value: 0
+hid_dim:
+    value: 256
+homo_injection_ratio:
+    value: 0
+hyper_cd_metric:
+    value: 1
+hyper_metric:
+    value: 10
+hyper_syn_norm:
+    value: 0.5
+lambda1:
+    value: 1
+lambda2:
+    value: 1
+lambda3:
+    value: 0.15
+least_samples:
+    value: 5
+local_epochs:
+    value: 3
+log_name:
+    value: null
+log_root:
+    value: null
+louvain_delta:
+    value: 20
+louvain_resolution:
+    value: 1
+lr:
+    value: 0.001
+max_degree:
+    value: 5
+max_epsilon:
+    value: 20
+metis_num_coms:
+    value: 100
+metrics:
+    value:
+        - accuracy
+model:
+    value:
+        - gcn
+model_param:
+    value: false
+noise_scale:
+    value: 1
+num_clients:
+    value: 10
+num_clusters:
+    value: 7
+num_epochs:
+    value: 3
+num_global_syn_nodes:
+    value: 100
+num_layers:
+    value: 2
+num_proto:
+    value: 5
+num_prototypes_per_class:
+    value: 5
+num_rounds:
+    value: 100
+optim:
+    value: adam
+p:
+    value: 0.2
+pre_epochs:
+    value: 200
+pre_gen_epochs:
+    value: 200
+processing:
+    value: raw
+processing_percentage:
+    value: 0.1
+prot_dim:
+    value: 64
+proto_contrast_weight:
+    value: 0.1
+pruning_epochs:
+    value: 10
+retain_ratio:
+    value: 0.8
+root:
+    value: /home/zhanghao/fgl/OpenFGL/openfgl/dataset
+scenario:
+    value: subgraph_fl
+seed:
+    value: 2026
+sep:
+    value: 0.1
+server_condense_iters:
+    value: 200
+simulation_mode:
+    value: subgraph_fl_label_skew
+sinkhorn_lambda:
+    value: 0.05
+solver_epochs:
+    value: 100
+subgraph_ration:
+    value: 0.25
+task:
+    value: node_cls
+tau:
+    value: 0.5
+train_val_test:
+    value: default_split
+use_cuda:
+    value: true
+weight_decay:
+    value: 0.0005
+wkd_logit_weight:
+    value: 1
+wkd_loss_cosine_decay_epoch:
+    value: 50
+wkd_sinkhorn_iter:
+    value: 10
+wkd_temperature:
+    value: 1

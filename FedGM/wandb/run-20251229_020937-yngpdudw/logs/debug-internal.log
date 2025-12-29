@@ -1,0 +1,14 @@
+{"time":"2025-12-29T02:09:39.9334296+07:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-29T02:09:40.3520949+07:00","level":"INFO","msg":"stream: created new stream","id":"yngpdudw"}
+{"time":"2025-12-29T02:09:40.3520949+07:00","level":"INFO","msg":"handler: started","stream_id":"yngpdudw"}
+{"time":"2025-12-29T02:09:40.3536717+07:00","level":"INFO","msg":"stream: started","id":"yngpdudw"}
+{"time":"2025-12-29T02:09:40.3536717+07:00","level":"INFO","msg":"writer: started","stream_id":"yngpdudw"}
+{"time":"2025-12-29T02:09:40.3536717+07:00","level":"INFO","msg":"sender: started","stream_id":"yngpdudw"}
+{"time":"2025-12-29T02:09:56.1379516+07:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1421}
+{"time":"2025-12-29T02:09:56.1923209+07:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":17}
+{"time":"2025-12-29T02:10:17.2720578+07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-29T02:10:17.7396319+07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-12-29T02:10:17.7499287+07:00","level":"INFO","msg":"stream: closing","id":"yngpdudw"}
+{"time":"2025-12-29T02:10:17.7499287+07:00","level":"INFO","msg":"handler: closed","stream_id":"yngpdudw"}
+{"time":"2025-12-29T02:10:17.7509381+07:00","level":"INFO","msg":"sender: closed","stream_id":"yngpdudw"}
+{"time":"2025-12-29T02:10:17.7509381+07:00","level":"INFO","msg":"stream: closed","id":"yngpdudw"}

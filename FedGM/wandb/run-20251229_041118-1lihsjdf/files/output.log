@@ -1,0 +1,1102 @@
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\data\in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+round # 0		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5866	loss_val: 1.5863	loss_test: 1.5901	accuracy_train: 0.3381	accuracy_val: 0.3077	accuracy_test: 0.3111
+[client 1]	loss_train: 1.6078	loss_val: 1.6098	loss_test: 1.6083	accuracy_train: 0.2905	accuracy_val: 0.2795	accuracy_test: 0.2692
+[client 2]	loss_train: 1.6035	loss_val: 1.6051	loss_test: 1.6084	accuracy_train: 0.2488	accuracy_val: 0.2621	accuracy_test: 0.2581
+[client 3]	loss_train: 1.6066	loss_val: 1.6107	loss_test: 1.6117	accuracy_train: 0.2500	accuracy_val: 0.2154	accuracy_test: 0.2048
+[client 4]	loss_train: 1.6052	loss_val: 1.6083	loss_test: 1.6059	accuracy_train: 0.2857	accuracy_val: 0.2649	accuracy_test: 0.2577
+curr_round: 0	curr_val_accuracy: 0.2671	curr_test_accuracy: 0.2613
+best_round: 0	best_val_accuracy: 0.2671	best_test_accuracy: 0.2613
+--------------------------------------------------
+round # 1		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5760	loss_val: 1.5771	loss_test: 1.5818	accuracy_train: 0.4143	accuracy_val: 0.3776	accuracy_test: 0.3222
+[client 1]	loss_train: 1.5996	loss_val: 1.6018	loss_test: 1.6008	accuracy_train: 0.2946	accuracy_val: 0.2857	accuracy_test: 0.2788
+[client 2]	loss_train: 1.5908	loss_val: 1.5942	loss_test: 1.5984	accuracy_train: 0.2300	accuracy_val: 0.2483	accuracy_test: 0.2366
+[client 3]	loss_train: 1.5888	loss_val: 1.5966	loss_test: 1.5985	accuracy_train: 0.2448	accuracy_val: 0.2077	accuracy_test: 0.1928
+[client 4]	loss_train: 1.5965	loss_val: 1.6003	loss_test: 1.5970	accuracy_train: 0.2723	accuracy_val: 0.2649	accuracy_test: 0.2371
+curr_round: 1	curr_val_accuracy: 0.2780	curr_test_accuracy: 0.2549
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 2		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5658	loss_val: 1.5690	loss_test: 1.5746	accuracy_train: 0.3571	accuracy_val: 0.3357	accuracy_test: 0.3000
+[client 1]	loss_train: 1.5927	loss_val: 1.5948	loss_test: 1.5943	accuracy_train: 0.2490	accuracy_val: 0.2484	accuracy_test: 0.2308
+[client 2]	loss_train: 1.5789	loss_val: 1.5836	loss_test: 1.5899	accuracy_train: 0.2113	accuracy_val: 0.2345	accuracy_test: 0.2151
+[client 3]	loss_train: 1.5726	loss_val: 1.5823	loss_test: 1.5859	accuracy_train: 0.1979	accuracy_val: 0.1769	accuracy_test: 0.1928
+[client 4]	loss_train: 1.5885	loss_val: 1.5928	loss_test: 1.5899	accuracy_train: 0.2455	accuracy_val: 0.2252	accuracy_test: 0.2165
+curr_round: 2	curr_val_accuracy: 0.2451	curr_test_accuracy: 0.2314
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 3		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5587	loss_val: 1.5638	loss_test: 1.5700	accuracy_train: 0.3095	accuracy_val: 0.3077	accuracy_test: 0.3000
+[client 1]	loss_train: 1.5881	loss_val: 1.5903	loss_test: 1.5897	accuracy_train: 0.2033	accuracy_val: 0.2298	accuracy_test: 0.2115
+[client 2]	loss_train: 1.5701	loss_val: 1.5755	loss_test: 1.5842	accuracy_train: 0.2113	accuracy_val: 0.2207	accuracy_test: 0.2151
+[client 3]	loss_train: 1.5600	loss_val: 1.5701	loss_test: 1.5759	accuracy_train: 0.1823	accuracy_val: 0.1769	accuracy_test: 0.1807
+[client 4]	loss_train: 1.5826	loss_val: 1.5872	loss_test: 1.5843	accuracy_train: 0.2054	accuracy_val: 0.2119	accuracy_test: 0.1959
+curr_round: 3	curr_val_accuracy: 0.2300	curr_test_accuracy: 0.2207
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 4		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5540	loss_val: 1.5606	loss_test: 1.5668	accuracy_train: 0.2905	accuracy_val: 0.3007	accuracy_test: 0.3000
+[client 1]	loss_train: 1.5848	loss_val: 1.5875	loss_test: 1.5865	accuracy_train: 0.2033	accuracy_val: 0.1988	accuracy_test: 0.2115
+[client 2]	loss_train: 1.5644	loss_val: 1.5705	loss_test: 1.5806	accuracy_train: 0.2113	accuracy_val: 0.2138	accuracy_test: 0.2151
+[client 3]	loss_train: 1.5510	loss_val: 1.5621	loss_test: 1.5689	accuracy_train: 0.1823	accuracy_val: 0.1769	accuracy_test: 0.1807
+[client 4]	loss_train: 1.5785	loss_val: 1.5835	loss_test: 1.5815	accuracy_train: 0.1875	accuracy_val: 0.2119	accuracy_test: 0.1753
+curr_round: 4	curr_val_accuracy: 0.2204	curr_test_accuracy: 0.2164
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 5		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5512	loss_val: 1.5588	loss_test: 1.5650	accuracy_train: 0.2810	accuracy_val: 0.2797	accuracy_test: 0.3111
+[client 1]	loss_train: 1.5822	loss_val: 1.5857	loss_test: 1.5848	accuracy_train: 0.1992	accuracy_val: 0.2112	accuracy_test: 0.2115
+[client 2]	loss_train: 1.5610	loss_val: 1.5678	loss_test: 1.5785	accuracy_train: 0.2113	accuracy_val: 0.2138	accuracy_test: 0.2151
+[client 3]	loss_train: 1.5454	loss_val: 1.5576	loss_test: 1.5646	accuracy_train: 0.1823	accuracy_val: 0.1769	accuracy_test: 0.1807
+[client 4]	loss_train: 1.5756	loss_val: 1.5817	loss_test: 1.5806	accuracy_train: 0.1920	accuracy_val: 0.2119	accuracy_test: 0.1856
+curr_round: 5	curr_val_accuracy: 0.2191	curr_test_accuracy: 0.2207
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 6		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5489	loss_val: 1.5575	loss_test: 1.5636	accuracy_train: 0.2905	accuracy_val: 0.2867	accuracy_test: 0.3000
+[client 1]	loss_train: 1.5804	loss_val: 1.5848	loss_test: 1.5839	accuracy_train: 0.2033	accuracy_val: 0.2174	accuracy_test: 0.2212
+[client 2]	loss_train: 1.5588	loss_val: 1.5665	loss_test: 1.5777	accuracy_train: 0.2113	accuracy_val: 0.2207	accuracy_test: 0.2151
+[client 3]	loss_train: 1.5423	loss_val: 1.5554	loss_test: 1.5623	accuracy_train: 0.1823	accuracy_val: 0.1769	accuracy_test: 0.1807
+[client 4]	loss_train: 1.5732	loss_val: 1.5807	loss_test: 1.5807	accuracy_train: 0.2098	accuracy_val: 0.2119	accuracy_test: 0.2062
+curr_round: 6	curr_val_accuracy: 0.2232	curr_test_accuracy: 0.2250
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 7		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5459	loss_val: 1.5559	loss_test: 1.5623	accuracy_train: 0.3143	accuracy_val: 0.3077	accuracy_test: 0.3111
+[client 1]	loss_train: 1.5779	loss_val: 1.5837	loss_test: 1.5829	accuracy_train: 0.2365	accuracy_val: 0.2298	accuracy_test: 0.2308
+[client 2]	loss_train: 1.5562	loss_val: 1.5653	loss_test: 1.5769	accuracy_train: 0.2207	accuracy_val: 0.2276	accuracy_test: 0.2366
+[client 3]	loss_train: 1.5393	loss_val: 1.5536	loss_test: 1.5603	accuracy_train: 0.1927	accuracy_val: 0.1769	accuracy_test: 0.1807
+[client 4]	loss_train: 1.5705	loss_val: 1.5795	loss_test: 1.5808	accuracy_train: 0.2723	accuracy_val: 0.2252	accuracy_test: 0.2165
+curr_round: 7	curr_val_accuracy: 0.2342	curr_test_accuracy: 0.2357
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 8		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5407	loss_val: 1.5536	loss_test: 1.5602	accuracy_train: 0.3286	accuracy_val: 0.3147	accuracy_test: 0.3222
+[client 1]	loss_train: 1.5739	loss_val: 1.5816	loss_test: 1.5809	accuracy_train: 0.2573	accuracy_val: 0.2422	accuracy_test: 0.2308
+[client 2]	loss_train: 1.5517	loss_val: 1.5629	loss_test: 1.5756	accuracy_train: 0.2300	accuracy_val: 0.2414	accuracy_test: 0.2366
+[client 3]	loss_train: 1.5338	loss_val: 1.5506	loss_test: 1.5571	accuracy_train: 0.2031	accuracy_val: 0.1769	accuracy_test: 0.1807
+[client 4]	loss_train: 1.5663	loss_val: 1.5776	loss_test: 1.5797	accuracy_train: 0.3259	accuracy_val: 0.2450	accuracy_test: 0.2474
+curr_round: 8	curr_val_accuracy: 0.2451	curr_test_accuracy: 0.2443
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 9		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5325	loss_val: 1.5500	loss_test: 1.5568	accuracy_train: 0.3571	accuracy_val: 0.3217	accuracy_test: 0.3222
+[client 1]	loss_train: 1.5677	loss_val: 1.5781	loss_test: 1.5778	accuracy_train: 0.2780	accuracy_val: 0.2484	accuracy_test: 0.2404
+[client 2]	loss_train: 1.5444	loss_val: 1.5585	loss_test: 1.5732	accuracy_train: 0.2441	accuracy_val: 0.2483	accuracy_test: 0.2473
+[client 3]	loss_train: 1.5250	loss_val: 1.5455	loss_test: 1.5523	accuracy_train: 0.2448	accuracy_val: 0.2154	accuracy_test: 0.2169
+[client 4]	loss_train: 1.5600	loss_val: 1.5744	loss_test: 1.5768	accuracy_train: 0.3527	accuracy_val: 0.2848	accuracy_test: 0.2577
+curr_round: 9	curr_val_accuracy: 0.2643	curr_test_accuracy: 0.2571
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 10		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5204	loss_val: 1.5446	loss_test: 1.5521	accuracy_train: 0.3714	accuracy_val: 0.3147	accuracy_test: 0.3333
+[client 1]	loss_train: 1.5589	loss_val: 1.5731	loss_test: 1.5734	accuracy_train: 0.3029	accuracy_val: 0.2547	accuracy_test: 0.2404
+[client 2]	loss_train: 1.5336	loss_val: 1.5519	loss_test: 1.5695	accuracy_train: 0.2488	accuracy_val: 0.2552	accuracy_test: 0.2473
+[client 3]	loss_train: 1.5116	loss_val: 1.5381	loss_test: 1.5452	accuracy_train: 0.2760	accuracy_val: 0.2385	accuracy_test: 0.2530
+[client 4]	loss_train: 1.5510	loss_val: 1.5697	loss_test: 1.5717	accuracy_train: 0.3795	accuracy_val: 0.2848	accuracy_test: 0.2680
+curr_round: 10	curr_val_accuracy: 0.2698	curr_test_accuracy: 0.2678
+best_round: 1	best_val_accuracy: 0.2780	best_test_accuracy: 0.2549
+--------------------------------------------------
+round # 11		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.5045	loss_val: 1.5379	loss_test: 1.5463	accuracy_train: 0.3762	accuracy_val: 0.3217	accuracy_test: 0.3222
+[client 1]	loss_train: 1.5477	loss_val: 1.5665	loss_test: 1.5680	accuracy_train: 0.3237	accuracy_val: 0.2547	accuracy_test: 0.2404
+[client 2]	loss_train: 1.5190	loss_val: 1.5429	loss_test: 1.5651	accuracy_train: 0.2535	accuracy_val: 0.2759	accuracy_test: 0.2581
+[client 3]	loss_train: 1.4943	loss_val: 1.5287	loss_test: 1.5361	accuracy_train: 0.3073	accuracy_val: 0.2538	accuracy_test: 0.2530
+[client 4]	loss_train: 1.5391	loss_val: 1.5636	loss_test: 1.5644	accuracy_train: 0.3839	accuracy_val: 0.2848	accuracy_test: 0.2680
+curr_round: 11	curr_val_accuracy: 0.2780	curr_test_accuracy: 0.2678
+best_round: 11	best_val_accuracy: 0.2780	best_test_accuracy: 0.2678
+--------------------------------------------------
+round # 12		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.4854	loss_val: 1.5313	loss_test: 1.5406	accuracy_train: 0.3714	accuracy_val: 0.3217	accuracy_test: 0.3222
+[client 1]	loss_train: 1.5344	loss_val: 1.5589	loss_test: 1.5620	accuracy_train: 0.3237	accuracy_val: 0.2547	accuracy_test: 0.2404
+[client 2]	loss_train: 1.5013	loss_val: 1.5321	loss_test: 1.5613	accuracy_train: 0.2676	accuracy_val: 0.2828	accuracy_test: 0.2581
+[client 3]	loss_train: 1.4744	loss_val: 1.5180	loss_test: 1.5259	accuracy_train: 0.3281	accuracy_val: 0.2615	accuracy_test: 0.2530
+[client 4]	loss_train: 1.5246	loss_val: 1.5563	loss_test: 1.5554	accuracy_train: 0.3884	accuracy_val: 0.2848	accuracy_test: 0.2680
+curr_round: 12	curr_val_accuracy: 0.2807	curr_test_accuracy: 0.2678
+best_round: 12	best_val_accuracy: 0.2807	best_test_accuracy: 0.2678
+--------------------------------------------------
+round # 13		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.4648	loss_val: 1.5250	loss_test: 1.5357	accuracy_train: 0.3857	accuracy_val: 0.3287	accuracy_test: 0.3111
+[client 1]	loss_train: 1.5197	loss_val: 1.5510	loss_test: 1.5561	accuracy_train: 0.3278	accuracy_val: 0.2671	accuracy_test: 0.2404
+[client 2]	loss_train: 1.4814	loss_val: 1.5206	loss_test: 1.5589	accuracy_train: 0.2911	accuracy_val: 0.2897	accuracy_test: 0.2688
+[client 3]	loss_train: 1.4523	loss_val: 1.5068	loss_test: 1.5154	accuracy_train: 0.3281	accuracy_val: 0.2769	accuracy_test: 0.2771
+[client 4]	loss_train: 1.5085	loss_val: 1.5487	loss_test: 1.5453	accuracy_train: 0.3929	accuracy_val: 0.2848	accuracy_test: 0.2680
+curr_round: 13	curr_val_accuracy: 0.2890	curr_test_accuracy: 0.2720
+best_round: 13	best_val_accuracy: 0.2890	best_test_accuracy: 0.2720
+--------------------------------------------------
+round # 14		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.4426	loss_val: 1.5202	loss_test: 1.5327	accuracy_train: 0.3905	accuracy_val: 0.3217	accuracy_test: 0.3111
+[client 1]	loss_train: 1.5039	loss_val: 1.5432	loss_test: 1.5502	accuracy_train: 0.3361	accuracy_val: 0.2671	accuracy_test: 0.2404
+[client 2]	loss_train: 1.4606	loss_val: 1.5098	loss_test: 1.5594	accuracy_train: 0.3005	accuracy_val: 0.2897	accuracy_test: 0.2688
+[client 3]	loss_train: 1.4297	loss_val: 1.4967	loss_test: 1.5054	accuracy_train: 0.3542	accuracy_val: 0.2923	accuracy_test: 0.2771
+[client 4]	loss_train: 1.4912	loss_val: 1.5423	loss_test: 1.5348	accuracy_train: 0.4018	accuracy_val: 0.2848	accuracy_test: 0.2680
+curr_round: 14	curr_val_accuracy: 0.2903	curr_test_accuracy: 0.2720
+best_round: 14	best_val_accuracy: 0.2903	best_test_accuracy: 0.2720
+--------------------------------------------------
+round # 15		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.4195	loss_val: 1.5160	loss_test: 1.5301	accuracy_train: 0.4429	accuracy_val: 0.3427	accuracy_test: 0.3111
+[client 1]	loss_train: 1.4873	loss_val: 1.5359	loss_test: 1.5443	accuracy_train: 0.3527	accuracy_val: 0.2733	accuracy_test: 0.2500
+[client 2]	loss_train: 1.4399	loss_val: 1.5007	loss_test: 1.5623	accuracy_train: 0.3099	accuracy_val: 0.3034	accuracy_test: 0.2688
+[client 3]	loss_train: 1.4066	loss_val: 1.4889	loss_test: 1.4970	accuracy_train: 0.3750	accuracy_val: 0.2769	accuracy_test: 0.2771
+[client 4]	loss_train: 1.4733	loss_val: 1.5371	loss_test: 1.5254	accuracy_train: 0.4196	accuracy_val: 0.2715	accuracy_test: 0.2474
+curr_round: 15	curr_val_accuracy: 0.2930	curr_test_accuracy: 0.2699
+best_round: 15	best_val_accuracy: 0.2930	best_test_accuracy: 0.2699
+--------------------------------------------------
+round # 16		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.3959	loss_val: 1.5122	loss_test: 1.5274	accuracy_train: 0.4714	accuracy_val: 0.3566	accuracy_test: 0.3000
+[client 1]	loss_train: 1.4699	loss_val: 1.5292	loss_test: 1.5385	accuracy_train: 0.3776	accuracy_val: 0.2671	accuracy_test: 0.2692
+[client 2]	loss_train: 1.4192	loss_val: 1.4934	loss_test: 1.5650	accuracy_train: 0.3239	accuracy_val: 0.3241	accuracy_test: 0.2688
+[client 3]	loss_train: 1.3839	loss_val: 1.4827	loss_test: 1.4901	accuracy_train: 0.4219	accuracy_val: 0.2769	accuracy_test: 0.3373
+[client 4]	loss_train: 1.4540	loss_val: 1.5323	loss_test: 1.5163	accuracy_train: 0.4375	accuracy_val: 0.2781	accuracy_test: 0.2680
+curr_round: 16	curr_val_accuracy: 0.2999	curr_test_accuracy: 0.2870
+best_round: 16	best_val_accuracy: 0.2999	best_test_accuracy: 0.2870
+--------------------------------------------------
+round # 17		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.3707	loss_val: 1.5074	loss_test: 1.5233	accuracy_train: 0.5286	accuracy_val: 0.3636	accuracy_test: 0.3222
+[client 1]	loss_train: 1.4513	loss_val: 1.5228	loss_test: 1.5319	accuracy_train: 0.3900	accuracy_val: 0.2981	accuracy_test: 0.2788
+[client 2]	loss_train: 1.3986	loss_val: 1.4865	loss_test: 1.5689	accuracy_train: 0.3474	accuracy_val: 0.3310	accuracy_test: 0.2796
+[client 3]	loss_train: 1.3604	loss_val: 1.4765	loss_test: 1.4844	accuracy_train: 0.4583	accuracy_val: 0.3077	accuracy_test: 0.3614
+[client 4]	loss_train: 1.4337	loss_val: 1.5282	loss_test: 1.5094	accuracy_train: 0.4464	accuracy_val: 0.2980	accuracy_test: 0.2887
+curr_round: 17	curr_val_accuracy: 0.3191	curr_test_accuracy: 0.3042
+best_round: 17	best_val_accuracy: 0.3191	best_test_accuracy: 0.3042
+--------------------------------------------------
+round # 18		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.3444	loss_val: 1.5029	loss_test: 1.5182	accuracy_train: 0.5571	accuracy_val: 0.3706	accuracy_test: 0.3444
+[client 1]	loss_train: 1.4313	loss_val: 1.5168	loss_test: 1.5252	accuracy_train: 0.3942	accuracy_val: 0.2981	accuracy_test: 0.2692
+[client 2]	loss_train: 1.3770	loss_val: 1.4802	loss_test: 1.5740	accuracy_train: 0.3709	accuracy_val: 0.3241	accuracy_test: 0.2796
+[client 3]	loss_train: 1.3357	loss_val: 1.4727	loss_test: 1.4799	accuracy_train: 0.4844	accuracy_val: 0.3077	accuracy_test: 0.3614
+[client 4]	loss_train: 1.4118	loss_val: 1.5242	loss_test: 1.5030	accuracy_train: 0.4866	accuracy_val: 0.3113	accuracy_test: 0.2887
+curr_round: 18	curr_val_accuracy: 0.3218	curr_test_accuracy: 0.3063
+best_round: 18	best_val_accuracy: 0.3218	best_test_accuracy: 0.3063
+--------------------------------------------------
+round # 19		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.3170	loss_val: 1.4991	loss_test: 1.5126	accuracy_train: 0.6333	accuracy_val: 0.3916	accuracy_test: 0.3556
+[client 1]	loss_train: 1.4096	loss_val: 1.5106	loss_test: 1.5194	accuracy_train: 0.4191	accuracy_val: 0.3043	accuracy_test: 0.3173
+[client 2]	loss_train: 1.3546	loss_val: 1.4745	loss_test: 1.5811	accuracy_train: 0.3803	accuracy_val: 0.3241	accuracy_test: 0.2796
+[client 3]	loss_train: 1.3089	loss_val: 1.4690	loss_test: 1.4754	accuracy_train: 0.5104	accuracy_val: 0.3154	accuracy_test: 0.3614
+[client 4]	loss_train: 1.3875	loss_val: 1.5201	loss_test: 1.4960	accuracy_train: 0.5312	accuracy_val: 0.3245	accuracy_test: 0.3093
+curr_round: 19	curr_val_accuracy: 0.3314	curr_test_accuracy: 0.3235
+best_round: 19	best_val_accuracy: 0.3314	best_test_accuracy: 0.3235
+--------------------------------------------------
+round # 20		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.2884	loss_val: 1.4985	loss_test: 1.5113	accuracy_train: 0.6429	accuracy_val: 0.3706	accuracy_test: 0.3556
+[client 1]	loss_train: 1.3857	loss_val: 1.5055	loss_test: 1.5137	accuracy_train: 0.4564	accuracy_val: 0.3106	accuracy_test: 0.3269
+[client 2]	loss_train: 1.3313	loss_val: 1.4707	loss_test: 1.5926	accuracy_train: 0.4085	accuracy_val: 0.3172	accuracy_test: 0.2688
+[client 3]	loss_train: 1.2807	loss_val: 1.4653	loss_test: 1.4706	accuracy_train: 0.5208	accuracy_val: 0.3385	accuracy_test: 0.3855
+[client 4]	loss_train: 1.3615	loss_val: 1.5167	loss_test: 1.4895	accuracy_train: 0.5402	accuracy_val: 0.3179	accuracy_test: 0.3402
+curr_round: 20	curr_val_accuracy: 0.3301	curr_test_accuracy: 0.3342
+best_round: 19	best_val_accuracy: 0.3314	best_test_accuracy: 0.3235
+--------------------------------------------------
+round # 21		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.2593	loss_val: 1.4981	loss_test: 1.5097	accuracy_train: 0.6571	accuracy_val: 0.3846	accuracy_test: 0.3444
+[client 1]	loss_train: 1.3597	loss_val: 1.5007	loss_test: 1.5061	accuracy_train: 0.4813	accuracy_val: 0.3106	accuracy_test: 0.3269
+[client 2]	loss_train: 1.3066	loss_val: 1.4677	loss_test: 1.6044	accuracy_train: 0.4178	accuracy_val: 0.3379	accuracy_test: 0.2796
+[client 3]	loss_train: 1.2497	loss_val: 1.4649	loss_test: 1.4664	accuracy_train: 0.5312	accuracy_val: 0.3462	accuracy_test: 0.3976
+[client 4]	loss_train: 1.3332	loss_val: 1.5153	loss_test: 1.4831	accuracy_train: 0.5446	accuracy_val: 0.3113	accuracy_test: 0.3402
+curr_round: 21	curr_val_accuracy: 0.3369	curr_test_accuracy: 0.3363
+best_round: 21	best_val_accuracy: 0.3369	best_test_accuracy: 0.3363
+--------------------------------------------------
+round # 22		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.2279	loss_val: 1.4976	loss_test: 1.5073	accuracy_train: 0.6619	accuracy_val: 0.3846	accuracy_test: 0.3889
+[client 1]	loss_train: 1.3324	loss_val: 1.4967	loss_test: 1.5003	accuracy_train: 0.5021	accuracy_val: 0.2981	accuracy_test: 0.3654
+[client 2]	loss_train: 1.2797	loss_val: 1.4641	loss_test: 1.6155	accuracy_train: 0.4413	accuracy_val: 0.3310	accuracy_test: 0.2796
+[client 3]	loss_train: 1.2166	loss_val: 1.4608	loss_test: 1.4611	accuracy_train: 0.5469	accuracy_val: 0.3538	accuracy_test: 0.3855
+[client 4]	loss_train: 1.3039	loss_val: 1.5159	loss_test: 1.4773	accuracy_train: 0.5491	accuracy_val: 0.3113	accuracy_test: 0.3711
+curr_round: 22	curr_val_accuracy: 0.3341	curr_test_accuracy: 0.3577
+best_round: 21	best_val_accuracy: 0.3369	best_test_accuracy: 0.3363
+--------------------------------------------------
+round # 23		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.1936	loss_val: 1.4980	loss_test: 1.5028	accuracy_train: 0.6714	accuracy_val: 0.4056	accuracy_test: 0.3889
+[client 1]	loss_train: 1.3033	loss_val: 1.4934	loss_test: 1.4947	accuracy_train: 0.5436	accuracy_val: 0.2919	accuracy_test: 0.3654
+[client 2]	loss_train: 1.2502	loss_val: 1.4628	loss_test: 1.6266	accuracy_train: 0.4695	accuracy_val: 0.3448	accuracy_test: 0.2903
+[client 3]	loss_train: 1.1821	loss_val: 1.4581	loss_test: 1.4556	accuracy_train: 0.5469	accuracy_val: 0.3615	accuracy_test: 0.3735
+[client 4]	loss_train: 1.2718	loss_val: 1.5137	loss_test: 1.4670	accuracy_train: 0.5625	accuracy_val: 0.3377	accuracy_test: 0.3918
+curr_round: 23	curr_val_accuracy: 0.3464	curr_test_accuracy: 0.3620
+best_round: 23	best_val_accuracy: 0.3464	best_test_accuracy: 0.3620
+--------------------------------------------------
+round # 24		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.1583	loss_val: 1.4993	loss_test: 1.4953	accuracy_train: 0.6762	accuracy_val: 0.3986	accuracy_test: 0.4222
+[client 1]	loss_train: 1.2736	loss_val: 1.4910	loss_test: 1.4886	accuracy_train: 0.5436	accuracy_val: 0.2981	accuracy_test: 0.3654
+[client 2]	loss_train: 1.2163	loss_val: 1.4610	loss_test: 1.6285	accuracy_train: 0.4930	accuracy_val: 0.3379	accuracy_test: 0.3011
+[client 3]	loss_train: 1.1463	loss_val: 1.4544	loss_test: 1.4505	accuracy_train: 0.5625	accuracy_val: 0.3769	accuracy_test: 0.3735
+[client 4]	loss_train: 1.2366	loss_val: 1.5120	loss_test: 1.4604	accuracy_train: 0.5759	accuracy_val: 0.3377	accuracy_test: 0.4021
+curr_round: 24	curr_val_accuracy: 0.3478	curr_test_accuracy: 0.3728
+best_round: 24	best_val_accuracy: 0.3478	best_test_accuracy: 0.3728
+--------------------------------------------------
+round # 25		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.1237	loss_val: 1.5005	loss_test: 1.4853	accuracy_train: 0.6857	accuracy_val: 0.3986	accuracy_test: 0.4111
+[client 1]	loss_train: 1.2420	loss_val: 1.4885	loss_test: 1.4728	accuracy_train: 0.5685	accuracy_val: 0.2919	accuracy_test: 0.3846
+[client 2]	loss_train: 1.1806	loss_val: 1.4573	loss_test: 1.6291	accuracy_train: 0.5211	accuracy_val: 0.3448	accuracy_test: 0.3226
+[client 3]	loss_train: 1.1114	loss_val: 1.4560	loss_test: 1.4476	accuracy_train: 0.5729	accuracy_val: 0.3846	accuracy_test: 0.3735
+[client 4]	loss_train: 1.2019	loss_val: 1.5067	loss_test: 1.4501	accuracy_train: 0.5804	accuracy_val: 0.3444	accuracy_test: 0.4021
+curr_round: 25	curr_val_accuracy: 0.3505	curr_test_accuracy: 0.3791
+best_round: 25	best_val_accuracy: 0.3505	best_test_accuracy: 0.3791
+--------------------------------------------------
+round # 26		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.0886	loss_val: 1.5053	loss_test: 1.4746	accuracy_train: 0.6810	accuracy_val: 0.4056	accuracy_test: 0.3889
+[client 1]	loss_train: 1.2092	loss_val: 1.4865	loss_test: 1.4606	accuracy_train: 0.5851	accuracy_val: 0.2919	accuracy_test: 0.4038
+[client 2]	loss_train: 1.1460	loss_val: 1.4567	loss_test: 1.6313	accuracy_train: 0.5540	accuracy_val: 0.3517	accuracy_test: 0.3118
+[client 3]	loss_train: 1.0770	loss_val: 1.4547	loss_test: 1.4422	accuracy_train: 0.5781	accuracy_val: 0.4077	accuracy_test: 0.3976
+[client 4]	loss_train: 1.1668	loss_val: 1.5101	loss_test: 1.4441	accuracy_train: 0.5848	accuracy_val: 0.3510	accuracy_test: 0.4124
+curr_round: 26	curr_val_accuracy: 0.3587	curr_test_accuracy: 0.3834
+best_round: 26	best_val_accuracy: 0.3587	best_test_accuracy: 0.3834
+--------------------------------------------------
+round # 27		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.0515	loss_val: 1.5144	loss_test: 1.4703	accuracy_train: 0.6857	accuracy_val: 0.3916	accuracy_test: 0.3778
+[client 1]	loss_train: 1.1757	loss_val: 1.4862	loss_test: 1.4576	accuracy_train: 0.5892	accuracy_val: 0.2981	accuracy_test: 0.3558
+[client 2]	loss_train: 1.1114	loss_val: 1.4591	loss_test: 1.6434	accuracy_train: 0.5869	accuracy_val: 0.3586	accuracy_test: 0.3226
+[client 3]	loss_train: 1.0410	loss_val: 1.4505	loss_test: 1.4348	accuracy_train: 0.5885	accuracy_val: 0.4077	accuracy_test: 0.4217
+[client 4]	loss_train: 1.1310	loss_val: 1.5240	loss_test: 1.4476	accuracy_train: 0.5893	accuracy_val: 0.3444	accuracy_test: 0.4124
+curr_round: 27	curr_val_accuracy: 0.3574	curr_test_accuracy: 0.3769
+best_round: 26	best_val_accuracy: 0.3587	best_test_accuracy: 0.3834
+--------------------------------------------------
+round # 28		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 1.0172	loss_val: 1.5298	loss_test: 1.4761	accuracy_train: 0.6952	accuracy_val: 0.4056	accuracy_test: 0.4222
+[client 1]	loss_train: 1.1403	loss_val: 1.4887	loss_test: 1.4542	accuracy_train: 0.6017	accuracy_val: 0.3354	accuracy_test: 0.3462
+[client 2]	loss_train: 1.0812	loss_val: 1.4666	loss_test: 1.6810	accuracy_train: 0.6103	accuracy_val: 0.3655	accuracy_test: 0.3226
+[client 3]	loss_train: 1.0044	loss_val: 1.4583	loss_test: 1.4353	accuracy_train: 0.6042	accuracy_val: 0.4000	accuracy_test: 0.4217
+[client 4]	loss_train: 1.0935	loss_val: 1.5345	loss_test: 1.4466	accuracy_train: 0.6116	accuracy_val: 0.3576	accuracy_test: 0.3814
+curr_round: 28	curr_val_accuracy: 0.3711	curr_test_accuracy: 0.3770
+best_round: 28	best_val_accuracy: 0.3711	best_test_accuracy: 0.3770
+--------------------------------------------------
+round # 29		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.9801	loss_val: 1.5444	loss_test: 1.4700	accuracy_train: 0.7048	accuracy_val: 0.4126	accuracy_test: 0.4222
+[client 1]	loss_train: 1.1002	loss_val: 1.4894	loss_test: 1.4478	accuracy_train: 0.6141	accuracy_val: 0.3354	accuracy_test: 0.3654
+[client 2]	loss_train: 1.0387	loss_val: 1.4739	loss_test: 1.6966	accuracy_train: 0.6620	accuracy_val: 0.3724	accuracy_test: 0.3333
+[client 3]	loss_train: 0.9662	loss_val: 1.4581	loss_test: 1.4313	accuracy_train: 0.6302	accuracy_val: 0.4231	accuracy_test: 0.4458
+[client 4]	loss_train: 1.0545	loss_val: 1.5398	loss_test: 1.4380	accuracy_train: 0.6205	accuracy_val: 0.3709	accuracy_test: 0.3814
+curr_round: 29	curr_val_accuracy: 0.3807	curr_test_accuracy: 0.3877
+best_round: 29	best_val_accuracy: 0.3807	best_test_accuracy: 0.3877
+--------------------------------------------------
+round # 30		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.9426	loss_val: 1.5661	loss_test: 1.4662	accuracy_train: 0.7000	accuracy_val: 0.4126	accuracy_test: 0.4222
+[client 1]	loss_train: 1.0577	loss_val: 1.4885	loss_test: 1.4374	accuracy_train: 0.6307	accuracy_val: 0.3106	accuracy_test: 0.4038
+[client 2]	loss_train: 0.9894	loss_val: 1.4782	loss_test: 1.6972	accuracy_train: 0.6948	accuracy_val: 0.3724	accuracy_test: 0.3333
+[client 3]	loss_train: 0.9286	loss_val: 1.4645	loss_test: 1.4311	accuracy_train: 0.6667	accuracy_val: 0.4846	accuracy_test: 0.4578
+[client 4]	loss_train: 1.0179	loss_val: 1.5421	loss_test: 1.4322	accuracy_train: 0.6339	accuracy_val: 0.3907	accuracy_test: 0.3918
+curr_round: 30	curr_val_accuracy: 0.3902	curr_test_accuracy: 0.4006
+best_round: 30	best_val_accuracy: 0.3902	best_test_accuracy: 0.4006
+--------------------------------------------------
+round # 31		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.9058	loss_val: 1.5906	loss_test: 1.4694	accuracy_train: 0.7000	accuracy_val: 0.4126	accuracy_test: 0.4333
+[client 1]	loss_train: 1.0157	loss_val: 1.4920	loss_test: 1.4269	accuracy_train: 0.6515	accuracy_val: 0.2981	accuracy_test: 0.4038
+[client 2]	loss_train: 0.9488	loss_val: 1.4949	loss_test: 1.7194	accuracy_train: 0.7136	accuracy_val: 0.3862	accuracy_test: 0.3548
+[client 3]	loss_train: 0.8921	loss_val: 1.4825	loss_test: 1.4329	accuracy_train: 0.7188	accuracy_val: 0.5231	accuracy_test: 0.5181
+[client 4]	loss_train: 0.9804	loss_val: 1.5594	loss_test: 1.4303	accuracy_train: 0.6562	accuracy_val: 0.4106	accuracy_test: 0.3814
+curr_round: 31	curr_val_accuracy: 0.4012	curr_test_accuracy: 0.4155
+best_round: 31	best_val_accuracy: 0.4012	best_test_accuracy: 0.4155
+--------------------------------------------------
+round # 32		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.8666	loss_val: 1.6098	loss_test: 1.4741	accuracy_train: 0.7190	accuracy_val: 0.4056	accuracy_test: 0.4333
+[client 1]	loss_train: 0.9737	loss_val: 1.5017	loss_test: 1.4226	accuracy_train: 0.7012	accuracy_val: 0.3230	accuracy_test: 0.4038
+[client 2]	loss_train: 0.9172	loss_val: 1.5167	loss_test: 1.7610	accuracy_train: 0.7230	accuracy_val: 0.3862	accuracy_test: 0.3548
+[client 3]	loss_train: 0.8499	loss_val: 1.4971	loss_test: 1.4379	accuracy_train: 0.7135	accuracy_val: 0.5000	accuracy_test: 0.4940
+[client 4]	loss_train: 0.9483	loss_val: 1.5991	loss_test: 1.4607	accuracy_train: 0.6652	accuracy_val: 0.3775	accuracy_test: 0.3814
+curr_round: 32	curr_val_accuracy: 0.3944	curr_test_accuracy: 0.4113
+best_round: 31	best_val_accuracy: 0.4012	best_test_accuracy: 0.4155
+--------------------------------------------------
+round # 33		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.8303	loss_val: 1.6251	loss_test: 1.4684	accuracy_train: 0.7238	accuracy_val: 0.4126	accuracy_test: 0.4333
+[client 1]	loss_train: 0.9361	loss_val: 1.5176	loss_test: 1.4219	accuracy_train: 0.6929	accuracy_val: 0.3540	accuracy_test: 0.4038
+[client 2]	loss_train: 0.8704	loss_val: 1.5134	loss_test: 1.7570	accuracy_train: 0.7371	accuracy_val: 0.4000	accuracy_test: 0.4086
+[client 3]	loss_train: 0.8138	loss_val: 1.5029	loss_test: 1.4391	accuracy_train: 0.7292	accuracy_val: 0.5077	accuracy_test: 0.4819
+[client 4]	loss_train: 0.9141	loss_val: 1.6127	loss_test: 1.4565	accuracy_train: 0.6741	accuracy_val: 0.3709	accuracy_test: 0.3918
+curr_round: 33	curr_val_accuracy: 0.4053	curr_test_accuracy: 0.4219
+best_round: 33	best_val_accuracy: 0.4053	best_test_accuracy: 0.4219
+--------------------------------------------------
+round # 34		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.7983	loss_val: 1.6251	loss_test: 1.4625	accuracy_train: 0.7286	accuracy_val: 0.4196	accuracy_test: 0.4333
+[client 1]	loss_train: 0.8996	loss_val: 1.5300	loss_test: 1.4293	accuracy_train: 0.6971	accuracy_val: 0.3602	accuracy_test: 0.3942
+[client 2]	loss_train: 0.8382	loss_val: 1.5431	loss_test: 1.7845	accuracy_train: 0.7183	accuracy_val: 0.3862	accuracy_test: 0.4194
+[client 3]	loss_train: 0.7824	loss_val: 1.5304	loss_test: 1.4506	accuracy_train: 0.7552	accuracy_val: 0.5308	accuracy_test: 0.5181
+[client 4]	loss_train: 0.8745	loss_val: 1.6133	loss_test: 1.4372	accuracy_train: 0.6964	accuracy_val: 0.3775	accuracy_test: 0.4330
+curr_round: 34	curr_val_accuracy: 0.4108	curr_test_accuracy: 0.4369
+best_round: 34	best_val_accuracy: 0.4108	best_test_accuracy: 0.4369
+--------------------------------------------------
+round # 35		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.7671	loss_val: 1.6573	loss_test: 1.4581	accuracy_train: 0.7286	accuracy_val: 0.4196	accuracy_test: 0.4333
+[client 1]	loss_train: 0.8663	loss_val: 1.5445	loss_test: 1.4458	accuracy_train: 0.7054	accuracy_val: 0.3478	accuracy_test: 0.3846
+[client 2]	loss_train: 0.8129	loss_val: 1.5806	loss_test: 1.8316	accuracy_train: 0.7371	accuracy_val: 0.3586	accuracy_test: 0.4946
+[client 3]	loss_train: 0.7457	loss_val: 1.5536	loss_test: 1.4586	accuracy_train: 0.7552	accuracy_val: 0.5385	accuracy_test: 0.4940
+[client 4]	loss_train: 0.8487	loss_val: 1.6354	loss_test: 1.4291	accuracy_train: 0.6920	accuracy_val: 0.3907	accuracy_test: 0.4536
+curr_round: 35	curr_val_accuracy: 0.4067	curr_test_accuracy: 0.4496
+best_round: 34	best_val_accuracy: 0.4108	best_test_accuracy: 0.4369
+--------------------------------------------------
+round # 36		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.7385	loss_val: 1.7187	loss_test: 1.4769	accuracy_train: 0.7190	accuracy_val: 0.4196	accuracy_test: 0.4111
+[client 1]	loss_train: 0.8362	loss_val: 1.5580	loss_test: 1.4707	accuracy_train: 0.7054	accuracy_val: 0.3478	accuracy_test: 0.3750
+[client 2]	loss_train: 0.7738	loss_val: 1.6107	loss_test: 1.8568	accuracy_train: 0.7277	accuracy_val: 0.3655	accuracy_test: 0.4301
+[client 3]	loss_train: 0.7225	loss_val: 1.5769	loss_test: 1.4707	accuracy_train: 0.7604	accuracy_val: 0.5231	accuracy_test: 0.4940
+[client 4]	loss_train: 0.8183	loss_val: 1.6529	loss_test: 1.4293	accuracy_train: 0.7500	accuracy_val: 0.3907	accuracy_test: 0.4845
+curr_round: 36	curr_val_accuracy: 0.4054	curr_test_accuracy: 0.4368
+best_round: 34	best_val_accuracy: 0.4108	best_test_accuracy: 0.4369
+--------------------------------------------------
+round # 37		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.7095	loss_val: 1.7500	loss_test: 1.5007	accuracy_train: 0.7333	accuracy_val: 0.4126	accuracy_test: 0.4000
+[client 1]	loss_train: 0.8067	loss_val: 1.5751	loss_test: 1.4788	accuracy_train: 0.7178	accuracy_val: 0.3665	accuracy_test: 0.3750
+[client 2]	loss_train: 0.7325	loss_val: 1.6141	loss_test: 1.8736	accuracy_train: 0.7418	accuracy_val: 0.4000	accuracy_test: 0.4624
+[client 3]	loss_train: 0.7068	loss_val: 1.5841	loss_test: 1.4696	accuracy_train: 0.7708	accuracy_val: 0.5308	accuracy_test: 0.5181
+[client 4]	loss_train: 0.7933	loss_val: 1.7010	loss_test: 1.4843	accuracy_train: 0.7500	accuracy_val: 0.3775	accuracy_test: 0.4639
+curr_round: 37	curr_val_accuracy: 0.4136	curr_test_accuracy: 0.4410
+best_round: 37	best_val_accuracy: 0.4136	best_test_accuracy: 0.4410
+--------------------------------------------------
+round # 38		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.6883	loss_val: 1.7578	loss_test: 1.5251	accuracy_train: 0.7524	accuracy_val: 0.4126	accuracy_test: 0.4000
+[client 1]	loss_train: 0.7836	loss_val: 1.5936	loss_test: 1.5020	accuracy_train: 0.7220	accuracy_val: 0.3789	accuracy_test: 0.3654
+[client 2]	loss_train: 0.7090	loss_val: 1.6358	loss_test: 1.9235	accuracy_train: 0.7465	accuracy_val: 0.3931	accuracy_test: 0.4516
+[client 3]	loss_train: 0.6819	loss_val: 1.5813	loss_test: 1.4756	accuracy_train: 0.7917	accuracy_val: 0.5385	accuracy_test: 0.5181
+[client 4]	loss_train: 0.7767	loss_val: 1.7365	loss_test: 1.4898	accuracy_train: 0.7500	accuracy_val: 0.3642	accuracy_test: 0.4639
+curr_round: 38	curr_val_accuracy: 0.4136	curr_test_accuracy: 0.4368
+best_round: 38	best_val_accuracy: 0.4136	best_test_accuracy: 0.4368
+--------------------------------------------------
+round # 39		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.6725	loss_val: 1.8111	loss_test: 1.5642	accuracy_train: 0.7476	accuracy_val: 0.4126	accuracy_test: 0.4111
+[client 1]	loss_train: 0.7664	loss_val: 1.6237	loss_test: 1.5359	accuracy_train: 0.7012	accuracy_val: 0.3727	accuracy_test: 0.3750
+[client 2]	loss_train: 0.6855	loss_val: 1.6436	loss_test: 1.9442	accuracy_train: 0.7465	accuracy_val: 0.4000	accuracy_test: 0.4409
+[client 3]	loss_train: 0.6607	loss_val: 1.6001	loss_test: 1.5008	accuracy_train: 0.8021	accuracy_val: 0.5385	accuracy_test: 0.5060
+[client 4]	loss_train: 0.7444	loss_val: 1.7228	loss_test: 1.4823	accuracy_train: 0.7500	accuracy_val: 0.3709	accuracy_test: 0.4639
+curr_round: 39	curr_val_accuracy: 0.4150	curr_test_accuracy: 0.4368
+best_round: 39	best_val_accuracy: 0.4150	best_test_accuracy: 0.4368
+--------------------------------------------------
+round # 40		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.6571	loss_val: 1.8390	loss_test: 1.6021	accuracy_train: 0.7524	accuracy_val: 0.4196	accuracy_test: 0.4111
+[client 1]	loss_train: 0.7414	loss_val: 1.6494	loss_test: 1.5452	accuracy_train: 0.7012	accuracy_val: 0.3602	accuracy_test: 0.3750
+[client 2]	loss_train: 0.6726	loss_val: 1.7032	loss_test: 1.9834	accuracy_train: 0.7418	accuracy_val: 0.3931	accuracy_test: 0.4194
+[client 3]	loss_train: 0.6310	loss_val: 1.6091	loss_test: 1.5208	accuracy_train: 0.8177	accuracy_val: 0.5385	accuracy_test: 0.4940
+[client 4]	loss_train: 0.7271	loss_val: 1.7560	loss_test: 1.4903	accuracy_train: 0.7589	accuracy_val: 0.3709	accuracy_test: 0.4639
+curr_round: 40	curr_val_accuracy: 0.4122	curr_test_accuracy: 0.4304
+best_round: 39	best_val_accuracy: 0.4150	best_test_accuracy: 0.4368
+--------------------------------------------------
+round # 41		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.6365	loss_val: 1.8485	loss_test: 1.5800	accuracy_train: 0.7524	accuracy_val: 0.4196	accuracy_test: 0.4111
+[client 1]	loss_train: 0.7242	loss_val: 1.6701	loss_test: 1.5620	accuracy_train: 0.7137	accuracy_val: 0.3727	accuracy_test: 0.3750
+[client 2]	loss_train: 0.6525	loss_val: 1.7135	loss_test: 1.9860	accuracy_train: 0.7324	accuracy_val: 0.3931	accuracy_test: 0.4516
+[client 3]	loss_train: 0.6105	loss_val: 1.6039	loss_test: 1.5438	accuracy_train: 0.8125	accuracy_val: 0.5462	accuracy_test: 0.4940
+[client 4]	loss_train: 0.7063	loss_val: 1.7790	loss_test: 1.5004	accuracy_train: 0.7500	accuracy_val: 0.3709	accuracy_test: 0.4639
+curr_round: 41	curr_val_accuracy: 0.4163	curr_test_accuracy: 0.4368
+best_round: 41	best_val_accuracy: 0.4163	best_test_accuracy: 0.4368
+--------------------------------------------------
+round # 42		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.6178	loss_val: 1.8354	loss_test: 1.5363	accuracy_train: 0.7476	accuracy_val: 0.4336	accuracy_test: 0.4000
+[client 1]	loss_train: 0.7097	loss_val: 1.6908	loss_test: 1.5775	accuracy_train: 0.7220	accuracy_val: 0.3851	accuracy_test: 0.3846
+[client 2]	loss_train: 0.6471	loss_val: 1.7503	loss_test: 2.0496	accuracy_train: 0.7418	accuracy_val: 0.4069	accuracy_test: 0.4301
+[client 3]	loss_train: 0.6076	loss_val: 1.6682	loss_test: 1.5570	accuracy_train: 0.8021	accuracy_val: 0.5231	accuracy_test: 0.5060
+[client 4]	loss_train: 0.6855	loss_val: 1.8013	loss_test: 1.5057	accuracy_train: 0.7589	accuracy_val: 0.3841	accuracy_test: 0.4536
+curr_round: 42	curr_val_accuracy: 0.4232	curr_test_accuracy: 0.4325
+best_round: 42	best_val_accuracy: 0.4232	best_test_accuracy: 0.4325
+--------------------------------------------------
+round # 43		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.6039	loss_val: 1.8805	loss_test: 1.5669	accuracy_train: 0.7429	accuracy_val: 0.4196	accuracy_test: 0.4000
+[client 1]	loss_train: 0.6966	loss_val: 1.7272	loss_test: 1.6160	accuracy_train: 0.7095	accuracy_val: 0.3851	accuracy_test: 0.3846
+[client 2]	loss_train: 0.6284	loss_val: 1.7661	loss_test: 2.0864	accuracy_train: 0.7465	accuracy_val: 0.4000	accuracy_test: 0.4194
+[client 3]	loss_train: 0.5936	loss_val: 1.6885	loss_test: 1.5873	accuracy_train: 0.7969	accuracy_val: 0.5308	accuracy_test: 0.4940
+[client 4]	loss_train: 0.6720	loss_val: 1.8312	loss_test: 1.5188	accuracy_train: 0.7321	accuracy_val: 0.4040	accuracy_test: 0.4639
+curr_round: 43	curr_val_accuracy: 0.4246	curr_test_accuracy: 0.4304
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 44		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5865	loss_val: 1.8873	loss_test: 1.5544	accuracy_train: 0.7619	accuracy_val: 0.4196	accuracy_test: 0.3889
+[client 1]	loss_train: 0.6753	loss_val: 1.7383	loss_test: 1.6557	accuracy_train: 0.7220	accuracy_val: 0.3851	accuracy_test: 0.3654
+[client 2]	loss_train: 0.6047	loss_val: 1.7980	loss_test: 2.1094	accuracy_train: 0.7512	accuracy_val: 0.4069	accuracy_test: 0.4301
+[client 3]	loss_train: 0.5788	loss_val: 1.6999	loss_test: 1.6146	accuracy_train: 0.8125	accuracy_val: 0.4846	accuracy_test: 0.4819
+[client 4]	loss_train: 0.6579	loss_val: 1.8635	loss_test: 1.5616	accuracy_train: 0.7366	accuracy_val: 0.4040	accuracy_test: 0.4433
+curr_round: 44	curr_val_accuracy: 0.4177	curr_test_accuracy: 0.4197
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 45		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5703	loss_val: 1.8754	loss_test: 1.5359	accuracy_train: 0.7857	accuracy_val: 0.4266	accuracy_test: 0.4111
+[client 1]	loss_train: 0.6582	loss_val: 1.7449	loss_test: 1.6666	accuracy_train: 0.7261	accuracy_val: 0.3851	accuracy_test: 0.3750
+[client 2]	loss_train: 0.6039	loss_val: 1.7847	loss_test: 2.1771	accuracy_train: 0.7512	accuracy_val: 0.4276	accuracy_test: 0.4086
+[client 3]	loss_train: 0.5772	loss_val: 1.7317	loss_test: 1.6399	accuracy_train: 0.8177	accuracy_val: 0.5000	accuracy_test: 0.4819
+[client 4]	loss_train: 0.6331	loss_val: 1.8772	loss_test: 1.5667	accuracy_train: 0.7321	accuracy_val: 0.3907	accuracy_test: 0.4433
+curr_round: 45	curr_val_accuracy: 0.4232	curr_test_accuracy: 0.4219
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 46		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5628	loss_val: 1.8674	loss_test: 1.5587	accuracy_train: 0.7762	accuracy_val: 0.4056	accuracy_test: 0.4333
+[client 1]	loss_train: 0.6522	loss_val: 1.7613	loss_test: 1.6847	accuracy_train: 0.7220	accuracy_val: 0.3789	accuracy_test: 0.3750
+[client 2]	loss_train: 0.5803	loss_val: 1.7975	loss_test: 2.1784	accuracy_train: 0.7559	accuracy_val: 0.4207	accuracy_test: 0.4194
+[client 3]	loss_train: 0.5678	loss_val: 1.7437	loss_test: 1.6469	accuracy_train: 0.8229	accuracy_val: 0.4923	accuracy_test: 0.4819
+[client 4]	loss_train: 0.6221	loss_val: 1.8872	loss_test: 1.5644	accuracy_train: 0.7321	accuracy_val: 0.4040	accuracy_test: 0.4536
+curr_round: 46	curr_val_accuracy: 0.4177	curr_test_accuracy: 0.4304
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 47		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5507	loss_val: 1.8659	loss_test: 1.5668	accuracy_train: 0.7762	accuracy_val: 0.4196	accuracy_test: 0.4333
+[client 1]	loss_train: 0.6341	loss_val: 1.7770	loss_test: 1.7026	accuracy_train: 0.7386	accuracy_val: 0.3789	accuracy_test: 0.3654
+[client 2]	loss_train: 0.5669	loss_val: 1.8210	loss_test: 2.1972	accuracy_train: 0.7700	accuracy_val: 0.4000	accuracy_test: 0.4086
+[client 3]	loss_train: 0.5370	loss_val: 1.7528	loss_test: 1.6661	accuracy_train: 0.8281	accuracy_val: 0.4923	accuracy_test: 0.4458
+[client 4]	loss_train: 0.6101	loss_val: 1.9185	loss_test: 1.5999	accuracy_train: 0.7321	accuracy_val: 0.3841	accuracy_test: 0.4433
+curr_round: 47	curr_val_accuracy: 0.4122	curr_test_accuracy: 0.4176
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 48		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5390	loss_val: 1.8931	loss_test: 1.5662	accuracy_train: 0.7810	accuracy_val: 0.4266	accuracy_test: 0.4333
+[client 1]	loss_train: 0.6235	loss_val: 1.7942	loss_test: 1.7021	accuracy_train: 0.7676	accuracy_val: 0.3665	accuracy_test: 0.3942
+[client 2]	loss_train: 0.5632	loss_val: 1.8143	loss_test: 2.2422	accuracy_train: 0.7746	accuracy_val: 0.4138	accuracy_test: 0.3871
+[client 3]	loss_train: 0.5202	loss_val: 1.7929	loss_test: 1.7062	accuracy_train: 0.8281	accuracy_val: 0.4846	accuracy_test: 0.4458
+[client 4]	loss_train: 0.6182	loss_val: 1.9927	loss_test: 1.6164	accuracy_train: 0.7277	accuracy_val: 0.3709	accuracy_test: 0.4433
+curr_round: 48	curr_val_accuracy: 0.4095	curr_test_accuracy: 0.4198
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 49		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5289	loss_val: 1.8989	loss_test: 1.5593	accuracy_train: 0.7905	accuracy_val: 0.4476	accuracy_test: 0.4556
+[client 1]	loss_train: 0.6121	loss_val: 1.8078	loss_test: 1.7215	accuracy_train: 0.8050	accuracy_val: 0.3727	accuracy_test: 0.3846
+[client 2]	loss_train: 0.5331	loss_val: 1.8292	loss_test: 2.2289	accuracy_train: 0.7746	accuracy_val: 0.4000	accuracy_test: 0.4086
+[client 3]	loss_train: 0.5163	loss_val: 1.8369	loss_test: 1.7704	accuracy_train: 0.8073	accuracy_val: 0.4923	accuracy_test: 0.4699
+[client 4]	loss_train: 0.6088	loss_val: 2.0284	loss_test: 1.6354	accuracy_train: 0.7232	accuracy_val: 0.3775	accuracy_test: 0.4330
+curr_round: 49	curr_val_accuracy: 0.4149	curr_test_accuracy: 0.4284
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 50		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5208	loss_val: 1.9308	loss_test: 1.5868	accuracy_train: 0.8000	accuracy_val: 0.4336	accuracy_test: 0.4556
+[client 1]	loss_train: 0.6113	loss_val: 1.8230	loss_test: 1.7585	accuracy_train: 0.7759	accuracy_val: 0.3789	accuracy_test: 0.3942
+[client 2]	loss_train: 0.5339	loss_val: 1.8411	loss_test: 2.2378	accuracy_train: 0.7746	accuracy_val: 0.4069	accuracy_test: 0.4086
+[client 3]	loss_train: 0.5045	loss_val: 1.8297	loss_test: 1.7776	accuracy_train: 0.8125	accuracy_val: 0.4923	accuracy_test: 0.4578
+[client 4]	loss_train: 0.5893	loss_val: 2.0372	loss_test: 1.6617	accuracy_train: 0.7188	accuracy_val: 0.3841	accuracy_test: 0.4227
+curr_round: 50	curr_val_accuracy: 0.4163	curr_test_accuracy: 0.4262
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 51		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5218	loss_val: 2.0254	loss_test: 1.6322	accuracy_train: 0.8000	accuracy_val: 0.4336	accuracy_test: 0.4111
+[client 1]	loss_train: 0.6075	loss_val: 1.8483	loss_test: 1.7561	accuracy_train: 0.7925	accuracy_val: 0.3665	accuracy_test: 0.3750
+[client 2]	loss_train: 0.5148	loss_val: 1.8202	loss_test: 2.2265	accuracy_train: 0.7793	accuracy_val: 0.4138	accuracy_test: 0.4086
+[client 3]	loss_train: 0.4981	loss_val: 1.8718	loss_test: 1.7896	accuracy_train: 0.8333	accuracy_val: 0.4769	accuracy_test: 0.4578
+[client 4]	loss_train: 0.5785	loss_val: 2.0242	loss_test: 1.6195	accuracy_train: 0.7411	accuracy_val: 0.3907	accuracy_test: 0.4330
+curr_round: 51	curr_val_accuracy: 0.4136	curr_test_accuracy: 0.4154
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 52		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.5083	loss_val: 2.0161	loss_test: 1.6176	accuracy_train: 0.8238	accuracy_val: 0.4406	accuracy_test: 0.4222
+[client 1]	loss_train: 0.6013	loss_val: 1.8553	loss_test: 1.7614	accuracy_train: 0.7925	accuracy_val: 0.3665	accuracy_test: 0.3846
+[client 2]	loss_train: 0.5064	loss_val: 1.8361	loss_test: 2.2307	accuracy_train: 0.7793	accuracy_val: 0.4276	accuracy_test: 0.4516
+[client 3]	loss_train: 0.4760	loss_val: 1.8622	loss_test: 1.8129	accuracy_train: 0.8385	accuracy_val: 0.4769	accuracy_test: 0.4337
+[client 4]	loss_train: 0.5735	loss_val: 2.0365	loss_test: 1.6484	accuracy_train: 0.7411	accuracy_val: 0.3709	accuracy_test: 0.4433
+curr_round: 52	curr_val_accuracy: 0.4135	curr_test_accuracy: 0.4261
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 53		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4961	loss_val: 2.0270	loss_test: 1.6211	accuracy_train: 0.8190	accuracy_val: 0.4476	accuracy_test: 0.4333
+[client 1]	loss_train: 0.6095	loss_val: 1.8624	loss_test: 1.7609	accuracy_train: 0.8050	accuracy_val: 0.3789	accuracy_test: 0.4038
+[client 2]	loss_train: 0.5262	loss_val: 1.9075	loss_test: 2.2989	accuracy_train: 0.7653	accuracy_val: 0.3931	accuracy_test: 0.4301
+[client 3]	loss_train: 0.4830	loss_val: 1.8862	loss_test: 1.8178	accuracy_train: 0.8177	accuracy_val: 0.4769	accuracy_test: 0.4578
+[client 4]	loss_train: 0.5861	loss_val: 2.1146	loss_test: 1.7265	accuracy_train: 0.7232	accuracy_val: 0.3841	accuracy_test: 0.4536
+curr_round: 53	curr_val_accuracy: 0.4136	curr_test_accuracy: 0.4347
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 54		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4910	loss_val: 1.9970	loss_test: 1.6165	accuracy_train: 0.8190	accuracy_val: 0.4545	accuracy_test: 0.4222
+[client 1]	loss_train: 0.5994	loss_val: 1.8731	loss_test: 1.7773	accuracy_train: 0.7884	accuracy_val: 0.3851	accuracy_test: 0.3750
+[client 2]	loss_train: 0.5023	loss_val: 1.9083	loss_test: 2.2971	accuracy_train: 0.7840	accuracy_val: 0.4069	accuracy_test: 0.3978
+[client 3]	loss_train: 0.4884	loss_val: 1.9635	loss_test: 1.8631	accuracy_train: 0.8385	accuracy_val: 0.4615	accuracy_test: 0.4217
+[client 4]	loss_train: 0.5679	loss_val: 2.0552	loss_test: 1.6762	accuracy_train: 0.7366	accuracy_val: 0.4106	accuracy_test: 0.4639
+curr_round: 54	curr_val_accuracy: 0.4218	curr_test_accuracy: 0.4154
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 55		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4851	loss_val: 2.0346	loss_test: 1.6960	accuracy_train: 0.8238	accuracy_val: 0.4615	accuracy_test: 0.4333
+[client 1]	loss_train: 0.5878	loss_val: 1.8777	loss_test: 1.8062	accuracy_train: 0.7759	accuracy_val: 0.3727	accuracy_test: 0.3750
+[client 2]	loss_train: 0.4783	loss_val: 1.8858	loss_test: 2.2782	accuracy_train: 0.8075	accuracy_val: 0.4276	accuracy_test: 0.4409
+[client 3]	loss_train: 0.4626	loss_val: 1.9575	loss_test: 1.8537	accuracy_train: 0.8385	accuracy_val: 0.4615	accuracy_test: 0.4217
+[client 4]	loss_train: 0.5605	loss_val: 2.0839	loss_test: 1.7462	accuracy_train: 0.7321	accuracy_val: 0.3841	accuracy_test: 0.4433
+curr_round: 55	curr_val_accuracy: 0.4190	curr_test_accuracy: 0.4219
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 56		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4746	loss_val: 2.0649	loss_test: 1.6938	accuracy_train: 0.8381	accuracy_val: 0.4545	accuracy_test: 0.4111
+[client 1]	loss_train: 0.5760	loss_val: 1.8892	loss_test: 1.8381	accuracy_train: 0.7884	accuracy_val: 0.3665	accuracy_test: 0.3750
+[client 2]	loss_train: 0.4763	loss_val: 1.9016	loss_test: 2.3338	accuracy_train: 0.8028	accuracy_val: 0.4207	accuracy_test: 0.4301
+[client 3]	loss_train: 0.4645	loss_val: 1.9511	loss_test: 1.8411	accuracy_train: 0.8438	accuracy_val: 0.4769	accuracy_test: 0.4699
+[client 4]	loss_train: 0.5594	loss_val: 2.0921	loss_test: 1.7467	accuracy_train: 0.7321	accuracy_val: 0.3841	accuracy_test: 0.4330
+curr_round: 56	curr_val_accuracy: 0.4176	curr_test_accuracy: 0.4218
+best_round: 43	best_val_accuracy: 0.4246	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 57		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4734	loss_val: 2.0936	loss_test: 1.7317	accuracy_train: 0.8333	accuracy_val: 0.4545	accuracy_test: 0.4222
+[client 1]	loss_train: 0.5766	loss_val: 1.9004	loss_test: 1.8248	accuracy_train: 0.7884	accuracy_val: 0.3727	accuracy_test: 0.3750
+[client 2]	loss_train: 0.4847	loss_val: 1.9399	loss_test: 2.3803	accuracy_train: 0.8028	accuracy_val: 0.4276	accuracy_test: 0.4409
+[client 3]	loss_train: 0.4788	loss_val: 1.9532	loss_test: 1.8738	accuracy_train: 0.8490	accuracy_val: 0.4923	accuracy_test: 0.4699
+[client 4]	loss_train: 0.5587	loss_val: 2.0692	loss_test: 1.6745	accuracy_train: 0.7321	accuracy_val: 0.3974	accuracy_test: 0.4536
+curr_round: 57	curr_val_accuracy: 0.4259	curr_test_accuracy: 0.4304
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 58		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4678	loss_val: 2.0599	loss_test: 1.7225	accuracy_train: 0.8476	accuracy_val: 0.4545	accuracy_test: 0.4556
+[client 1]	loss_train: 0.5621	loss_val: 1.9339	loss_test: 1.8566	accuracy_train: 0.7801	accuracy_val: 0.3665	accuracy_test: 0.3942
+[client 2]	loss_train: 0.4612	loss_val: 1.8935	loss_test: 2.3393	accuracy_train: 0.8075	accuracy_val: 0.4414	accuracy_test: 0.4409
+[client 3]	loss_train: 0.4498	loss_val: 1.9671	loss_test: 1.8869	accuracy_train: 0.8438	accuracy_val: 0.4846	accuracy_test: 0.4819
+[client 4]	loss_train: 0.5454	loss_val: 2.0630	loss_test: 1.7361	accuracy_train: 0.7366	accuracy_val: 0.3907	accuracy_test: 0.4227
+curr_round: 58	curr_val_accuracy: 0.4245	curr_test_accuracy: 0.4369
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 59		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4709	loss_val: 2.0117	loss_test: 1.6781	accuracy_train: 0.8524	accuracy_val: 0.4476	accuracy_test: 0.4444
+[client 1]	loss_train: 0.5631	loss_val: 1.9809	loss_test: 1.8929	accuracy_train: 0.7884	accuracy_val: 0.3478	accuracy_test: 0.3654
+[client 2]	loss_train: 0.4607	loss_val: 1.9020	loss_test: 2.3638	accuracy_train: 0.7887	accuracy_val: 0.4276	accuracy_test: 0.4516
+[client 3]	loss_train: 0.4344	loss_val: 1.9840	loss_test: 1.8842	accuracy_train: 0.8698	accuracy_val: 0.4692	accuracy_test: 0.4940
+[client 4]	loss_train: 0.5322	loss_val: 2.1193	loss_test: 1.7819	accuracy_train: 0.7455	accuracy_val: 0.3907	accuracy_test: 0.4227
+curr_round: 59	curr_val_accuracy: 0.4135	curr_test_accuracy: 0.4326
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 60		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4573	loss_val: 2.0991	loss_test: 1.6760	accuracy_train: 0.8571	accuracy_val: 0.4476	accuracy_test: 0.4333
+[client 1]	loss_train: 0.5513	loss_val: 1.9838	loss_test: 1.9123	accuracy_train: 0.7967	accuracy_val: 0.3540	accuracy_test: 0.3654
+[client 2]	loss_train: 0.4649	loss_val: 1.9081	loss_test: 2.4000	accuracy_train: 0.8075	accuracy_val: 0.4276	accuracy_test: 0.4731
+[client 3]	loss_train: 0.4318	loss_val: 2.0033	loss_test: 1.9058	accuracy_train: 0.8802	accuracy_val: 0.4615	accuracy_test: 0.4819
+[client 4]	loss_train: 0.5384	loss_val: 2.1987	loss_test: 1.8470	accuracy_train: 0.7545	accuracy_val: 0.3709	accuracy_test: 0.4330
+curr_round: 60	curr_val_accuracy: 0.4094	curr_test_accuracy: 0.4347
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 61		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4630	loss_val: 2.1319	loss_test: 1.7131	accuracy_train: 0.8429	accuracy_val: 0.4545	accuracy_test: 0.4222
+[client 1]	loss_train: 0.5472	loss_val: 1.9938	loss_test: 1.9451	accuracy_train: 0.8050	accuracy_val: 0.3665	accuracy_test: 0.3654
+[client 2]	loss_train: 0.4911	loss_val: 1.9860	loss_test: 2.4606	accuracy_train: 0.7934	accuracy_val: 0.4138	accuracy_test: 0.4731
+[client 3]	loss_train: 0.4303	loss_val: 2.0649	loss_test: 1.9431	accuracy_train: 0.8750	accuracy_val: 0.4692	accuracy_test: 0.4819
+[client 4]	loss_train: 0.5299	loss_val: 2.2130	loss_test: 1.8112	accuracy_train: 0.7723	accuracy_val: 0.3775	accuracy_test: 0.4227
+curr_round: 61	curr_val_accuracy: 0.4135	curr_test_accuracy: 0.4304
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 62		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4407	loss_val: 2.0772	loss_test: 1.7118	accuracy_train: 0.8667	accuracy_val: 0.4685	accuracy_test: 0.4111
+[client 1]	loss_train: 0.5398	loss_val: 1.9924	loss_test: 1.9347	accuracy_train: 0.8050	accuracy_val: 0.3602	accuracy_test: 0.3654
+[client 2]	loss_train: 0.4600	loss_val: 1.9724	loss_test: 2.4736	accuracy_train: 0.7981	accuracy_val: 0.4276	accuracy_test: 0.4731
+[client 3]	loss_train: 0.4277	loss_val: 2.0465	loss_test: 1.9381	accuracy_train: 0.8854	accuracy_val: 0.4769	accuracy_test: 0.4578
+[client 4]	loss_train: 0.5135	loss_val: 2.1735	loss_test: 1.7810	accuracy_train: 0.7634	accuracy_val: 0.3974	accuracy_test: 0.4330
+curr_round: 62	curr_val_accuracy: 0.4231	curr_test_accuracy: 0.4261
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 63		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4437	loss_val: 2.0898	loss_test: 1.7455	accuracy_train: 0.8714	accuracy_val: 0.4755	accuracy_test: 0.4333
+[client 1]	loss_train: 0.5397	loss_val: 2.0033	loss_test: 1.9699	accuracy_train: 0.8008	accuracy_val: 0.3602	accuracy_test: 0.3750
+[client 2]	loss_train: 0.4510	loss_val: 1.9655	loss_test: 2.5463	accuracy_train: 0.8169	accuracy_val: 0.4069	accuracy_test: 0.4409
+[client 3]	loss_train: 0.4224	loss_val: 2.0667	loss_test: 1.9477	accuracy_train: 0.8802	accuracy_val: 0.4846	accuracy_test: 0.4458
+[client 4]	loss_train: 0.5030	loss_val: 2.1627	loss_test: 1.7832	accuracy_train: 0.7812	accuracy_val: 0.3974	accuracy_test: 0.4330
+curr_round: 63	curr_val_accuracy: 0.4217	curr_test_accuracy: 0.4240
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 64		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4334	loss_val: 2.0948	loss_test: 1.7645	accuracy_train: 0.8619	accuracy_val: 0.4615	accuracy_test: 0.4556
+[client 1]	loss_train: 0.5459	loss_val: 2.0292	loss_test: 2.0108	accuracy_train: 0.8091	accuracy_val: 0.3789	accuracy_test: 0.3269
+[client 2]	loss_train: 0.4311	loss_val: 1.9685	loss_test: 2.4946	accuracy_train: 0.8263	accuracy_val: 0.4069	accuracy_test: 0.4516
+[client 3]	loss_train: 0.4110	loss_val: 2.0843	loss_test: 1.9677	accuracy_train: 0.8802	accuracy_val: 0.4923	accuracy_test: 0.4458
+[client 4]	loss_train: 0.4981	loss_val: 2.1552	loss_test: 1.8152	accuracy_train: 0.7902	accuracy_val: 0.3841	accuracy_test: 0.4227
+curr_round: 64	curr_val_accuracy: 0.4218	curr_test_accuracy: 0.4176
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 65		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4270	loss_val: 2.1197	loss_test: 1.8035	accuracy_train: 0.8810	accuracy_val: 0.4685	accuracy_test: 0.4444
+[client 1]	loss_train: 0.5311	loss_val: 2.0243	loss_test: 2.0146	accuracy_train: 0.8133	accuracy_val: 0.3789	accuracy_test: 0.3269
+[client 2]	loss_train: 0.4146	loss_val: 1.9383	loss_test: 2.4787	accuracy_train: 0.8404	accuracy_val: 0.4138	accuracy_test: 0.4839
+[client 3]	loss_train: 0.4129	loss_val: 2.1043	loss_test: 1.9794	accuracy_train: 0.8594	accuracy_val: 0.4615	accuracy_test: 0.4217
+[client 4]	loss_train: 0.5015	loss_val: 2.2255	loss_test: 1.8579	accuracy_train: 0.7768	accuracy_val: 0.3907	accuracy_test: 0.4330
+curr_round: 65	curr_val_accuracy: 0.4204	curr_test_accuracy: 0.4197
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 66		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4192	loss_val: 2.1271	loss_test: 1.7631	accuracy_train: 0.8619	accuracy_val: 0.4685	accuracy_test: 0.4333
+[client 1]	loss_train: 0.5165	loss_val: 2.0389	loss_test: 2.0314	accuracy_train: 0.8216	accuracy_val: 0.3665	accuracy_test: 0.3365
+[client 2]	loss_train: 0.4185	loss_val: 1.9551	loss_test: 2.5515	accuracy_train: 0.8310	accuracy_val: 0.4069	accuracy_test: 0.4194
+[client 3]	loss_train: 0.4442	loss_val: 2.1896	loss_test: 2.0770	accuracy_train: 0.8438	accuracy_val: 0.4923	accuracy_test: 0.3976
+[client 4]	loss_train: 0.5006	loss_val: 2.2618	loss_test: 1.8649	accuracy_train: 0.7991	accuracy_val: 0.3907	accuracy_test: 0.4330
+curr_round: 66	curr_val_accuracy: 0.4217	curr_test_accuracy: 0.4026
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 67		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4175	loss_val: 2.1780	loss_test: 1.7589	accuracy_train: 0.8762	accuracy_val: 0.4615	accuracy_test: 0.4444
+[client 1]	loss_train: 0.5125	loss_val: 2.0508	loss_test: 2.0047	accuracy_train: 0.8216	accuracy_val: 0.3665	accuracy_test: 0.3269
+[client 2]	loss_train: 0.4168	loss_val: 1.9772	loss_test: 2.5645	accuracy_train: 0.8404	accuracy_val: 0.4000	accuracy_test: 0.4301
+[client 3]	loss_train: 0.4179	loss_val: 2.0924	loss_test: 1.9973	accuracy_train: 0.8542	accuracy_val: 0.4846	accuracy_test: 0.4096
+[client 4]	loss_train: 0.4884	loss_val: 2.2270	loss_test: 1.8755	accuracy_train: 0.8304	accuracy_val: 0.4238	accuracy_test: 0.4124
+curr_round: 67	curr_val_accuracy: 0.4245	curr_test_accuracy: 0.4026
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 68		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4116	loss_val: 2.1936	loss_test: 1.7493	accuracy_train: 0.8857	accuracy_val: 0.4336	accuracy_test: 0.4333
+[client 1]	loss_train: 0.5081	loss_val: 2.0583	loss_test: 1.9880	accuracy_train: 0.8091	accuracy_val: 0.3602	accuracy_test: 0.3365
+[client 2]	loss_train: 0.4147	loss_val: 1.9828	loss_test: 2.5442	accuracy_train: 0.8404	accuracy_val: 0.4069	accuracy_test: 0.4194
+[client 3]	loss_train: 0.3998	loss_val: 2.0634	loss_test: 1.9993	accuracy_train: 0.8646	accuracy_val: 0.4923	accuracy_test: 0.4458
+[client 4]	loss_train: 0.4823	loss_val: 2.2108	loss_test: 1.8164	accuracy_train: 0.8170	accuracy_val: 0.4106	accuracy_test: 0.4330
+curr_round: 68	curr_val_accuracy: 0.4177	curr_test_accuracy: 0.4112
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 69		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4008	loss_val: 2.1646	loss_test: 1.7888	accuracy_train: 0.8857	accuracy_val: 0.4336	accuracy_test: 0.4333
+[client 1]	loss_train: 0.5112	loss_val: 2.0886	loss_test: 2.0223	accuracy_train: 0.8091	accuracy_val: 0.3665	accuracy_test: 0.3365
+[client 2]	loss_train: 0.4123	loss_val: 1.9498	loss_test: 2.5271	accuracy_train: 0.8169	accuracy_val: 0.3862	accuracy_test: 0.4516
+[client 3]	loss_train: 0.3896	loss_val: 2.0648	loss_test: 2.0327	accuracy_train: 0.8854	accuracy_val: 0.4923	accuracy_test: 0.4458
+[client 4]	loss_train: 0.4764	loss_val: 2.2358	loss_test: 1.8211	accuracy_train: 0.8348	accuracy_val: 0.4106	accuracy_test: 0.4330
+curr_round: 69	curr_val_accuracy: 0.4150	curr_test_accuracy: 0.4176
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 70		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4091	loss_val: 2.1911	loss_test: 1.8454	accuracy_train: 0.8714	accuracy_val: 0.4406	accuracy_test: 0.4333
+[client 1]	loss_train: 0.5232	loss_val: 2.1347	loss_test: 2.0814	accuracy_train: 0.7884	accuracy_val: 0.3540	accuracy_test: 0.3462
+[client 2]	loss_train: 0.4401	loss_val: 1.9710	loss_test: 2.6312	accuracy_train: 0.8122	accuracy_val: 0.3586	accuracy_test: 0.4301
+[client 3]	loss_train: 0.4106	loss_val: 2.1122	loss_test: 2.0303	accuracy_train: 0.8646	accuracy_val: 0.4846	accuracy_test: 0.4458
+[client 4]	loss_train: 0.4802	loss_val: 2.2993	loss_test: 1.8456	accuracy_train: 0.8438	accuracy_val: 0.4106	accuracy_test: 0.4742
+curr_round: 70	curr_val_accuracy: 0.4067	curr_test_accuracy: 0.4240
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 71		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.4123	loss_val: 2.2030	loss_test: 1.8615	accuracy_train: 0.8714	accuracy_val: 0.4476	accuracy_test: 0.4444
+[client 1]	loss_train: 0.5006	loss_val: 2.1126	loss_test: 2.0644	accuracy_train: 0.8050	accuracy_val: 0.3602	accuracy_test: 0.3365
+[client 2]	loss_train: 0.4078	loss_val: 1.9821	loss_test: 2.5757	accuracy_train: 0.8216	accuracy_val: 0.3862	accuracy_test: 0.4194
+[client 3]	loss_train: 0.4110	loss_val: 2.1240	loss_test: 2.0439	accuracy_train: 0.8542	accuracy_val: 0.4692	accuracy_test: 0.4337
+[client 4]	loss_train: 0.4607	loss_val: 2.2764	loss_test: 1.8826	accuracy_train: 0.8661	accuracy_val: 0.4106	accuracy_test: 0.4639
+curr_round: 71	curr_val_accuracy: 0.4122	curr_test_accuracy: 0.4176
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 72		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3973	loss_val: 2.1898	loss_test: 1.8501	accuracy_train: 0.8619	accuracy_val: 0.4545	accuracy_test: 0.4444
+[client 1]	loss_train: 0.4922	loss_val: 2.1017	loss_test: 2.0683	accuracy_train: 0.8216	accuracy_val: 0.3727	accuracy_test: 0.3365
+[client 2]	loss_train: 0.3735	loss_val: 1.9804	loss_test: 2.4782	accuracy_train: 0.8732	accuracy_val: 0.3862	accuracy_test: 0.4409
+[client 3]	loss_train: 0.3862	loss_val: 2.1029	loss_test: 2.0370	accuracy_train: 0.8802	accuracy_val: 0.4769	accuracy_test: 0.4578
+[client 4]	loss_train: 0.4543	loss_val: 2.2872	loss_test: 1.8830	accuracy_train: 0.8616	accuracy_val: 0.4106	accuracy_test: 0.4536
+curr_round: 72	curr_val_accuracy: 0.4177	curr_test_accuracy: 0.4240
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 73		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3935	loss_val: 2.1841	loss_test: 1.8543	accuracy_train: 0.8571	accuracy_val: 0.4545	accuracy_test: 0.4444
+[client 1]	loss_train: 0.4803	loss_val: 2.1058	loss_test: 2.0808	accuracy_train: 0.8216	accuracy_val: 0.3602	accuracy_test: 0.3558
+[client 2]	loss_train: 0.3681	loss_val: 1.9446	loss_test: 2.4755	accuracy_train: 0.8545	accuracy_val: 0.4069	accuracy_test: 0.4194
+[client 3]	loss_train: 0.3890	loss_val: 2.1026	loss_test: 2.0554	accuracy_train: 0.8802	accuracy_val: 0.4846	accuracy_test: 0.4458
+[client 4]	loss_train: 0.4497	loss_val: 2.3049	loss_test: 1.9349	accuracy_train: 0.8527	accuracy_val: 0.4172	accuracy_test: 0.4536
+curr_round: 73	curr_val_accuracy: 0.4218	curr_test_accuracy: 0.4219
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 74		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3856	loss_val: 2.1844	loss_test: 1.8472	accuracy_train: 0.8571	accuracy_val: 0.4545	accuracy_test: 0.4556
+[client 1]	loss_train: 0.4824	loss_val: 2.1354	loss_test: 2.1231	accuracy_train: 0.8257	accuracy_val: 0.3602	accuracy_test: 0.3462
+[client 2]	loss_train: 0.3797	loss_val: 1.9911	loss_test: 2.5732	accuracy_train: 0.8357	accuracy_val: 0.3793	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3712	loss_val: 2.1154	loss_test: 2.0686	accuracy_train: 0.8906	accuracy_val: 0.4769	accuracy_test: 0.4337
+[client 4]	loss_train: 0.4569	loss_val: 2.3445	loss_test: 1.9502	accuracy_train: 0.8527	accuracy_val: 0.4172	accuracy_test: 0.4536
+curr_round: 74	curr_val_accuracy: 0.4149	curr_test_accuracy: 0.4177
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 75		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3734	loss_val: 2.1963	loss_test: 1.7990	accuracy_train: 0.8762	accuracy_val: 0.4685	accuracy_test: 0.4889
+[client 1]	loss_train: 0.4813	loss_val: 2.1500	loss_test: 2.1332	accuracy_train: 0.8299	accuracy_val: 0.3540	accuracy_test: 0.3462
+[client 2]	loss_train: 0.3809	loss_val: 2.0250	loss_test: 2.5973	accuracy_train: 0.8498	accuracy_val: 0.3655	accuracy_test: 0.4301
+[client 3]	loss_train: 0.3674	loss_val: 2.1391	loss_test: 2.0737	accuracy_train: 0.8958	accuracy_val: 0.4538	accuracy_test: 0.4217
+[client 4]	loss_train: 0.4378	loss_val: 2.3156	loss_test: 1.9089	accuracy_train: 0.8661	accuracy_val: 0.4305	accuracy_test: 0.4639
+curr_round: 75	curr_val_accuracy: 0.4122	curr_test_accuracy: 0.4284
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 76		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3648	loss_val: 2.2007	loss_test: 1.7760	accuracy_train: 0.8905	accuracy_val: 0.4755	accuracy_test: 0.4667
+[client 1]	loss_train: 0.4705	loss_val: 2.1525	loss_test: 2.0930	accuracy_train: 0.8299	accuracy_val: 0.3602	accuracy_test: 0.3462
+[client 2]	loss_train: 0.3821	loss_val: 2.0396	loss_test: 2.5859	accuracy_train: 0.8357	accuracy_val: 0.3655	accuracy_test: 0.4301
+[client 3]	loss_train: 0.3884	loss_val: 2.2041	loss_test: 2.0997	accuracy_train: 0.8646	accuracy_val: 0.4538	accuracy_test: 0.4458
+[client 4]	loss_train: 0.4292	loss_val: 2.3191	loss_test: 1.9386	accuracy_train: 0.8661	accuracy_val: 0.4238	accuracy_test: 0.4330
+curr_round: 76	curr_val_accuracy: 0.4135	curr_test_accuracy: 0.4219
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 77		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3567	loss_val: 2.1670	loss_test: 1.7580	accuracy_train: 0.8952	accuracy_val: 0.4615	accuracy_test: 0.4444
+[client 1]	loss_train: 0.4751	loss_val: 2.1688	loss_test: 2.1256	accuracy_train: 0.8216	accuracy_val: 0.3540	accuracy_test: 0.3365
+[client 2]	loss_train: 0.3809	loss_val: 2.0361	loss_test: 2.6106	accuracy_train: 0.8451	accuracy_val: 0.3655	accuracy_test: 0.3978
+[client 3]	loss_train: 0.3818	loss_val: 2.2117	loss_test: 2.1019	accuracy_train: 0.8646	accuracy_val: 0.4615	accuracy_test: 0.4578
+[client 4]	loss_train: 0.4335	loss_val: 2.3466	loss_test: 1.9694	accuracy_train: 0.8571	accuracy_val: 0.4172	accuracy_test: 0.4845
+curr_round: 77	curr_val_accuracy: 0.4094	curr_test_accuracy: 0.4219
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 78		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3568	loss_val: 2.1969	loss_test: 1.7482	accuracy_train: 0.9000	accuracy_val: 0.4685	accuracy_test: 0.4444
+[client 1]	loss_train: 0.4606	loss_val: 2.1440	loss_test: 2.1113	accuracy_train: 0.8340	accuracy_val: 0.3416	accuracy_test: 0.3558
+[client 2]	loss_train: 0.3803	loss_val: 2.0378	loss_test: 2.6668	accuracy_train: 0.8263	accuracy_val: 0.3862	accuracy_test: 0.3978
+[client 3]	loss_train: 0.3589	loss_val: 2.2434	loss_test: 2.1463	accuracy_train: 0.8958	accuracy_val: 0.4538	accuracy_test: 0.4217
+[client 4]	loss_train: 0.4575	loss_val: 2.4342	loss_test: 2.0098	accuracy_train: 0.8259	accuracy_val: 0.4106	accuracy_test: 0.4845
+curr_round: 78	curr_val_accuracy: 0.4094	curr_test_accuracy: 0.4198
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 79		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3505	loss_val: 2.1957	loss_test: 1.7321	accuracy_train: 0.9048	accuracy_val: 0.4685	accuracy_test: 0.4556
+[client 1]	loss_train: 0.4570	loss_val: 2.1465	loss_test: 2.0983	accuracy_train: 0.8257	accuracy_val: 0.3540	accuracy_test: 0.3462
+[client 2]	loss_train: 0.3919	loss_val: 2.0756	loss_test: 2.6677	accuracy_train: 0.8310	accuracy_val: 0.3862	accuracy_test: 0.4194
+[client 3]	loss_train: 0.3519	loss_val: 2.2348	loss_test: 2.1644	accuracy_train: 0.9010	accuracy_val: 0.4462	accuracy_test: 0.4096
+[client 4]	loss_train: 0.4324	loss_val: 2.3790	loss_test: 1.9300	accuracy_train: 0.8482	accuracy_val: 0.4172	accuracy_test: 0.4742
+curr_round: 79	curr_val_accuracy: 0.4122	curr_test_accuracy: 0.4198
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 80		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3453	loss_val: 2.2050	loss_test: 1.8225	accuracy_train: 0.9143	accuracy_val: 0.4755	accuracy_test: 0.4556
+[client 1]	loss_train: 0.4487	loss_val: 2.1448	loss_test: 2.1290	accuracy_train: 0.8340	accuracy_val: 0.3540	accuracy_test: 0.3750
+[client 2]	loss_train: 0.3908	loss_val: 2.0754	loss_test: 2.6914	accuracy_train: 0.8310	accuracy_val: 0.3793	accuracy_test: 0.4301
+[client 3]	loss_train: 0.3499	loss_val: 2.2122	loss_test: 2.1630	accuracy_train: 0.8906	accuracy_val: 0.4385	accuracy_test: 0.4217
+[client 4]	loss_train: 0.4157	loss_val: 2.3323	loss_test: 1.9067	accuracy_train: 0.8482	accuracy_val: 0.4305	accuracy_test: 0.4639
+curr_round: 80	curr_val_accuracy: 0.4135	curr_test_accuracy: 0.4283
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 81		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3453	loss_val: 2.2192	loss_test: 1.8724	accuracy_train: 0.9000	accuracy_val: 0.4755	accuracy_test: 0.4444
+[client 1]	loss_train: 0.4592	loss_val: 2.1841	loss_test: 2.1736	accuracy_train: 0.8174	accuracy_val: 0.3540	accuracy_test: 0.3654
+[client 2]	loss_train: 0.3741	loss_val: 2.0711	loss_test: 2.6772	accuracy_train: 0.8451	accuracy_val: 0.3724	accuracy_test: 0.4301
+[client 3]	loss_train: 0.3416	loss_val: 2.2180	loss_test: 2.1597	accuracy_train: 0.8958	accuracy_val: 0.4615	accuracy_test: 0.4217
+[client 4]	loss_train: 0.4064	loss_val: 2.3101	loss_test: 1.9273	accuracy_train: 0.8571	accuracy_val: 0.4305	accuracy_test: 0.4536
+curr_round: 81	curr_val_accuracy: 0.4163	curr_test_accuracy: 0.4219
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 82		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3457	loss_val: 2.2420	loss_test: 1.9143	accuracy_train: 0.9000	accuracy_val: 0.4825	accuracy_test: 0.4667
+[client 1]	loss_train: 0.4522	loss_val: 2.1789	loss_test: 2.1407	accuracy_train: 0.8174	accuracy_val: 0.3478	accuracy_test: 0.3558
+[client 2]	loss_train: 0.3567	loss_val: 2.0587	loss_test: 2.6535	accuracy_train: 0.8404	accuracy_val: 0.3724	accuracy_test: 0.4194
+[client 3]	loss_train: 0.3464	loss_val: 2.2140	loss_test: 2.1595	accuracy_train: 0.8802	accuracy_val: 0.4615	accuracy_test: 0.4217
+[client 4]	loss_train: 0.4100	loss_val: 2.3684	loss_test: 1.9339	accuracy_train: 0.8795	accuracy_val: 0.4305	accuracy_test: 0.4639
+curr_round: 82	curr_val_accuracy: 0.4163	curr_test_accuracy: 0.4241
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 83		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3363	loss_val: 2.2227	loss_test: 1.8722	accuracy_train: 0.8952	accuracy_val: 0.4825	accuracy_test: 0.4667
+[client 1]	loss_train: 0.4430	loss_val: 2.1670	loss_test: 2.1339	accuracy_train: 0.8299	accuracy_val: 0.3602	accuracy_test: 0.3846
+[client 2]	loss_train: 0.3710	loss_val: 2.0878	loss_test: 2.7335	accuracy_train: 0.8451	accuracy_val: 0.3793	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3518	loss_val: 2.2310	loss_test: 2.1935	accuracy_train: 0.8802	accuracy_val: 0.4769	accuracy_test: 0.3976
+[client 4]	loss_train: 0.4060	loss_val: 2.3881	loss_test: 1.9310	accuracy_train: 0.8795	accuracy_val: 0.4106	accuracy_test: 0.4845
+curr_round: 83	curr_val_accuracy: 0.4190	curr_test_accuracy: 0.4284
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 84		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3337	loss_val: 2.1962	loss_test: 1.8735	accuracy_train: 0.9000	accuracy_val: 0.4965	accuracy_test: 0.4778
+[client 1]	loss_train: 0.4370	loss_val: 2.1916	loss_test: 2.1666	accuracy_train: 0.8299	accuracy_val: 0.3602	accuracy_test: 0.3846
+[client 2]	loss_train: 0.3640	loss_val: 2.0623	loss_test: 2.7459	accuracy_train: 0.8310	accuracy_val: 0.3793	accuracy_test: 0.4194
+[client 3]	loss_train: 0.3424	loss_val: 2.2288	loss_test: 2.2075	accuracy_train: 0.8854	accuracy_val: 0.4769	accuracy_test: 0.3976
+[client 4]	loss_train: 0.4055	loss_val: 2.4173	loss_test: 1.9947	accuracy_train: 0.8661	accuracy_val: 0.4106	accuracy_test: 0.4742
+curr_round: 84	curr_val_accuracy: 0.4217	curr_test_accuracy: 0.4305
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 85		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3291	loss_val: 2.1781	loss_test: 1.8255	accuracy_train: 0.9000	accuracy_val: 0.4895	accuracy_test: 0.4667
+[client 1]	loss_train: 0.4330	loss_val: 2.2042	loss_test: 2.1735	accuracy_train: 0.8257	accuracy_val: 0.3478	accuracy_test: 0.3846
+[client 2]	loss_train: 0.3493	loss_val: 2.0654	loss_test: 2.7536	accuracy_train: 0.8545	accuracy_val: 0.3793	accuracy_test: 0.3871
+[client 3]	loss_train: 0.3425	loss_val: 2.2057	loss_test: 2.1896	accuracy_train: 0.8802	accuracy_val: 0.4692	accuracy_test: 0.4458
+[client 4]	loss_train: 0.3998	loss_val: 2.3760	loss_test: 1.9552	accuracy_train: 0.8705	accuracy_val: 0.4371	accuracy_test: 0.4948
+curr_round: 85	curr_val_accuracy: 0.4217	curr_test_accuracy: 0.4348
+best_round: 57	best_val_accuracy: 0.4259	best_test_accuracy: 0.4304
+--------------------------------------------------
+round # 86		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3171	loss_val: 2.2394	loss_test: 1.8570	accuracy_train: 0.9048	accuracy_val: 0.4825	accuracy_test: 0.4444
+[client 1]	loss_train: 0.4257	loss_val: 2.1938	loss_test: 2.1882	accuracy_train: 0.8548	accuracy_val: 0.3727	accuracy_test: 0.4038
+[client 2]	loss_train: 0.3672	loss_val: 2.1240	loss_test: 2.7805	accuracy_train: 0.8404	accuracy_val: 0.3931	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3365	loss_val: 2.1995	loss_test: 2.1740	accuracy_train: 0.9010	accuracy_val: 0.4769	accuracy_test: 0.4458
+[client 4]	loss_train: 0.3829	loss_val: 2.4068	loss_test: 2.0278	accuracy_train: 0.8839	accuracy_val: 0.4238	accuracy_test: 0.4330
+curr_round: 86	curr_val_accuracy: 0.4272	curr_test_accuracy: 0.4262
+best_round: 86	best_val_accuracy: 0.4272	best_test_accuracy: 0.4262
+--------------------------------------------------
+round # 87		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3184	loss_val: 2.2696	loss_test: 1.8757	accuracy_train: 0.9048	accuracy_val: 0.4825	accuracy_test: 0.4667
+[client 1]	loss_train: 0.4276	loss_val: 2.2168	loss_test: 2.1885	accuracy_train: 0.8299	accuracy_val: 0.3602	accuracy_test: 0.4038
+[client 2]	loss_train: 0.3377	loss_val: 2.0629	loss_test: 2.7529	accuracy_train: 0.8592	accuracy_val: 0.3931	accuracy_test: 0.4301
+[client 3]	loss_train: 0.3236	loss_val: 2.1840	loss_test: 2.1780	accuracy_train: 0.9010	accuracy_val: 0.4692	accuracy_test: 0.4458
+[client 4]	loss_train: 0.4041	loss_val: 2.4807	loss_test: 2.1140	accuracy_train: 0.8661	accuracy_val: 0.4238	accuracy_test: 0.4845
+curr_round: 87	curr_val_accuracy: 0.4231	curr_test_accuracy: 0.4455
+best_round: 86	best_val_accuracy: 0.4272	best_test_accuracy: 0.4262
+--------------------------------------------------
+round # 88		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3170	loss_val: 2.2212	loss_test: 1.8297	accuracy_train: 0.9048	accuracy_val: 0.4755	accuracy_test: 0.4444
+[client 1]	loss_train: 0.4374	loss_val: 2.2404	loss_test: 2.1964	accuracy_train: 0.8382	accuracy_val: 0.3478	accuracy_test: 0.3846
+[client 2]	loss_train: 0.3271	loss_val: 2.0798	loss_test: 2.7307	accuracy_train: 0.8732	accuracy_val: 0.3931	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3286	loss_val: 2.1909	loss_test: 2.1875	accuracy_train: 0.8906	accuracy_val: 0.4692	accuracy_test: 0.4217
+[client 4]	loss_train: 0.3778	loss_val: 2.4287	loss_test: 2.0765	accuracy_train: 0.8839	accuracy_val: 0.4305	accuracy_test: 0.4639
+curr_round: 88	curr_val_accuracy: 0.4204	curr_test_accuracy: 0.4240
+best_round: 86	best_val_accuracy: 0.4272	best_test_accuracy: 0.4262
+--------------------------------------------------
+round # 89		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3135	loss_val: 2.2493	loss_test: 1.9025	accuracy_train: 0.9048	accuracy_val: 0.4755	accuracy_test: 0.4667
+[client 1]	loss_train: 0.4258	loss_val: 2.2506	loss_test: 2.2200	accuracy_train: 0.8465	accuracy_val: 0.3540	accuracy_test: 0.3654
+[client 2]	loss_train: 0.3225	loss_val: 2.0855	loss_test: 2.7336	accuracy_train: 0.9061	accuracy_val: 0.3931	accuracy_test: 0.3871
+[client 3]	loss_train: 0.3247	loss_val: 2.2302	loss_test: 2.2026	accuracy_train: 0.8906	accuracy_val: 0.4538	accuracy_test: 0.4458
+[client 4]	loss_train: 0.3740	loss_val: 2.3911	loss_test: 2.0212	accuracy_train: 0.8795	accuracy_val: 0.4437	accuracy_test: 0.4433
+curr_round: 89	curr_val_accuracy: 0.4218	curr_test_accuracy: 0.4198
+best_round: 86	best_val_accuracy: 0.4272	best_test_accuracy: 0.4262
+--------------------------------------------------
+round # 90		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3177	loss_val: 2.2873	loss_test: 1.9472	accuracy_train: 0.8857	accuracy_val: 0.4755	accuracy_test: 0.4556
+[client 1]	loss_train: 0.4083	loss_val: 2.2177	loss_test: 2.1669	accuracy_train: 0.8465	accuracy_val: 0.3665	accuracy_test: 0.3750
+[client 2]	loss_train: 0.3212	loss_val: 2.0874	loss_test: 2.7818	accuracy_train: 0.8967	accuracy_val: 0.3862	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3244	loss_val: 2.2373	loss_test: 2.1862	accuracy_train: 0.8906	accuracy_val: 0.4538	accuracy_test: 0.4458
+[client 4]	loss_train: 0.3769	loss_val: 2.4354	loss_test: 2.0293	accuracy_train: 0.8750	accuracy_val: 0.4040	accuracy_test: 0.4742
+curr_round: 90	curr_val_accuracy: 0.4149	curr_test_accuracy: 0.4305
+best_round: 86	best_val_accuracy: 0.4272	best_test_accuracy: 0.4262
+--------------------------------------------------
+round # 91		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3042	loss_val: 2.1972	loss_test: 1.8790	accuracy_train: 0.9095	accuracy_val: 0.4825	accuracy_test: 0.4667
+[client 1]	loss_train: 0.4080	loss_val: 2.2088	loss_test: 2.1386	accuracy_train: 0.8631	accuracy_val: 0.3665	accuracy_test: 0.3846
+[client 2]	loss_train: 0.3174	loss_val: 2.0504	loss_test: 2.7669	accuracy_train: 0.9061	accuracy_val: 0.3862	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3605	loss_val: 2.2716	loss_test: 2.2264	accuracy_train: 0.8646	accuracy_val: 0.4385	accuracy_test: 0.4578
+[client 4]	loss_train: 0.3670	loss_val: 2.3859	loss_test: 2.0476	accuracy_train: 0.8750	accuracy_val: 0.4040	accuracy_test: 0.4330
+curr_round: 91	curr_val_accuracy: 0.4135	curr_test_accuracy: 0.4284
+best_round: 86	best_val_accuracy: 0.4272	best_test_accuracy: 0.4262
+--------------------------------------------------
+round # 92		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.2946	loss_val: 2.1620	loss_test: 1.8279	accuracy_train: 0.9143	accuracy_val: 0.4965	accuracy_test: 0.4667
+[client 1]	loss_train: 0.4122	loss_val: 2.2234	loss_test: 2.1719	accuracy_train: 0.8423	accuracy_val: 0.3665	accuracy_test: 0.3654
+[client 2]	loss_train: 0.3275	loss_val: 2.0835	loss_test: 2.7119	accuracy_train: 0.8732	accuracy_val: 0.3793	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3206	loss_val: 2.1920	loss_test: 2.1841	accuracy_train: 0.8802	accuracy_val: 0.4538	accuracy_test: 0.4337
+[client 4]	loss_train: 0.3795	loss_val: 2.4044	loss_test: 2.0476	accuracy_train: 0.8839	accuracy_val: 0.4040	accuracy_test: 0.4433
+curr_round: 92	curr_val_accuracy: 0.4176	curr_test_accuracy: 0.4220
+best_round: 86	best_val_accuracy: 0.4272	best_test_accuracy: 0.4262
+--------------------------------------------------
+round # 93		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.3103	loss_val: 2.1744	loss_test: 1.8810	accuracy_train: 0.9000	accuracy_val: 0.4825	accuracy_test: 0.4778
+[client 1]	loss_train: 0.3992	loss_val: 2.2131	loss_test: 2.1516	accuracy_train: 0.8382	accuracy_val: 0.3665	accuracy_test: 0.3750
+[client 2]	loss_train: 0.2991	loss_val: 2.0476	loss_test: 2.6319	accuracy_train: 0.8967	accuracy_val: 0.4000	accuracy_test: 0.4301
+[client 3]	loss_train: 0.3187	loss_val: 2.2044	loss_test: 2.1956	accuracy_train: 0.8750	accuracy_val: 0.4538	accuracy_test: 0.4096
+[client 4]	loss_train: 0.3746	loss_val: 2.3687	loss_test: 2.0127	accuracy_train: 0.8795	accuracy_val: 0.4106	accuracy_test: 0.4536
+curr_round: 93	curr_val_accuracy: 0.4204	curr_test_accuracy: 0.4284
+best_round: 86	best_val_accuracy: 0.4272	best_test_accuracy: 0.4262
+--------------------------------------------------
+round # 94		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.2879	loss_val: 2.2159	loss_test: 1.8706	accuracy_train: 0.9143	accuracy_val: 0.4825	accuracy_test: 0.4556
+[client 1]	loss_train: 0.3941	loss_val: 2.2174	loss_test: 2.1862	accuracy_train: 0.8423	accuracy_val: 0.3789	accuracy_test: 0.3846
+[client 2]	loss_train: 0.3118	loss_val: 2.0808	loss_test: 2.6618	accuracy_train: 0.8685	accuracy_val: 0.4069	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3153	loss_val: 2.2366	loss_test: 2.1902	accuracy_train: 0.8750	accuracy_val: 0.4615	accuracy_test: 0.4337
+[client 4]	loss_train: 0.3724	loss_val: 2.3979	loss_test: 2.0567	accuracy_train: 0.8795	accuracy_val: 0.4305	accuracy_test: 0.4742
+curr_round: 94	curr_val_accuracy: 0.4300	curr_test_accuracy: 0.4305
+best_round: 94	best_val_accuracy: 0.4300	best_test_accuracy: 0.4305
+--------------------------------------------------
+round # 95		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.2854	loss_val: 2.2739	loss_test: 1.8938	accuracy_train: 0.9190	accuracy_val: 0.4895	accuracy_test: 0.4556
+[client 1]	loss_train: 0.3938	loss_val: 2.2486	loss_test: 2.2224	accuracy_train: 0.8382	accuracy_val: 0.3540	accuracy_test: 0.3942
+[client 2]	loss_train: 0.2850	loss_val: 2.0667	loss_test: 2.6506	accuracy_train: 0.9014	accuracy_val: 0.4000	accuracy_test: 0.4194
+[client 3]	loss_train: 0.2922	loss_val: 2.2116	loss_test: 2.1896	accuracy_train: 0.8958	accuracy_val: 0.4692	accuracy_test: 0.4217
+[client 4]	loss_train: 0.3778	loss_val: 2.4477	loss_test: 2.1134	accuracy_train: 0.8884	accuracy_val: 0.4437	accuracy_test: 0.4536
+curr_round: 95	curr_val_accuracy: 0.4286	curr_test_accuracy: 0.4283
+best_round: 94	best_val_accuracy: 0.4300	best_test_accuracy: 0.4305
+--------------------------------------------------
+round # 96		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.2798	loss_val: 2.2859	loss_test: 1.8764	accuracy_train: 0.9286	accuracy_val: 0.4965	accuracy_test: 0.4444
+[client 1]	loss_train: 0.3945	loss_val: 2.2743	loss_test: 2.2380	accuracy_train: 0.8423	accuracy_val: 0.3665	accuracy_test: 0.3942
+[client 2]	loss_train: 0.2889	loss_val: 2.0615	loss_test: 2.6732	accuracy_train: 0.9202	accuracy_val: 0.3862	accuracy_test: 0.4624
+[client 3]	loss_train: 0.3054	loss_val: 2.2544	loss_test: 2.1912	accuracy_train: 0.8906	accuracy_val: 0.4538	accuracy_test: 0.4337
+[client 4]	loss_train: 0.3536	loss_val: 2.3864	loss_test: 2.0691	accuracy_train: 0.8839	accuracy_val: 0.4305	accuracy_test: 0.4433
+curr_round: 96	curr_val_accuracy: 0.4245	curr_test_accuracy: 0.4347
+best_round: 94	best_val_accuracy: 0.4300	best_test_accuracy: 0.4305
+--------------------------------------------------
+round # 97		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.2826	loss_val: 2.3488	loss_test: 2.0061	accuracy_train: 0.9190	accuracy_val: 0.4825	accuracy_test: 0.4667
+[client 1]	loss_train: 0.3858	loss_val: 2.2763	loss_test: 2.2463	accuracy_train: 0.8631	accuracy_val: 0.3665	accuracy_test: 0.3750
+[client 2]	loss_train: 0.3015	loss_val: 2.1132	loss_test: 2.7022	accuracy_train: 0.8826	accuracy_val: 0.3931	accuracy_test: 0.4301
+[client 3]	loss_train: 0.3126	loss_val: 2.2887	loss_test: 2.2183	accuracy_train: 0.8646	accuracy_val: 0.4462	accuracy_test: 0.4096
+[client 4]	loss_train: 0.3577	loss_val: 2.4321	loss_test: 2.0559	accuracy_train: 0.8795	accuracy_val: 0.4305	accuracy_test: 0.4742
+curr_round: 97	curr_val_accuracy: 0.4218	curr_test_accuracy: 0.4305
+best_round: 94	best_val_accuracy: 0.4300	best_test_accuracy: 0.4305
+--------------------------------------------------
+round # 98		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.2796	loss_val: 2.3272	loss_test: 1.9479	accuracy_train: 0.9143	accuracy_val: 0.4965	accuracy_test: 0.4556
+[client 1]	loss_train: 0.3809	loss_val: 2.2870	loss_test: 2.2612	accuracy_train: 0.8465	accuracy_val: 0.3602	accuracy_test: 0.3654
+[client 2]	loss_train: 0.2969	loss_val: 2.1290	loss_test: 2.7231	accuracy_train: 0.9014	accuracy_val: 0.4069	accuracy_test: 0.4086
+[client 3]	loss_train: 0.2946	loss_val: 2.2562	loss_test: 2.2412	accuracy_train: 0.8958	accuracy_val: 0.4538	accuracy_test: 0.4217
+[client 4]	loss_train: 0.3518	loss_val: 2.4543	loss_test: 2.0951	accuracy_train: 0.8839	accuracy_val: 0.4371	accuracy_test: 0.4845
+curr_round: 98	curr_val_accuracy: 0.4286	curr_test_accuracy: 0.4262
+best_round: 94	best_val_accuracy: 0.4300	best_test_accuracy: 0.4305
+--------------------------------------------------
+round # 99		sampled_clients: [0, 1, 2, 3, 4]
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'dropout_adj' is deprecated, use 'dropout_edge' instead
+  warnings.warn(out)
+[client 0]	loss_train: 0.2822	loss_val: 2.3567	loss_test: 1.9363	accuracy_train: 0.9238	accuracy_val: 0.4825	accuracy_test: 0.4222
+[client 1]	loss_train: 0.3813	loss_val: 2.2844	loss_test: 2.2897	accuracy_train: 0.8423	accuracy_val: 0.3602	accuracy_test: 0.3750
+[client 2]	loss_train: 0.2820	loss_val: 2.1219	loss_test: 2.7499	accuracy_train: 0.9108	accuracy_val: 0.4000	accuracy_test: 0.4086
+[client 3]	loss_train: 0.3054	loss_val: 2.2941	loss_test: 2.2276	accuracy_train: 0.8802	accuracy_val: 0.4462	accuracy_test: 0.4337
+[client 4]	loss_train: 0.3507	loss_val: 2.4578	loss_test: 2.1685	accuracy_train: 0.8884	accuracy_val: 0.4371	accuracy_test: 0.4330
+curr_round: 99	curr_val_accuracy: 0.4231	curr_test_accuracy: 0.4133
+best_round: 94	best_val_accuracy: 0.4300	best_test_accuracy: 0.4305
+--------------------------------------------------

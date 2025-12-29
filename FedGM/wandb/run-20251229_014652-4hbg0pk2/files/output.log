@@ -1,0 +1,19 @@
+G:\conda\envs\gfl\Lib\site-packages\torch_geometric\data\in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+round # 0		sampled_clients: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Traceback (most recent call last):
+  File "G:\Code\python\FedGM\main.py", line 32, in <module>
+    trainer.train()
+  File "G:\Code\python\FedGM\flcore\trainer.py", line 122, in train
+    self.clients[client_id].execute()
+  File "G:\Code\python\FedGM\flcore\fedlog\client.py", line 130, in execute
+    self.train_generator()
+  File "G:\Code\python\FedGM\flcore\fedlog\client.py", line 181, in train_generator
+    train_mask_part = local_graph.train_mask
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\torch_geometric\data\data.py", line 561, in __getattr__
+    return getattr(self._store, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\conda\envs\gfl\Lib\site-packages\torch_geometric\data\storage.py", line 96, in __getattr__
+    raise AttributeError(
+AttributeError: 'GlobalStorage' object has no attribute 'train_mask'
