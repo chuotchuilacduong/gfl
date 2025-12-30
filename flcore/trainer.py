@@ -4,7 +4,10 @@ from data.distributed_dataset_loader import FGLDataset
 from utils.basic_utils import load_client, load_server
 from utils.logger import Logger
 import wandb
-
+from flcore.hyperion.server import HyperionServer
+from flcore.hyperion.client import HyperionClient
+from flcore.hyperion.models import HyperionModelWrapper
+from flcore.fedigl.fedigl_gin_model import FedIGL_GIN
 class FGLTrainer:
     """
     Federated Graph Learning Trainer class to manage the training and evaluation process.
@@ -40,11 +43,59 @@ class FGLTrainer:
         
         
         fgl_dataset = FGLDataset(args)
+        
+        if fgl_dataset.global_data is not None and hasattr(fgl_dataset.global_data, 'num_global_classes'):
+            args.num_classes = fgl_dataset.global_data.num_global_classes
+        else:
+            args.num_classes = fgl_dataset.local_data[0].y.max().item() + 1
+        
+        
         self.device = torch.device(f"cuda:{args.gpuid}" if (torch.cuda.is_available() and args.use_cuda) else "cpu")
         self.clients = [load_client(args, client_id, fgl_dataset.local_data[client_id], fgl_dataset.processed_dir, self.message_pool, self.device) for client_id in range(self.args.num_clients)]
         self.server = load_server(args, fgl_dataset.global_data, fgl_dataset.processed_dir, self.message_pool, self.device)
         
         self.evaluation_result = {"best_round":0}
+        if args.fl_algorithm == 'hyperion':
+           
+            self.server.task.model = HyperionModelWrapper(
+                base_gnn_model=self.server.task.model, 
+                args=args
+            ).to(self.device)
+            
+            for client in self.clients:
+                client.task.model = HyperionModelWrapper(
+                    base_gnn_model=client.task.model, 
+                    args=args
+                ).to(self.device)
+                
+                if hasattr(client, 'optimizer'):
+                    client.optimizer = torch.optim.Adam(
+                        client.task.model.parameters(), 
+                        lr=args.lr, 
+                        weight_decay=args.weight_decay
+                    )
+        if args.fl_algorithm == 'fedigl':
+            from flcore.fedigl.fedigl_gin_model import FedIGL_GIN
+            if fgl_dataset.global_data is not None:
+                nfeat = fgl_dataset.global_data.num_features
+            else:
+                nfeat = fgl_dataset.local_data[0].x.shape[1]
+            nhid = args.hid_dim     
+            nclass = args.num_classes
+            nlayer = args.num_layers
+            dropout = args.dropout
+            
+            self.server.task.model = FedIGL_GIN(nfeat, nhid, nclass, nlayer, dropout, args).to(self.device) 
+            
+            for client in self.clients:
+                client.task.model = FedIGL_GIN(nfeat, nhid, nclass, nlayer, dropout, args).to(self.device)
+                
+                if hasattr(client, 'optimizer'):
+                    client.optimizer = torch.optim.Adam(
+                        client.task.model.parameters(), 
+                        lr=args.lr, 
+                        weight_decay=args.weight_decay
+                    )
         if self.args.task in ["graph_cls", "graph_reg", "node_cls", "link_pred"]:
             for metric in self.args.metrics:
                 self.evaluation_result[f"best_val_{metric}"] = 0

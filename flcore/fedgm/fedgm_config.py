@@ -1,6 +1,6 @@
 
 config = {
-    "reduction_rate": 0.84,
+    "reduction_rate": 0.5,
     "op_epoche": 500,
     "opti_pge_epoche":5,
     "opti_x_epoche":15,

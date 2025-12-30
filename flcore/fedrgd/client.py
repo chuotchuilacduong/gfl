@@ -12,11 +12,7 @@ from types import SimpleNamespace
 from utils.metrics import compute_supervised_metrics
 
 def normalize_sparse_gcn(adj_t):
-    """
-    Chuẩn hóa ma trận kề dạng SparseTensor theo công thức GCN:
-    D^-0.5 * (A + I) * D^-0.5
-    """
-    adj_t = fill_diag(adj_t, 1.0) # A + I
+    adj_t = fill_diag(adj_t, 1.0) 
     deg = sparsesum(adj_t, dim=1)
     deg_inv_sqrt = deg.pow_(-0.5)
     deg_inv_sqrt.masked_fill_(deg_inv_sqrt == float('inf'), 0.)
@@ -24,22 +20,18 @@ def normalize_sparse_gcn(adj_t):
     adj_t = mul(adj_t, deg_inv_sqrt.view(1, -1)) # (D^-0.5 * (A+I)) * D^-0.5
     return adj_t
 
-def robust_normalize_adj(adj, eps=0):
-    """
-    Normalize adjacency matrix with comprehensive NaN/Inf protection
-    Returns: D^-0.5 * (A + I) * D^-0.5
-    """
+
+def robust_normalize_adj(adj, eps=0): 
+
     adj = torch.clamp(adj, min=0, max=10)
+    
     adj = adj + torch.eye(adj.shape[0], device=adj.device)
+    
     row_sum = torch.sum(adj, 1) + eps
     d_inv_sqrt = torch.pow(row_sum, -0.5)
-    d_inv_sqrt = torch.clamp(d_inv_sqrt, min=0, max=10)
-    # d_inv_sqrt[torch.isnan(d_inv_sqrt) | torch.isinf(d_inv_sqrt)] = 0.0
-    d_mat_inv_sqrt = torch.diag(d_inv_sqrt)
-    adj_norm = torch.matmul(torch.matmul(d_mat_inv_sqrt, adj), d_mat_inv_sqrt)
-    
-    # if torch.isnan(adj_norm).any() or torch.isinf(adj_norm).any():
-    #     adj_norm = torch.nan_to_num(adj_norm, nan=0.0, posinf=1.0, neginf=0.0)
+    d_inv_sqrt = torch.clamp(d_inv_sqrt, min=0, max=10) 
+    d_inv_sqrt = d_inv_sqrt.view(-1, 1) 
+    adj_norm = adj * d_inv_sqrt * d_inv_sqrt.view(1, -1)
     
     return adj_norm
 def sample_edges_from_probabilistic_adj(adj, threshold=0.3, top_k=15, device=None):
@@ -47,35 +39,26 @@ def sample_edges_from_probabilistic_adj(adj, threshold=0.3, top_k=15, device=Non
         device = adj.device
     
     num_nodes = adj.size(0)
-    
     if num_nodes == 0:
         return (torch.empty((2, 0), dtype=torch.long, device=device),
                 torch.empty(0, dtype=torch.float, device=device))
+
+    top_k_actual = min(top_k, num_nodes) if top_k is not None else num_nodes
     
-    edge_list = []
+    vals, indices = torch.topk(adj, top_k_actual, dim=1, largest=True)
     
-    for node_idx in range(num_nodes):
-        probs = adj[node_idx]
-        
-        if top_k is not None:
-            top_k_actual = min(top_k, num_nodes)
-            top_vals, top_indices = torch.topk(probs, top_k_actual, largest=True)
-            valid_mask = top_vals > threshold
-            valid_neighbors = top_indices[valid_mask]
-        else:
-            valid_mask = probs > threshold
-            valid_neighbors = torch.nonzero(valid_mask, as_tuple=True)[0]
-        
-        for neighbor in valid_neighbors:
-            edge_list.append([node_idx, neighbor.item()])
+    mask = vals > threshold
     
-    if len(edge_list) == 0:
+    row_indices = torch.arange(num_nodes, device=device).unsqueeze(1).expand_as(indices)
+    src = row_indices[mask]
+    dst = indices[mask]   
+    if src.numel() == 0:
         edge_index = torch.empty((2, 0), dtype=torch.long, device=device)
         edge_weight = torch.empty(0, dtype=torch.float, device=device)
     else:
-        edge_index = torch.tensor(edge_list, dtype=torch.long, device=device).t()
+        edge_index = torch.stack([src, dst], dim=0)
         edge_weight = torch.ones(edge_index.size(1), dtype=torch.float, device=device)
-    
+        
     return edge_index, edge_weight
 
 
@@ -132,10 +115,6 @@ class FedRGDClient(FedGMClient):
                 top_k=15,
                 device=self.device
             )
-            # threshold = 0.5
-            # g_adj_filtered = g_adj.clone()
-            # g_adj_filtered[g_adj_filtered < threshold] = 0 
-            # g_edge_index, g_edge_weight = dense_to_sparse(g_adj_filtered)
             batch_x = torch.cat([l_x, g_x], dim=0)
             batch_y = torch.cat([l_y, g_y], dim=0)
             num_local_nodes = l_x.size(0)
@@ -145,7 +124,7 @@ class FedRGDClient(FedGMClient):
             batch_edge_index = torch.cat([l_edge_index, shifted_g_edge_index], dim=1)
             batch_edge_weight = torch.cat([l_edge_weight, g_edge_weight], dim=0)
             
-            g_mask = torch.zeros(g_x.size(0), dtype=torch.bool, device=self.device)
+            g_mask = torch.ones(g_x.size(0), dtype=torch.bool, device=self.device)
             batch_mask = torch.cat([l_mask, g_mask], dim=0)
         else:
             batch_x, batch_y = l_x, l_y
@@ -198,64 +177,72 @@ class FedRGDClient(FedGMClient):
             self._perform_graph_condensation(batch_x, batch_y, batch_adj_dense, batch_mask)
     
     def _perform_graph_condensation(self, batch_x, batch_y, batch_adj_dense, batch_mask):
-        """
-        Graph condensation sử dụng model_cond (GCN_kipf)
-        Copy weights từ task.model và KHÔNG cập nhật model_cond.
-        """
+
         self.model_cond.load_state_dict(self.task.model.state_dict())
         
-        self.model_cond.train()
+        self.model_cond.eval() 
         for p in self.model_cond.parameters():
-            p.requires_grad = True
-
+            p.requires_grad = False 
         batch_adj_norm = robust_normalize_adj(batch_adj_dense)
-
         syn_class_indices = {}
         for c in range(self.task.num_global_classes):
             indices = (self.syn_y == c).nonzero(as_tuple=True)[0]
             if len(indices) > 0:
                 syn_class_indices[c] = indices
 
+        real_gradients_cache = [] 
+        for p in self.model_cond.parameters():
+            p.requires_grad = True
+
+        self.model_cond.zero_grad()
+        output_real = self.model_cond(batch_x, batch_adj_norm)
+        unique_classes = torch.unique(batch_y[batch_mask])
+        
+        for c in unique_classes:
+            c = c.item()
+            if c not in syn_class_indices:
+                continue
+
+            mask_c = batch_mask & (batch_y == c)
+            if mask_c.sum() == 0:
+                continue
+            
+            loss_real_c = F.nll_loss(output_real[mask_c], batch_y[mask_c])
+            
+            gw_real_c = torch.autograd.grad(
+                loss_real_c, 
+                self.model_cond.parameters(), 
+                retain_graph=True, 
+                create_graph=False 
+            )
+            gw_real_c = [g.detach() for g in gw_real_c]
+            real_gradients_cache.append((c, gw_real_c))
+            
+        del output_real, loss_real_c
+        torch.cuda.empty_cache() 
+        self.model_cond.train()
         for it in range(self.args.condense_iters):
-            self.model_cond.zero_grad()
             self.optimizer_feat.zero_grad()
             self.optimizer_pge.zero_grad()
 
-            output_real = self.model_cond(batch_x, batch_adj_norm)
-            
+            # Forward Synthetic
             adj_syn = self.pge(self.syn_x)
             adj_syn_norm = robust_normalize_adj(adj_syn)
             output_syn = self.model_cond(self.syn_x, adj_syn_norm)
-            total_match_loss = 0.0
-            unique_classes = torch.unique(batch_y[batch_mask])
             
-            for c in unique_classes:
-                c = c.item()
-                if c not in syn_class_indices:
-                    continue
-
-                mask_c = batch_mask & (batch_y == c)
-                if mask_c.sum() == 0:
-                    continue
-                
-                loss_real_c = F.nll_loss(output_real[mask_c], batch_y[mask_c])
-                gw_real_c = torch.autograd.grad(
-                    loss_real_c, 
-                    self.model_cond.parameters(), 
-                    retain_graph=True, 
-                    create_graph=False
-                )
-                gw_real_c = [g.detach().clone() for g in gw_real_c]
-
+            total_match_loss = 0.0
+            
+            for c, gw_real_c in real_gradients_cache:
                 idx_c = syn_class_indices[c]
+                
                 loss_syn_c = F.nll_loss(output_syn[idx_c], self.syn_y[idx_c])
+                
                 gw_syn_c = torch.autograd.grad(
                     loss_syn_c, 
                     self.model_cond.parameters(), 
                     create_graph=True, 
                     retain_graph=True
-                )
-                
+                )                
                 match_loss_c = match_loss(
                     gw_syn_c, gw_real_c, 
                     dis_metric=config["dis_metric"], 
@@ -263,6 +250,7 @@ class FedRGDClient(FedGMClient):
                 )
                 total_match_loss += match_loss_c
 
+            # Update
             if total_match_loss > 0:
                 total_match_loss.backward()
                 torch.nn.utils.clip_grad_norm_(

@@ -20,16 +20,14 @@ def normalize_sparse_gcn(adj_t):
     return adj_t
 
 def robust_normalize_adj(adj, eps=0):
-
     adj = torch.clamp(adj, min=0, max=10)
     adj = adj + torch.eye(adj.shape[0], device=adj.device)
     row_sum = torch.sum(adj, 1) + eps
     d_inv_sqrt = torch.pow(row_sum, -0.5)
-    d_inv_sqrt = torch.clamp(d_inv_sqrt, min=0, max=10)
+    # d_inv_sqrt = torch.clamp(d_inv_sqrt, min=0, max=10)
     # d_inv_sqrt[torch.isnan(d_inv_sqrt) | torch.isinf(d_inv_sqrt)] = 0.0
     d_mat_inv_sqrt = torch.diag(d_inv_sqrt)
-    adj_norm = torch.matmul(torch.matmul(d_mat_inv_sqrt, adj), d_mat_inv_sqrt)
-    
+    adj_norm = torch.matmul(torch.matmul(d_mat_inv_sqrt, adj), d_mat_inv_sqrt) 
     # if torch.isnan(adj_norm).any() or torch.isinf(adj_norm).any():
     #     adj_norm = torch.nan_to_num(adj_norm, nan=0.0, posinf=1.0, neginf=0.0)
     
@@ -113,11 +111,10 @@ class FedRGDServer(FedGMServer):
     
     def _perform_graph_condensation(self):
         """
-        Perform gradient matching-based graph condensation
+        gradient matching-based graph condensation
         """
         self.model_cond.load_state_dict(self.task.model.state_dict())
         
-        self.model_cond.train()
         for p in self.model_cond.parameters():
             p.requires_grad = True
         
@@ -135,19 +132,63 @@ class FedRGDServer(FedGMServer):
 
         if not input_graphs:
             return
+        target_cache = []
         
-        # print(f"\n{'='*60}")
-        # print(f"Starting Graph Condensation - Round {self.message_pool['round']}")
-        # print(f"Number of client graphs: {len(input_graphs)}")
-        # print(f"{'='*60}")
+        self.model_cond.eval() 
+        self.model_cond.zero_grad()
 
+        for client_graph in input_graphs:
+            c_x = client_graph["x"].to(self.device).detach()
+            c_y = client_graph["y"].to(self.device)
+            c_adj_dense = client_graph["adj"].to(self.device).detach()
+
+            if torch.isnan(c_x).any() or torch.isnan(c_adj_dense).any():
+                continue
+
+            c_adj_norm = robust_normalize_adj(c_adj_dense)
+            
+            out_target = self.model_cond(c_x, c_adj_norm)
+            
+            if not self._is_log_softmax(out_target):
+                out_target = torch.nn.functional.log_softmax(out_target, dim=1)
+            
+            loss_target = torch.nn.functional.nll_loss(out_target, c_y)
+            
+            if torch.isnan(loss_target) or torch.isinf(loss_target):
+                continue
+            
+            gw_target = torch.autograd.grad(
+                loss_target, 
+                self.model_cond.parameters(),
+                retain_graph=False, 
+                create_graph=False
+            )
+            gw_target = [g.detach() for g in gw_target] 
+
+            unique_classes_client = torch.unique(c_y)
+            relevant_syn_indices = []
+            for c in unique_classes_client:
+                c_item = c.item()
+                if c_item in global_syn_class_indices:
+                    relevant_syn_indices.append(global_syn_class_indices[c_item])
+            
+            if relevant_syn_indices:
+                batch_syn_indices = torch.cat(relevant_syn_indices)
+                target_cache.append({
+                    'gw_target': gw_target,
+                    'syn_indices': batch_syn_indices
+                })
+        
+        if not target_cache:
+            return
+
+        self.model_cond.train() 
         for it in range(self.args.server_condense_iters):
             self.optimizer_global.zero_grad()
             self.model_cond.zero_grad()
             
-            # 1. Forward Synthetic
+            # 1. Forward Synthetic Global
             adj_syn_global = self.pge_global(self.syn_x_global)
-            
             if torch.isnan(adj_syn_global).any() or torch.isinf(adj_syn_global).any():
                 continue
             
@@ -157,32 +198,36 @@ class FedRGDServer(FedGMServer):
             if not self._is_log_softmax(out_syn_global):
                 out_syn_global = torch.nn.functional.log_softmax(out_syn_global, dim=1)
             
-            # 2. Collect gradients
-            all_gw_syn = []
-            all_gw_target = []
+            # 2. Match Gradients
+            total_match_loss = 0.0
             valid_graphs = 0
             
-            for client_graph in input_graphs:
-                result = self._compute_gradients_for_client(
-                    client_graph, 
-                    out_syn_global, 
-                    global_syn_class_indices
+            for item in target_cache:
+                gw_target = item['gw_target']
+                batch_syn_indices = item['syn_indices']
+                
+                loss_syn = torch.nn.functional.nll_loss(
+                    out_syn_global[batch_syn_indices],
+                    self.syn_y_global[batch_syn_indices]
                 )
                 
-                if result is not None:
-                    gw_syn, gw_target = result
-                    all_gw_syn.append(gw_syn)
-                    all_gw_target.append(gw_target)
-                    valid_graphs += 1
+                if torch.isnan(loss_syn) or torch.isinf(loss_syn):
+                    continue
+
+                # Gradient Synthetic (create_graph=True)
+                gw_syn = torch.autograd.grad(
+                    loss_syn, 
+                    self.model_cond.parameters(), 
+                    retain_graph=True,
+                    create_graph=True
+                )
+                
+                batch_loss = match_loss(gw_syn, gw_target, dis_metric=config["dis_metric"], device=self.device)
+                total_match_loss += batch_loss
+                valid_graphs += 1
             
             if valid_graphs == 0:
                 continue
-            
-            # 3. Compute Match Loss & Update
-            total_match_loss = 0.0
-            for gw_syn, gw_target in zip(all_gw_syn, all_gw_target):
-                batch_loss = match_loss(gw_syn, gw_target, dis_metric=config["dis_metric"], device=self.device)
-                total_match_loss += batch_loss
             
             avg_loss = total_match_loss / valid_graphs
             avg_loss.backward()
@@ -195,13 +240,8 @@ class FedRGDServer(FedGMServer):
             self.optimizer_global.step()
             self.last_gradient_match_loss = avg_loss.item()
             
-            # if it % 10 == 0 or it == self.args.server_condense_iters - 1:
-            #     print(f"Iter {it:3d}/{self.args.server_condense_iters}: "
-            #           f"Match Loss = {avg_loss.item():.6f} "
-            #           f"(Valid graphs: {valid_graphs}/{len(input_graphs)})")
-            
             del out_syn_global, adj_syn_norm, adj_syn_global
-            torch.cuda.empty_cache()
+            # torch.cuda.empty_cache()
         
         print(f"{'='*60}\n")
     
