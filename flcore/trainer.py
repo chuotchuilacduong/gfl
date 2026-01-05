@@ -74,28 +74,7 @@ class FGLTrainer:
                         lr=args.lr, 
                         weight_decay=args.weight_decay
                     )
-        if args.fl_algorithm == 'fedigl':
-            from flcore.fedigl.fedigl_gin_model import FedIGL_GIN
-            if fgl_dataset.global_data is not None:
-                nfeat = fgl_dataset.global_data.num_features
-            else:
-                nfeat = fgl_dataset.local_data[0].x.shape[1]
-            nhid = args.hid_dim     
-            nclass = args.num_classes
-            nlayer = args.num_layers
-            dropout = args.dropout
-            
-            self.server.task.model = FedIGL_GIN(nfeat, nhid, nclass, nlayer, dropout, args).to(self.device) 
-            
-            for client in self.clients:
-                client.task.model = FedIGL_GIN(nfeat, nhid, nclass, nlayer, dropout, args).to(self.device)
-                
-                if hasattr(client, 'optimizer'):
-                    client.optimizer = torch.optim.Adam(
-                        client.task.model.parameters(), 
-                        lr=args.lr, 
-                        weight_decay=args.weight_decay
-                    )
+        
         if self.args.task in ["graph_cls", "graph_reg", "node_cls", "link_pred"]:
             for metric in self.args.metrics:
                 self.evaluation_result[f"best_val_{metric}"] = 0
