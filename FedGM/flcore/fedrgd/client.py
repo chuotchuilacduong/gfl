@@ -4,6 +4,7 @@ import torch.nn.functional as F
 from flcore.fedgm.client import FedGMClient
 from flcore.fedgm.utils import match_loss, normalize_adj_tensor
 from flcore.fedgm.pge import PGE
+from flcore.fedgm.IGNR import GraphonLearner as IGNR
 from flcore.fedgm.fedgm_config import config
 from torch_geometric.utils import to_torch_sparse_tensor, dense_to_sparse
 from model.gcn import GCN_kipf
@@ -65,7 +66,8 @@ def sample_edges_from_probabilistic_adj(adj, threshold=0.3, top_k=15, device=Non
 class FedRGDClient(FedGMClient):
     def __init__(self, args, client_id, data, data_dir, message_pool, device):
         super(FedRGDClient, self).__init__(args, client_id, data, data_dir, message_pool, device)
-        
+        if not hasattr(args, 'method'):
+            args.method = config.get('method', 'GCond')
         task_model = GCN_kipf(
             nfeat=self.task.num_feats,
             nhid=args.hid_dim,
@@ -226,7 +228,11 @@ class FedRGDClient(FedGMClient):
             self.optimizer_pge.zero_grad()
 
             # Forward Synthetic
-            adj_syn = self.pge(self.syn_x)
+            if self.args.method == 'SGDD':
+                 adj_syn, opt_loss = self.pge(self.syn_x, Lx=None)
+            else:
+                 adj_syn = self.pge(self.syn_x)
+                 opt_loss = torch.tensor(0.0, device=self.device)
             adj_syn_norm = robust_normalize_adj(adj_syn)
             output_syn = self.model_cond(self.syn_x, adj_syn_norm)
             
@@ -249,7 +255,8 @@ class FedRGDClient(FedGMClient):
                     device=self.device
                 )
                 total_match_loss += match_loss_c
-
+            if self.args.method == 'SGDD' and config.get("opt_scale", 0) > 0:
+                 total_match_loss += config["opt_scale"] * opt_loss
             # Update
             if total_match_loss > 0:
                 total_match_loss.backward()
@@ -311,8 +318,10 @@ class FedRGDClient(FedGMClient):
 
     def send_message(self):
         with torch.no_grad():
-            final_adj = self.pge.inference(self.syn_x)
-        
+            if self.args.method == 'SGDD':
+                final_adj, _ = self.pge(self.syn_x, Lx=None)
+            else:
+                final_adj = self.pge.inference(self.syn_x)
         self.message_pool[f"client_{self.client_id}"] = {
             "weights": list(self.task.model.parameters()),
             "num_samples": self.task.num_samples,

@@ -1,12 +1,14 @@
 import subprocess
 import sys
 import os
-algorithms= [ "hyperion"]
-# algorithms = [ "fedgm","fedpub", "fedgta", "fedsage_plus", "fedavg","hyperion"]
+# algorithms= ["fedrgd"]
+# algorithms = [ "fedpub", "fedgta", "fedsage_plus", "fedavg","hyperion"]
 # algorithms = ["fedgm", "fedrgd", "fedpub", "fedgta", "fedsage_plus", "fedavg"]
-client_counts = [ 5,10,20]
+algorithms = ["fedgta","fedpub","fedaux","fedavg"]
+client_counts = [3]
 data=["Cora","CiteSeer","PubMed","Actor","Chameleon","Computers"]
-
+# data=["Actor","Chameleon"]
+# data=["Cora"]
 base_args = [
     "--scenario", "subgraph_fl",
     "--simulation_mode", "subgraph_fl_label_skew",
@@ -17,7 +19,8 @@ base_args = [
     "--num_rounds", "100",
     # "--lr", "0.001",    
     "--louvain_resolution", "1",
-    "--seed", "2026",
+    '--method',"GCond",
+    "--seed", "2024",
     "--gpuid", "0",
     '--metrics', 'accuracy',
     "--debug", "False"
@@ -35,14 +38,14 @@ print("=== BẮT ĐẦU CHẠY ===")
 for algo in algorithms:
     if algo == "fedgm":
         eval_mode = "global_model_on_local_data"        
-    elif algo == "fedsage_plus":
-        eval_mode = "global_model_on_local_data"
+    elif algo == "fedrgd":
+        eval_mode = "local_model_on_local_data"
     else:
         eval_mode = "local_model_on_local_data"
-    if algo == "fedgm":
-        lrate= "0.001"
+    if algo == "fedsage_plus":
+        lrate= "0.0001"
     elif algo == "fedrgd":
-        lrate= "0.001"
+        lrate= "0.005"
     else: lrate = "0.001"
         
     for n_clients in client_counts:

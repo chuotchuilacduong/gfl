@@ -3,6 +3,7 @@ import torch.nn as nn
 from flcore.base import BaseClient
 from flcore.fedgm.fedgm_config import config
 from flcore.fedgm.pge import PGE
+from flcore.fedgm.IGNR import GraphonLearner as IGNR
 from torch_geometric.utils.sparse import to_torch_sparse_tensor
 import random
 import numpy as np
@@ -25,6 +26,9 @@ class FedGMClient(BaseClient):
         super(FedGMClient, self).__init__(args, client_id, data, data_dir, message_pool, device)
         self.class_dict2 = None
         self.samplers = None
+        
+        if not hasattr(self.args, 'method'):
+            self.args.method = 'GCond'
         
         self.model = GCN_kipf(nfeat=self.task.num_feats, 
                                              nhid=args.hid_dim, 
@@ -71,7 +75,8 @@ class FedGMClient(BaseClient):
                 "syn_y": self.syn_y,
                 "pge": self.best_pge_state,
                 "num_syn_nodes": self.num_syn_nodes,
-                "local_syn_class_indices": self.syn_class_indices
+                "local_syn_class_indices": self.syn_class_indices,
+                "method": self.args.method
             }
         else:
             self.message_pool[f"client_{self.client_id}"]={
@@ -87,8 +92,12 @@ class FedGMClient(BaseClient):
         
         # trainable parameters
         self.syn_x = nn.Parameter(torch.FloatTensor(self.num_syn_nodes, self.task.num_feats).to(self.device))
-        self.pge = PGE(nfeat=self.task.num_feats, nnodes=self.num_syn_nodes, device=self.device, args=self.args).to(self.device)
-
+        if self.args.method == 'SGDD':
+            self.pge = IGNR(node_feature=self.task.num_feats, nfeat=128, nnodes=self.num_syn_nodes, 
+                            device=self.device, args=self.args).to(self.device)
+        else:
+            # GCond và DosCond sử dụng PGE
+            self.pge = PGE(nfeat=self.task.num_feats, nnodes=self.num_syn_nodes, device=self.device, args=self.args).to(self.device)
         # sampled syn labels
         self.syn_y = torch.LongTensor(self.generate_labels_syn(self.task.splitted_data)).to(self.device)
 
@@ -148,8 +157,92 @@ class FedGMClient(BaseClient):
         self.num_class_dict = num_class_dict
         # print(num_class_dict)
         return labels_syn
-    
+    def sampling(self, ids_per_cls_train, budget, vecs, d, using_half=True):
+        """
+        Hàm sampling được tích hợp từ mã bạn cung cấp.
+        Đã điều chỉnh để tương thích với ids_per_cls_train dạng Dictionary.
+        """
+        budget_dist_compute = 1000
+        
+        if isinstance(vecs, np.ndarray):
+            vecs = torch.from_numpy(vecs)
+        
+        # Chuyển về half precision nếu cần, nhưng giữ bản gốc để tránh lỗi tính toán nếu logic sau cần float
+        vecs_proc = vecs.half() if using_half else vecs
+
+        ids_selected = []
+        
+        # Lấy danh sách các key (label) để truy cập dictionary an toàn
+        cls_keys = list(budget.keys())
+        
+        for i, class_key in enumerate(cls_keys):
+            # class_ = class_key (Label thực tế)
+            
+            # Tạo danh sách index của các lớp KHÁC lớp hiện tại
+            other_cls_indices = list(range(len(cls_keys)))
+            other_cls_indices.pop(i)
+            
+            # Lấy danh sách ID của lớp hiện tại từ Dictionary
+            current_cls_ids = ids_per_cls_train[class_key]
+
+            ids_selected0 = (
+                current_cls_ids
+                if len(current_cls_ids) < budget_dist_compute
+                else random.choices(current_cls_ids, k=budget_dist_compute)
+            )
+
+            dist = []
+            vecs_0 = vecs_proc[ids_selected0]
+            
+            for j in other_cls_indices:
+                other_class_key = cls_keys[j] # Lấy label của lớp khác
+                other_cls_ids_list = ids_per_cls_train[other_class_key] # Truy cập dict bằng label
+                
+                chosen_ids = random.choices(
+                    other_cls_ids_list,
+                    k=min(budget_dist_compute, len(other_cls_ids_list)),
+                )
+                vecs_1 = vecs_proc[chosen_ids]
+                
+                # Tính khoảng cách
+                if len(chosen_ids) < 26 or len(ids_selected0) < 26:
+                    # torch.cdist throws error for tensor smaller than 26
+                    dist.append(torch.cdist(vecs_0.float(), vecs_1.float()).half())
+                else:
+                    dist.append(torch.cdist(vecs_0, vecs_1))
+
+            dist_ = torch.cat(dist, dim=-1)  # include distance to all the other classes
+            n_selected = (dist_ < d).sum(dim=-1)
+            rank = n_selected.sort()[1].tolist()
+            
+            current_ids_selected = (
+                rank[: budget[class_key]]
+                if len(rank) > budget[class_key]
+                else random.choices(rank, k=budget[class_key])
+            )
+            ids_selected.extend([ids_selected0[j] for j in current_ids_selected]) # Lưu ý: index j lấy từ ids_selected0
+            
+        return ids_selected
     def get_syn_x_initialize(self, splitted_data):
+        if self.args.method == 'SGDD':
+            from collections import Counter
+            counter = Counter(self.syn_y.cpu().numpy())
+            features = splitted_data["data"].x
+            labels = splitted_data["data"].y
+            train_mask = splitted_data["train_mask"]
+
+            ids_per_cls_train = {}
+            for c in counter.keys():
+                idx = ((labels == c) & train_mask).nonzero().squeeze().tolist()
+                if not isinstance(idx, list):
+                    idx = [idx]
+                ids_per_cls_train[c] = idx
+            d_threshold = getattr(self.args, 'd', 0.5)
+            idx_selected = self.sampling(ids_per_cls_train, counter, features, d=d_threshold)
+            
+            idx_selected = np.array(idx_selected).reshape(-1)
+            sub_x = features[idx_selected]
+            return sub_x
         idx_selected = []
         from collections import Counter;
         counter = Counter(self.syn_y.cpu().numpy())
@@ -226,7 +319,10 @@ class FedGMClient(BaseClient):
         model_parameters = list(self.model.parameters())
         self.model.train()
 
-        adj_syn = pge(self.syn_x)
+        if self.args.method == 'SGDD':
+            adj_syn, opt_loss = pge(self.syn_x, Lx=None) 
+        else:
+            adj_syn = pge(self.syn_x)
         adj_syn_norm = normalize_adj_tensor(adj_syn, sparse=False)
         loss = torch.tensor(0.0).to(self.device)
               
@@ -264,7 +360,11 @@ class FedGMClient(BaseClient):
         else:
             loss_reg = torch.tensor(0)
 
-        loss = loss + loss_reg
+        if self.args.method == 'SGDD' and config.get("opt_scale", 0) > 0:
+             loss_opt_scaled = config["opt_scale"] * opt_loss
+        else:
+             loss_opt_scaled = torch.tensor(0.0).to(self.device)
+        loss = loss + loss_reg+ loss_opt_scaled
 
         if loss.item() < self.best_loss:
             self.best_loss = loss.item()
@@ -366,7 +466,10 @@ class FedGMClient(BaseClient):
             for (local_param, global_param) in zip(self.best_pge_state, pge.parameters()):
                     global_param.data.copy_(local_param)
                     
-            adj_syn = pge.inference(syn_x)
+            if self.args.method == 'SGDD':
+                 adj_syn, _ = pge(syn_x, Lx=None) # SGDD inference
+            else:
+                 adj_syn = pge.inference(syn_x)
             real_adj = to_torch_sparse_tensor(splitted_data["data"].edge_index)
             
             

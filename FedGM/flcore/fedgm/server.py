@@ -18,11 +18,13 @@ from utils.metrics import compute_supervised_metrics
 import networkx as nx
 import matplotlib.pyplot as plt
 import copy
-
+from flcore.fedgm.IGNR import GraphonLearner as IGNR
 
 class FedGMServer(BaseServer):
     def __init__(self, args, global_data, data_dir, message_pool, device):
         super(FedGMServer, self).__init__(args, global_data, data_dir, message_pool, device)
+        if not hasattr(self.args, 'method'):
+            self.args.method = 'GCond'
         self.model = GCN_kipf(nfeat=self.task.num_feats, 
                                              nhid=args.hid_dim, 
                                              nclass=self.task.num_global_classes, 
@@ -32,7 +34,11 @@ class FedGMServer(BaseServer):
                                              weight_decay=args.weight_decay, 
                                              device=self.device).to(self.device)
         self.model.initialize()
-        self.pge = PGE(nfeat=self.task.num_feats, nnodes = 1, device=self.device, args=self.args).to(self.device)
+        if self.args.method == 'SGDD':
+            self.pge = IGNR(node_feature=self.task.num_feats, nfeat=128, nnodes=1, device=self.device, args=self.args).to(self.device)
+        else:
+            self.pge = PGE(nfeat=self.task.num_feats, nnodes=1, device=self.device, args=self.args).to(self.device)
+       
         self.task.override_evaluate = self.get_override_evaluate()
 
         self.best_loss = float('inf')
@@ -46,8 +52,10 @@ class FedGMServer(BaseServer):
 
             num_tot_nodes = sum([self.message_pool[f"client_{client_id}"]["num_syn_nodes"] for client_id in self.message_pool[f"sampled_clients"]])
             
-            self.pge = PGE(nfeat=self.task.num_feats, nnodes = num_tot_nodes, device=self.device, args=self.args).to(self.device)
-            
+            if self.args.method == 'SGDD':
+                self.pge = IGNR(node_feature=self.task.num_feats, nfeat=128, nnodes=num_tot_nodes, device=self.device, args=self.args).to(self.device)
+            else:
+                self.pge = PGE(nfeat=self.task.num_feats, nnodes=num_tot_nodes, device=self.device, args=self.args).to(self.device)
             adj_syn = torch.zeros((num_tot_nodes, num_tot_nodes), dtype=torch.float32).to(self.device)
 
             labels = 0
@@ -64,21 +72,29 @@ class FedGMServer(BaseServer):
             syn_x = torch.concat(x_list)
             syn_y = torch.concat(y_list)
 
-            adj_link_pre = self.pge.inference(syn_x)
-
+            if self.args.method == 'SGDD':
+                adj_link_pre, _ = self.pge(syn_x, Lx=None)
+            else:
+                adj_link_pre = self.pge.inference(syn_x)
             num_syn_all_nodes = 0
             for it, client_id in enumerate(self.message_pool["sampled_clients"]):
                 for (local_param, global_param) in zip(self.message_pool[f"client_{client_id}"]["pge"], self.pge.parameters()):
                     global_param.data.copy_(local_param)
-                if it ==0:
-                    adj_link_pre = self.pge.inference(syn_x)
+                if self.args.method == 'SGDD':
+                    curr_adj, _ = self.pge(syn_x, Lx=None)
+                else:
+                    curr_adj = self.pge.inference(syn_x)
+                
+                if it == 0:
+                    adj_link_pre = curr_adj
                 else: 
-                    adj_link_pre += self.pge.inference(syn_x)
+                    adj_link_pre += curr_adj
+                
                 dst_start = num_syn_all_nodes
                 dst_end = num_syn_all_nodes + self.message_pool[f"client_{client_id}"]["num_syn_nodes"]
-                adj_syn[dst_start:dst_end, dst_start:dst_end] = self.pge.inference(syn_x)[dst_start:dst_end, dst_start:dst_end]
-                num_syn_all_nodes += self.message_pool[f"client_{client_id}"]["num_syn_nodes"]
                 
+                adj_syn[dst_start:dst_end, dst_start:dst_end] = curr_adj[dst_start:dst_end, dst_start:dst_end]
+                num_syn_all_nodes += self.message_pool[f"client_{client_id}"]["num_syn_nodes"]
             self.syn_x = syn_x.detach().requires_grad_()
             self.optimizer_feat = torch.optim.Adam([self.syn_x], lr=config["lr_feat"]) # parameterized syn_x
 

@@ -95,6 +95,15 @@ def load_client(args, client_id, data, data_dir, message_pool, device):
     elif args.fl_algorithm == "fedlog":
         from flcore.fedlog.client import FedLogClient
         return FedLogClient(args, client_id, data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedomg":
+        from flcore.fedomg.client import FedOMGClient
+        return FedOMGClient(args, client_id, data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedaux": # [Modified] Added FedAux loading
+        from flcore.fedaux.client import FedAuxClient
+        return FedAuxClient(args, client_id, data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "centralized":
+        from flcore.centralized.client import CentralizedClient
+        return CentralizedClient(args, client_id, data, data_dir, message_pool, device)
     
     
 def load_server(args, global_data, data_dir, message_pool, device):
@@ -170,9 +179,16 @@ def load_server(args, global_data, data_dir, message_pool, device):
     elif args.fl_algorithm == "fedlog":
         from flcore.fedlog.server import FedLogServer
         return FedLogServer(args, global_data, data_dir, message_pool, device)
-    
-    
-    
+    elif args.fl_algorithm == "fedomg":
+        from flcore.fedomg.server import FedOMGServer
+        return FedOMGServer(args, global_data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedaux": # [Modified] Added FedAux loading
+        from flcore.fedaux.server import FedAuxServer
+        return FedAuxServer(args, global_data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "centralized":
+        from flcore.centralized.server import CentralizedServer
+        return CentralizedServer(args, global_data, data_dir, message_pool, device)
+
     
 def load_optim(args):
     if args.optim == "adam":
