@@ -4,6 +4,7 @@ from data.distributed_dataset_loader import FGLDataset
 from utils.basic_utils import load_client, load_server
 from utils.logger import Logger
 import wandb
+import copy
 from flcore.hyperion.server import HyperionServer
 from flcore.hyperion.client import HyperionClient
 from flcore.hyperion.models import HyperionModelWrapper
@@ -34,10 +35,17 @@ class FGLTrainer:
         self.message_pool = {}
         
         project_name = getattr(args, "wandb_project", "FGL-Experiment")
+        if hasattr(args, 'fl_algorithm'):
+            if args.fl_algorithm == 'fedrgd' and hasattr(args, 'method') and args.method == 'SGDD':
+                run_name = f"{args.fl_algorithm}_{args.method}_{args.dataset}"
+            else:
+                run_name = f"{args.fl_algorithm}_{args.dataset}"
+        else:
+            run_name = "fgl_run"
         wandb.init(
             project=project_name,
             config=vars(args),
-            name=f"{args.fl_algorithm}_{args.dataset}" if hasattr(args, 'fl_algorithm') else "fgl_run"
+            name=run_name
         )
         
         
@@ -55,6 +63,7 @@ class FGLTrainer:
         self.server = load_server(args, fgl_dataset.global_data, fgl_dataset.processed_dir, self.message_pool, self.device)
         
         self.evaluation_result = {"best_round":0}
+        
         if args.fl_algorithm == 'hyperion':
            
             self.server.task.model = HyperionModelWrapper(
@@ -226,6 +235,43 @@ class FGLTrainer:
         
             print(current_output)
             print(best_output)
+        target_algos = ['fedgta', 'fedpub', 'fedaux','fedrgd','fedavg']
+        
+        if self.args.fl_algorithm in target_algos and self.args.evaluation_mode == 'local_model_on_local_data':
             
+            # 1. Tạo Global Model tạm thời bằng cách trung bình trọng số các Client
+            # Global Model = Weighted Average(Local Models)
+            temp_global_weights = copy.deepcopy(self.clients[0].task.model.state_dict())
+            for key in temp_global_weights:
+                temp_global_weights[key] = temp_global_weights[key] * 0 
+            
+            total_samples = 0
+            for client in self.clients:
+                n_samples = client.task.num_samples
+                total_samples += n_samples
+                client_weights = client.task.model.state_dict()
+                for key in temp_global_weights:
+                    temp_global_weights[key] += client_weights[key] * n_samples
+            
+            for key in temp_global_weights:
+                temp_global_weights[key] = temp_global_weights[key] / total_samples
+            
+            # 2. Lưu trọng số cũ của Server
+            original_server_weights = copy.deepcopy(self.server.task.model.state_dict())
+            
+            # 3. Load trọng số Global vào Server để đánh giá
+            self.server.task.model.load_state_dict(temp_global_weights)
+            
+            # 4. Đánh giá trên dữ liệu toàn cục
+            global_result = self.server.task.evaluate()
+            
+            # 5. Log kết quả với tiền tố 'global_model_'
+            for key, value in global_result.items():
+                evaluation_result[f"global_model_{key}"] = value
+                
+            print(f"Global Model Accuracy ({self.args.fl_algorithm}): {global_result.get(f'{self.args.metrics[0]}_test', 0):.4f}")
+
+            # 6. Khôi phục trạng thái Server
+            self.server.task.model.load_state_dict(original_server_weights) 
         self.logger.add_log(evaluation_result)
         wandb.log(evaluation_result)

@@ -6,6 +6,7 @@ from flcore.fedgm.utils import match_loss, normalize_adj_tensor
 from flcore.fedgm.pge import PGE
 from flcore.fedgm.fedgm_config import config
 from model.gcn import GCN_kipf
+from flcore.fedgm.IGNR import GraphonLearner as IGNR
 from torch_sparse import SparseTensor, fill_diag, sum as sparsesum, mul
 from utils.metrics import compute_supervised_metrics
 
@@ -36,9 +37,14 @@ def robust_normalize_adj(adj, eps=0):
 class FedRGDServer(FedGMServer):
     def __init__(self, args, global_data, data_dir, message_pool, device):
         super(FedRGDServer, self).__init__(args, global_data, data_dir, message_pool, device)
+        if not hasattr(self.args, 'method'):
+             self.args.method = config.get('method', 'GCond')
         
         self.num_global_syn_nodes = args.num_global_syn_nodes
-        self.pge_global = PGE(nfeat=self.task.num_feats, nnodes=self.num_global_syn_nodes, device=device, args=args).to(device)
+        if self.args.method == 'SGDD':
+            self.pge_global = IGNR(node_feature=self.task.num_feats, nfeat=128, nnodes=self.num_global_syn_nodes, device=device, args=args).to(device)
+        else:
+            self.pge_global = PGE(nfeat=self.task.num_feats, nnodes=self.num_global_syn_nodes, device=device, args=args).to(device)
         self.syn_x_global = torch.randn(self.num_global_syn_nodes, self.task.num_feats, requires_grad=True, device=device)
         self.syn_y_global = torch.LongTensor([i % self.task.num_global_classes for i in range(self.num_global_syn_nodes)]).to(device)
         
@@ -188,7 +194,11 @@ class FedRGDServer(FedGMServer):
             self.model_cond.zero_grad()
             
             # 1. Forward Synthetic Global
-            adj_syn_global = self.pge_global(self.syn_x_global)
+            if self.args.method == 'SGDD':
+                adj_syn_global, opt_loss = self.pge_global(self.syn_x_global, Lx=None)
+            else:
+                adj_syn_global = self.pge_global(self.syn_x_global)
+                opt_loss = torch.tensor(0.0, device=self.device)
             if torch.isnan(adj_syn_global).any() or torch.isinf(adj_syn_global).any():
                 continue
             
@@ -230,6 +240,8 @@ class FedRGDServer(FedGMServer):
                 continue
             
             avg_loss = total_match_loss / valid_graphs
+            if self.args.method == 'SGDD' and config.get("opt_scale", 0) > 0:
+                avg_loss += config["opt_scale"] * opt_loss
             avg_loss.backward()
             
             torch.nn.utils.clip_grad_norm_(
@@ -313,7 +325,10 @@ class FedRGDServer(FedGMServer):
     def _cache_global_graph(self):
         """Cache the global synthetic graph for distribution"""
         with torch.no_grad():
-            final_adj = self.pge_global.inference(self.syn_x_global)
+            if self.args.method == 'SGDD':
+                final_adj, _ = self.pge_global(self.syn_x_global, Lx=None)
+            else:
+                final_adj = self.pge_global.inference(self.syn_x_global)
             self.global_graph_cache = {
                 "x": self.syn_x_global.detach().cpu(),
                 "adj": final_adj.detach().cpu(),

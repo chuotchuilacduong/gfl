@@ -1,5 +1,5 @@
 import argparse
-
+from flcore.hyperion.hyperion_config import add_hyperion_args
 # scenarios
 supported_scenario = ["graph_fl", "subgraph_fl", "subgraph_fl_hetero"]
 
@@ -27,7 +27,12 @@ supported_subgraph_fl_hetero_tasks = ["node_cls_heterogeneous"]
 
 
 # algorithm and models
-supported_fl_algorithm = ["isolate", "fedavg", "fedprox", "scaffold", "moon", "feddc", "fedproto", "fedtgp", "fedpub", "fedstar", "fedgta", "fedtad", "gcfl_plus", "fedsage_plus", "adafgl", "feddep", "fggp", "fgssl", "fedgl", "fedhgn3", "fedgm","fedrgd"]
+supported_fl_algorithm = ["isolate", "fedavg", "fedprox",
+                          "scaffold", "moon", "feddc", "fedproto",
+                          "fedtgp", "fedpub", "fedstar", "fedgta", "fedtad",
+                          "gcfl_plus", "fedsage_plus", "adafgl", "feddep", "fggp",
+                          "fgssl", "fedgl", "fedhgn3", "fedgm","fedrgd", "hyperion",
+                          "fedigl", "fedlog", "fedomg","fedaux","centralized"]
 supported_metrics = ["accuracy", "precision", "f1", "recall", "auc", "ap", "clustering_accuracy", "nmi", "ari"]
 supported_evaluation_modes = ["global_model_on_local_data", "global_model_on_global_data", "local_model_on_local_data", "local_model_on_global_data"]
 supported_data_processing = ["raw", "random_feature_sparsity", "random_feature_noise", "random_topology_sparsity", "random_topology_noise", "random_label_sparsity", "random_label_noise"]
@@ -141,8 +146,50 @@ parser.add_argument("--model_param", type=bool, default=False)
 
 # FedRGD settings
 parser.add_argument("--num_global_syn_nodes", type=int, default=100)
-parser.add_argument("--server_condense_iters", type=int, default=200)
-parser.add_argument("--condense_iters", type=int, default=100)
+parser.add_argument("--server_condense_iters", type=int, default=50)
+parser.add_argument("--condense_iters", type=int, default=50)
 parser.add_argument("--local_epochs", type=int, default=3)
+parser.add_argument("--method", type=str, default="GCond", choices=["GCond", "SGDD"], help="Method for graph condensation in FedRGD")
 
+# IGNR / SGDD settings
+parser.add_argument("--ep_ratio", type=float, default=0.5, help="Ratio for node feature in IGNR")
+parser.add_argument("--sinkhorn_iter", type=int, default=5, help="Sinkhorn iterations for IGNR")
+parser.add_argument("--mx_size", type=int, default=100, help="Max size for IGNR transport plan")
+parser.add_argument("--opt_scale", type=float, default=1.0, help="Scaling factor for optimal transport loss")
+
+
+#FedIGL settings
+parser.add_argument('--lambda1', type=float, default=1.0, help='Regularization coefficient 1 for FedIGL')
+parser.add_argument('--lambda2', type=float, default=1.0, help='Regularization coefficient 2 for FedIGL')
+parser.add_argument('--lambda3', type=float, default=0.15, help='Weight for the regularization loss term')
+parser.add_argument('--subgraph_ration', type=float, default=0.25, help='Subgraph ratio for FedIGL')
+
+# FedLoG settings
+parser.add_argument('--pre_gen_epochs', type=int, default=100, help='Epochs for generator pretraining')
+parser.add_argument('--pre_epochs', type=int, default=100, help='Epochs for local model pretraining')
+parser.add_argument('--head_deg_thres', type=int, default=3, help='Degree threshold for head/tail separation')
+parser.add_argument('--hyper_metric', type=float, default=1, help='Hyperparameter for metric loss')
+parser.add_argument('--hyper_syn_norm', type=float, default=0.5, help='Hyperparameter for synthetic norm loss')
+parser.add_argument('--hyper_cd_metric', type=float, default=1, help='Hyperparameter for cross-domain metric')
+parser.add_argument('--num_proto', type=int, default=5, help='Number of prototypes')
+
+# FedOMG settings
+parser.add_argument("--omg_meta_lr", type=float, default=0.1)
+parser.add_argument("--grad_balance", type=bool, default=False)
+parser.add_argument("--omg_learning_rate", type=float, default=0.001)
+parser.add_argument("--omg_step_size", type=int, default=10)
+parser.add_argument("--omg_c", type=float, default=0.1)
+parser.add_argument("--omg_rounds", type=int, default=50)
+parser.add_argument("--omg_momentum", type=float, default=0.9)
+parser.add_argument("--omg_gamma", type=float, default=0.1)
+parser.add_argument("--gm_flag", type=str, default="gem", choices=["gem", "ca_grad"])
+
+
+# FedAux settings
+parser.add_argument("--sigma", type=float, default=1.0, help="Sigma for FedAux kernel aggregator")
+parser.add_argument("--norm_scale", type=float, default=10.0, help="Scale for exponential normalization in FedAux")
+parser.add_argument("--loc_l2", type=float, default=1e-5, help="L2 regularization coefficient for FedAux")
+parser.add_argument("--dropout1", type=float, default=0.5, help="Dropout rate for GNNAUX")
+#Hyperion setting
+parser = add_hyperion_args(parser)
 args = parser.parse_args()

@@ -16,6 +16,16 @@ def load_graph_cls_default_model(args, input_dim, output_dim, client_id=None):
     Returns:
         torch.nn.Module: The initialized model.
     """
+    if hasattr(args, 'fl_algorithm') and args.fl_algorithm == 'fedigl':
+        from flcore.fedigl.fedigl_gin_model import FedIGL_GIN
+        return FedIGL_GIN(
+            nfeat=input_dim, 
+            nhid=args.hid_dim, 
+            nclass=output_dim, 
+            nlayer=args.num_layers, 
+            dropout=args.dropout, 
+            args=args
+        )
     if client_id is None: # server
         if len(args.model) > 1:
             return None
@@ -57,6 +67,16 @@ def load_node_edge_level_default_model(args, input_dim, output_dim, client_id=No
     Returns:
         torch.nn.Module: The initialized model.
     """
+    if hasattr(args, 'fl_algorithm') and args.fl_algorithm == 'fedigl':
+        from flcore.fedigl.fedigl_gin_model import FedIGL_Node_GIN
+        return FedIGL_Node_GIN(
+            nfeat=input_dim, 
+            nhid=args.hid_dim, 
+            nclass=output_dim, 
+            nlayer=args.num_layers, 
+            dropout=args.dropout, 
+            args=args
+        )
     if client_id is None: # server
         if len(args.model) > 1:
             return None

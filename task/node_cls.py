@@ -98,7 +98,17 @@ class NodeClsTask(BaseTask):
             eval_output = {}
             self.model.eval()
             with torch.no_grad():
-                embedding, logits = self.model.forward(splitted_data["data"])
+                output = self.model.forward(splitted_data["data"])
+                
+                if isinstance(output, tuple) and len(output) == 5: 
+                    # Trường hợp Hyperion: (pred, virtual_label, prot_nce_loss, graph_emb, distances)
+                    logits = output[0]       # pred là logits
+                    embedding = output[3]    # graph_emb là embedding
+                elif isinstance(output, tuple) and len(output) == 2:
+                    # Trường hợp GCN chuẩn: (embedding, logits)
+                    embedding, logits = output
+                else:
+                    embedding, logits = output[0], output[1]
                 loss_train = self.loss_fn(embedding, logits, splitted_data["data"].y, splitted_data["train_mask"])
                 loss_val = self.loss_fn(embedding, logits, splitted_data["data"].y, splitted_data["val_mask"])
                 loss_test = self.loss_fn(embedding, logits, splitted_data["data"].y, splitted_data["test_mask"])

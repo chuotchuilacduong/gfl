@@ -4,7 +4,7 @@ import sys
 
 # sys.argv = ["main.py",
 #             '--debug', 'False',
-#             "--seed", '2024',
+#             "--seed", '2025',
 #             "--gpuid", '0',
 #             '--scenario', 'subgraph_fl',
 #             '--simulation_mode', 'subgraph_fl_label_skew',
@@ -13,11 +13,12 @@ import sys
 #             '--louvain_resolution', '1',
 #             '--dataset', 'Actor',
 #             '--model', 'gcn',
-#             '--fl_algorithm', 'fedpub',
+#             '--fl_algorithm', 'fedgta',
 #             '--num_clients', '5',
 #             '--num_epochs', '3',
 #             '--num_rounds','100',
 #             '--metrics', 'accuracy',
+#             '--method',"GCond",
 #             '--evaluation_mode', "local_model_on_local_data"]
 
 
