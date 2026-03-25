@@ -68,6 +68,10 @@ class FedRGDClient(FedGMClient):
         super(FedRGDClient, self).__init__(args, client_id, data, data_dir, message_pool, device)
         if not hasattr(args, 'method'):
             args.method = config.get('method', 'GCond')
+        if self.args.method == 'DosCond':
+            config['op_epoche'] = 1
+            config['condense_iters'] = 1
+            self.args.condense_iters = 1
         task_model = GCN_kipf(
             nfeat=self.task.num_feats,
             nhid=args.hid_dim,
@@ -174,7 +178,14 @@ class FedRGDClient(FedGMClient):
         }
         
         # Graph Condensation
+        is_ablation = getattr(self.args, 'ablation', False)
+        should_condense = False
         if self.message_pool["round"] > 0:
+            should_condense = True
+            if is_ablation and self.message_pool["round"] > 1:
+                should_condense = False 
+        # Graph Condensation
+        if should_condense:
             batch_adj_dense = batch_adj_sparse.to_dense()
             self._perform_graph_condensation(batch_x, batch_y, batch_adj_dense, batch_mask)
     
@@ -230,6 +241,7 @@ class FedRGDClient(FedGMClient):
             # Forward Synthetic
             if self.args.method == 'SGDD':
                  adj_syn, opt_loss = self.pge(self.syn_x, Lx=None)
+            
             else:
                  adj_syn = self.pge(self.syn_x)
                  opt_loss = torch.tensor(0.0, device=self.device)
@@ -317,18 +329,36 @@ class FedRGDClient(FedGMClient):
         return override_evaluate
 
     def send_message(self):
-        with torch.no_grad():
-            if self.args.method == 'SGDD':
-                final_adj, _ = self.pge(self.syn_x, Lx=None)
-            else:
-                final_adj = self.pge.inference(self.syn_x)
-        self.message_pool[f"client_{self.client_id}"] = {
-            "weights": list(self.task.model.parameters()),
-            "num_samples": self.task.num_samples,
-            "local_metrics": self.local_metrics,
-            "syn_graph": {
+        current_round = self.message_pool.get("round", 0)
+        is_ablation = config.get('ablation', False)
+
+        should_send_graph = False
+        if is_ablation:
+            if current_round == 1:
+                should_send_graph = True
+        else:
+            if current_round > 0:
+                should_send_graph = True
+
+        syn_graph_data = None
+        if should_send_graph:
+            with torch.no_grad():
+                if self.args.method == 'SGDD':
+                    final_adj, _ = self.pge(self.syn_x, Lx=None)
+                else:
+                    final_adj = self.pge.inference(self.syn_x)
+            
+            syn_graph_data = {
                 "x": self.syn_x.detach().cpu(),
                 "adj": final_adj.detach().cpu(), 
                 "y": self.syn_y.detach().cpu()
             }
+
+        self.message_pool[f"client_{self.client_id}"] = {
+            "weights": list(self.task.model.parameters()),
+            "num_samples": self.task.num_samples,
+            "local_metrics": self.local_metrics
         }
+        
+        if syn_graph_data is not None:
+             self.message_pool[f"client_{self.client_id}"]["syn_graph"] = syn_graph_data

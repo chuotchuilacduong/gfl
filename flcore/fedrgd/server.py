@@ -39,7 +39,10 @@ class FedRGDServer(FedGMServer):
         super(FedRGDServer, self).__init__(args, global_data, data_dir, message_pool, device)
         if not hasattr(self.args, 'method'):
              self.args.method = config.get('method', 'GCond')
-        
+        if self.args.method == 'DosCond':
+            config['op_epoche'] = 1
+            config['server_condense_iters'] = 1
+            self.args.server_condense_iters = 1
         self.num_global_syn_nodes = args.num_global_syn_nodes
         if self.args.method == 'SGDD':
             self.pge_global = IGNR(node_feature=self.task.num_feats, nfeat=128, nnodes=self.num_global_syn_nodes, device=device, args=args).to(device)

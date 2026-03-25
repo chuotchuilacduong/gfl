@@ -1,5 +1,4 @@
 config = {
-    # Chọn phương pháp: 'GCond', 'SGDD', 'FedGM', hoặc phương pháp mới của bạn
     "method": "GCond", 
     
     "reduction_rate": 0.84,
