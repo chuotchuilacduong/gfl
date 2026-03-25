@@ -110,13 +110,18 @@ class FedRGDServer(FedGMServer):
     
     def execute(self):
         """Main server execution: aggregate weights and perform graph condensation"""
+        import time
         self.aggregate_classification_weights()
         self.last_gradient_match_loss = float('nan')
         
+        start_time = time.perf_counter()
         if self.message_pool["round"] > 0:
             self._perform_graph_condensation()
             
         self._cache_global_graph()
+        
+        duration = time.perf_counter() - start_time
+        self.message_pool["extra_server_compute"] = self.message_pool.get("extra_server_compute", 0) + duration
     
     def _perform_graph_condensation(self):
         """

@@ -92,7 +92,7 @@ class Feddgc1Client(BaseClient):
             
             self.task.processed_data['data']['edge_index'] = torch.cat([
                 self.task.processed_data['data']['edge_index'], 
-                self.edge_index_syn  
+                self.edge_index_syn + self.local_data_len  
             ], dim=1)
             self.task.processed_data['train_mask'] = torch.cat([self.task.processed_data['train_mask'], torch.ones(self.feat_syn.shape[0], dtype=torch.bool).to(self.device)], dim=0)
             self.task.processed_data['val_mask'] = torch.cat([self.task.processed_data['val_mask'],
@@ -121,14 +121,28 @@ class Feddgc1Client(BaseClient):
             custom_loss_fn (function): A custom loss function.
         """
         def custom_loss_fn(embedding, logits, label, mask):
+            loss1 = self.task.default_loss_fn(
+                logits[:self.local_data_len][mask[:self.local_data_len]], 
+                label[:self.local_data_len][mask[:self.local_data_len]]
+            )
+            
+            syn_mask = mask[self.local_data_len:]
+            if syn_mask.sum() == 0:
+                return loss1
+            
+            loss2 = self.task.default_loss_fn(
+                logits[self.local_data_len:][syn_mask], 
+                label[self.local_data_len:][syn_mask]
+            )
+            
             if self.message_pool["round"] == 1:
-                return self.task.default_loss_fn(logits[:self.local_data_len][mask[:self.local_data_len]], label[:self.local_data_len][mask[:self.local_data_len]]) + config['gama']*self.task.default_loss_fn(logits[self.local_data_len:][mask[self.local_data_len:]], label[self.local_data_len:][mask[self.local_data_len:]])
+                return loss1 + config['gama'] * loss2
             else:
-                loss_kd = 0
-                input = logits[self.local_data_len:]
-                target = self.message_pool[f"client_{self.client_id}"]["syn_logits"].to(self.device)
-                loss_kd += nn.MSELoss()(input, target)
-                return self.task.default_loss_fn(logits[:self.local_data_len][mask[:self.local_data_len]], label[:self.local_data_len][mask[:self.local_data_len]]) + config['gama']*self.task.default_loss_fn(logits[self.local_data_len:][mask[self.local_data_len:]], label[self.local_data_len:][mask[self.local_data_len:]]) + config['lambda'] * loss_kd
+                input_kd = logits[self.local_data_len:]
+                target_kd = self.message_pool[f"client_{self.client_id}"]["syn_logits"].to(self.device)
+                loss_kd = nn.MSELoss()(input_kd, target_kd)
+                return loss1 + config['gama'] * loss2 + config['lambda'] * loss_kd
+                
         return custom_loss_fn
 
 

@@ -48,7 +48,7 @@ if not hasattr(args, 'lr_teacher_model'):
 if not hasattr(args, 'keep_ratio'):
     args.keep_ratio = 1.0
 if not hasattr(args, 'reduction_rate'):
-    args.reduction_rate = 1.0
+    args.reduction_rate = 0.84
 if not hasattr(args, 'alignment'):
     args.alignment = 1
 if not hasattr(args, 'smoothness'):
@@ -62,9 +62,9 @@ if not hasattr(args, 'threshold'):
 if not hasattr(args, 'teacher_model_loop'):
     args.teacher_model_loop = 1000
 if not hasattr(args, 'condensing_loop'):
-    args.condensing_loop = 150
+    args.condensing_loop = 1000
 if not hasattr(args, 'student_model_loop'):
-    args.student_model_loop = 300
+    args.student_model_loop = 1000
 if not hasattr(args, 'teacher_val_stage'):
     args.teacher_val_stage = 50
 if not hasattr(args, 'student_val_stage'):

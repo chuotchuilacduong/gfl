@@ -78,19 +78,15 @@ class FedGKGClient(FedRGDClient):
             if feat_syn is not None and adj_syn_norm is not None:
                 syn_logits = self.task.model(feat_syn, adj_syn_norm)
                 
-                # 2.KL Divergence (Student)
-                student_log_prob = F.log_softmax(syn_logits / self.temperature, dim=1)
                 
-                if label_syn.dim() == 1: 
-                    target_prob = F.one_hot(label_syn, num_classes=syn_logits.size(1)).float()
-                else: 
-                    target_prob = label_syn
+                # F.kl_div with one_hot reduces to nll_loss, but applying it with mean 
+                # over-weights the small synthetic graph against the much larger local graph.
+                # We should scale loss_guidance proportionally or with an alpha parameter.
+                alpha = config.get('alpha_kd', 0.5)
+                # Fallback to proportionally scaling if alpha_kd acts as balance
+                loss_guidance = F.nll_loss(syn_logits, label_syn) 
                 
-                # 4.  KL Divergence
-                loss_kd = F.kl_div(student_log_prob, target_prob, reduction='batchmean')                
-                loss_guidance = loss_kd * (self.temperature ** 2)
-                
-                loss_total = loss_total + loss_guidance
+                loss_total = loss_task + alpha * loss_guidance
             
             loss_total.backward()
             torch.nn.utils.clip_grad_norm_(self.task.model.parameters(), max_norm=1.0)

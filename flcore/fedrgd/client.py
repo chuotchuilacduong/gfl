@@ -184,10 +184,16 @@ class FedRGDClient(FedGMClient):
             should_condense = True
             if is_ablation and self.message_pool["round"] > 1:
                 should_condense = False 
+        import time
+        start_time = time.perf_counter()
         # Graph Condensation
         if should_condense:
             batch_adj_dense = batch_adj_sparse.to_dense()
             self._perform_graph_condensation(batch_x, batch_y, batch_adj_dense, batch_mask)
+            
+        duration = time.perf_counter() - start_time
+        curr = self.message_pool.get(f"client_{self.client_id}_extra_compute", 0)
+        self.message_pool[f"client_{self.client_id}_extra_compute"] = curr + duration
     
     def _perform_graph_condensation(self, batch_x, batch_y, batch_adj_dense, batch_mask):
 

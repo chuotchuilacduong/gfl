@@ -140,6 +140,9 @@ class FGLTrainer:
         extra_client_compute = 0
         extra_server_compute = self.message_pool.get("extra_server_compute", 0)
         
+        # New metric tracking explicitly for One-time download 
+        one_time_download = 0.0 
+        
         if self.args.fl_algorithm == 'fedgvd':
             for client in self.clients:
                 # one time upload (feat_syn, edge_index_syn, label_syn)
@@ -151,14 +154,21 @@ class FGLTrainer:
                     
                     # logits are output predictions per round sent to server and returned
                     logits_size = client.feat_syn.shape[0] * self.args.num_classes * 4
-                    upload_per_round += logits_size
                     download_per_round += logits_size
                 
                 # extra compute (condensing graph)
                 if f"client_{client.client_id}_extra_compute" in self.message_pool:
                     extra_client_compute += self.message_pool[f"client_{client.client_id}_extra_compute"]
-                    
-            upload_per_round /= self.args.num_clients
+            
+            # In FedGVD, each client downloads the entire global synthetic graph in round 1
+            # one_time_upload here is the sum of all clients' synthetic data sizes
+            # So, one_time_download for each client is the average one_time_upload
+            # The total one_time_download across all clients is the sum of each client downloading the global synthetic graph.
+            # Since one_time_upload is the sum of synthetic data from all clients,
+            # and each client downloads this entire sum, the total one_time_download is one_time_upload * num_clients.
+            one_time_download = one_time_upload * self.args.num_clients
+            
+            upload_per_round = 0.0
             download_per_round /= self.args.num_clients
             one_time_upload /= self.args.num_clients
             extra_client_compute /= self.args.num_clients
@@ -181,9 +191,38 @@ class FGLTrainer:
         wandb.summary["Upload per round (bytes)"] = upload_per_round
         wandb.summary["Download per round (bytes)"] = download_per_round
         wandb.summary["One-time upload (bytes)"] = one_time_upload
+        wandb.summary["One-time download (bytes)"] = one_time_download
         wandb.summary["Extra client compute (s)"] = extra_client_compute
         wandb.summary["Extra server compute (s)"] = extra_server_compute
         wandb.summary["Target Accuracy"] = accuracy
+        
+        # Create a W&B Table to visualize the metrics seamlessly instead of a line chart
+        method_name = str(self.args.fl_algorithm).upper() if self.args.fl_algorithm else "Unknown"
+        
+        metrics_table = wandb.Table(columns=[
+            "Method", 
+            "Upload per round", 
+            "Download per round", 
+            "One-time upload",
+            "One-time download",
+            "Extra client compute", 
+            "Extra server compute", 
+            "Accuracy"
+        ])
+        
+        # Add formatted rows to the table
+        metrics_table.add_data(
+            method_name,
+            f"{upload_per_round/1024:.2f} KB",
+            f"{download_per_round/1024:.2f} KB",
+            f"{one_time_upload/1024/1024:.2f} MB" if one_time_upload > 1024*1024 else f"{one_time_upload/1024:.2f} KB",
+            f"{one_time_download/1024/1024:.2f} MB" if one_time_download > 1024*1024 else f"{one_time_download/1024:.2f} KB",
+            f"{extra_client_compute:.4f}s",
+            f"{extra_server_compute:.4f}s",
+            f"{accuracy:.4f}"
+        )
+        
+        wandb.log({"Performance Metrics": metrics_table})
         
         # format values with units (KB, MB)
         upload_str = f"{upload_per_round/1024:.2f} KB"
@@ -193,12 +232,17 @@ class FGLTrainer:
             one_time_str = f"{one_time_upload/1024/1024:.2f} MB"
         else:
             one_time_str = f"{one_time_upload/1024:.2f} KB"
+            
+        if one_time_download > 1024 * 1024:
+            one_time_dl_str = f"{one_time_download/1024/1024:.2f} MB"
+        else:
+            one_time_dl_str = f"{one_time_download/1024:.2f} KB"
         
         method_name = str(self.args.fl_algorithm).upper() if self.args.fl_algorithm else "Unknown"
         
         # format as requested
-        print(f"Method/Upload per round/Download per round/One-time upload/Extra client compute/Extra server compute/Accuracy")
-        print(f"{method_name}/{upload_str}/{download_str}/{one_time_str}/{extra_client_compute:.4f}s/{extra_server_compute:.4f}s/{accuracy:.4f}")
+        print(f"Method/Upload per round/Download per round/One-time upload/One-time download/Extra client compute/Extra server compute/Accuracy")
+        print(f"{method_name}/{upload_str}/{download_str}/{one_time_str}/{one_time_dl_str}/{extra_client_compute:.4f}s/{extra_server_compute:.4f}s/{accuracy:.4f}")
 
         self.logger.save()
         wandb.finish()
