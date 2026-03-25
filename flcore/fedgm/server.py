@@ -45,6 +45,9 @@ class FedGMServer(BaseServer):
         self.best_syn_x = None
    
     def execute(self):
+        import time
+        start_time = time.perf_counter()
+
         if self.message_pool["round"] == 0:
             x_list = []
             y_list = []
@@ -102,6 +105,10 @@ class FedGMServer(BaseServer):
             
             self.syn_y = syn_y.detach()
             
+            # Additional server compute overhead recorded here
+            duration = time.perf_counter() - start_time
+            self.message_pool["extra_server_compute"] = self.message_pool.get("extra_server_compute", 0) + duration
+
         else:
              
             all_local_num_class_dict = {}
@@ -155,7 +162,11 @@ class FedGMServer(BaseServer):
                                             device=self.device))
         
         self.task.model.initialize()
-        self.task.model.fit_with_val(self.syn_x, self.adj_syn, self.syn_y, self.task.splitted_data, train_iters=600, normalize=True, verbose=False)
+        
+        if self.message_pool["round"] == 0:
+            start_time_fit = time.perf_counter()
+            self.task.model.fit_with_val(self.syn_x, self.adj_syn, self.syn_y, self.task.splitted_data, train_iters=600, normalize=True, verbose=False)
+            self.message_pool["extra_server_compute"] += (time.perf_counter() - start_time_fit)
         
 
     def send_message(self):

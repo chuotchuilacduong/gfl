@@ -12,10 +12,17 @@ class Feddgc1Server(BaseServer):
 
 
     def execute(self):
+        import time
+        start_time = time.perf_counter()
         if self.message_pool["round"] == 0:
             self.global_data = self._aggregate_subgraphs()
         self._train_global_model(self.global_data)
         self._calculate_client_logits(self.global_data)
+        end_time = time.perf_counter()
+
+        if "extra_server_compute" not in self.message_pool:
+            self.message_pool["extra_server_compute"] = 0
+        self.message_pool["extra_server_compute"] += (end_time - start_time)
 
     def send_message(self):
         pass

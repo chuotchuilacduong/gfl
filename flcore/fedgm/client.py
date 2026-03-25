@@ -40,6 +40,9 @@ class FedGMClient(BaseClient):
                                              device=self.device).to(self.device)
         print(f"client {self.client_id} graph condensation")
 
+        import time
+        start_time = time.perf_counter()
+        
         self.opt_epochs = 0
         self.fedgc_initialization()
         self.task.override_evaluate = self.get_override_evaluate()
@@ -56,6 +59,10 @@ class FedGMClient(BaseClient):
             self.get_gradient(self.task.splitted_data)
             self.global_class_gradient = {}
             self.gradient_match(self.task.splitted_data, self.global_class_gradient, is_global = False)
+
+        duration = time.perf_counter() - start_time
+        # Store extra compute for trainer extraction
+        self.message_pool[f"client_{self.client_id}_extra_compute"] = duration
 
 
 

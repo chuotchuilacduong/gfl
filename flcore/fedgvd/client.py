@@ -47,7 +47,9 @@ class Feddgc1Client(BaseClient):
         the prototype-based regularization term, performs local training, and then updates the local
         prototypes for each class.
         """
+        import time
         if self.message_pool["round"] == 0:
+            start_time = time.perf_counter()
             if os.path.exists( f'{root}/saved_ours/feat_{args.dataset_str}_{args.teacher_model}_{args.validation_model}_{args.reduction_rate}_{args.seed}_{self.client_id}.pt') and os.path.exists(f'{root}/saved_ours/adj_{args.dataset_str}_{args.teacher_model}_{args.validation_model}_{args.reduction_rate}_{args.seed}_{self.client_id}.pt') and os.path.exists(f'{root}/saved_ours/label_{args.dataset_str}_{args.teacher_model}_{args.validation_model}_{args.reduction_rate}_{args.seed}_{self.client_id}.pt'):
                 feat_syn = torch.load(
                     f'{root}/saved_ours/feat_{args.dataset_str}_{args.teacher_model}_{args.validation_model}_{args.reduction_rate}_{args.seed}_{self.client_id}.pt').detach().to(self.device)
@@ -57,6 +59,9 @@ class Feddgc1Client(BaseClient):
                     f'{root}/saved_ours/label_{args.dataset_str}_{args.teacher_model}_{args.validation_model}_{args.reduction_rate}_{args.seed}_{self.client_id}.pt').detach().to(self.device)
             else:
                 feat_syn,adj_syn,labels_syn = data_gc(self.task.processed_data,self.client_id)
+
+            end_time = time.perf_counter()
+            self.message_pool[f"client_{self.client_id}_extra_compute"] = end_time - start_time
 
             random_matrix  = torch.rand(adj_syn.shape).to(self.device)  
             sampled_edges = (random_matrix <= adj_syn).float()

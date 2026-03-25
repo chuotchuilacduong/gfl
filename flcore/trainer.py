@@ -100,22 +100,109 @@ class FGLTrainer:
         """
         Train the model over a specified number of rounds, performing federated learning with the clients.
         """
+        from utils.basic_utils import total_size
+        self.upload_bytes_accumulator = 0
+        self.download_bytes_accumulator = 0
+        self.one_time_upload_accumulator = 0
+        
         for round_id in range(self.args.num_rounds):
             sampled_clients = sorted(random.sample(list(range(self.args.num_clients)), int(self.args.num_clients * self.args.client_frac)))
             print(f"round # {round_id}\t\tsampled_clients: {sampled_clients}")
             self.message_pool["round"] = round_id
             self.message_pool["sampled_clients"] = sampled_clients
             self.server.send_message()
+            
+            # Server sent a message (Download to clients)
+            if round_id > 0:
+                dl_size = total_size(self.message_pool.get("server", {}))
+                self.download_bytes_accumulator += (dl_size * len(sampled_clients))
+                
             for client_id in sampled_clients:
                 self.clients[client_id].execute()
                 self.clients[client_id].send_message()
+                
+                # Client sent a message (Upload from clients)
+                up_size = total_size(self.message_pool.get(f"client_{client_id}", {}))
+                if round_id == 0:
+                    self.one_time_upload_accumulator += up_size
+                else:
+                    self.upload_bytes_accumulator += up_size
+                    
             self.server.execute()
             
             self.evaluate()
             print("-"*50)
             
+        # Compute and print communication and computation metrics
+        upload_per_round = 0
+        download_per_round = 0
+        one_time_upload = 0
+        extra_client_compute = 0
+        extra_server_compute = self.message_pool.get("extra_server_compute", 0)
+        
+        if self.args.fl_algorithm == 'fedgvd':
+            for client in self.clients:
+                # one time upload (feat_syn, edge_index_syn, label_syn)
+                if hasattr(client, 'feat_syn') and isinstance(client.feat_syn, torch.Tensor):
+                    feat_size = client.feat_syn.numel() * client.feat_syn.element_size()
+                    label_size = client.label_syn.numel() * client.label_syn.element_size() if isinstance(client.label_syn, torch.Tensor) else client.feat_syn.shape[0] * 8
+                    edge_size = client.edge_index_syn.numel() * client.edge_index_syn.element_size() if isinstance(client.edge_index_syn, torch.Tensor) else 0
+                    one_time_upload += feat_size + label_size + edge_size
+                    
+                    # logits are output predictions per round sent to server and returned
+                    logits_size = client.feat_syn.shape[0] * self.args.num_classes * 4
+                    upload_per_round += logits_size
+                    download_per_round += logits_size
+                
+                # extra compute (condensing graph)
+                if f"client_{client.client_id}_extra_compute" in self.message_pool:
+                    extra_client_compute += self.message_pool[f"client_{client.client_id}_extra_compute"]
+                    
+            upload_per_round /= self.args.num_clients
+            download_per_round /= self.args.num_clients
+            one_time_upload /= self.args.num_clients
+            extra_client_compute /= self.args.num_clients
+        else:
+            # Dynamically tracked metrics
+            num_steady_rounds = max(1, self.args.num_rounds - 1)
+            
+            upload_per_round = self.upload_bytes_accumulator / (num_steady_rounds * self.args.num_clients)
+            download_per_round = self.download_bytes_accumulator / (num_steady_rounds * self.args.num_clients)
+            one_time_upload = self.one_time_upload_accumulator / self.args.num_clients
+            
+            for client in self.clients:
+                if f"client_{client.client_id}_extra_compute" in self.message_pool:
+                    extra_client_compute += self.message_pool[f"client_{client.client_id}_extra_compute"]
+            extra_client_compute /= self.args.num_clients
+
+        accuracy = self.evaluation_result.get(f"best_test_{self.args.metrics[0]}", 0)
+        
+        # log to wandb summary before finish to avoid line charts for single values
+        wandb.summary["Upload per round (bytes)"] = upload_per_round
+        wandb.summary["Download per round (bytes)"] = download_per_round
+        wandb.summary["One-time upload (bytes)"] = one_time_upload
+        wandb.summary["Extra client compute (s)"] = extra_client_compute
+        wandb.summary["Extra server compute (s)"] = extra_server_compute
+        wandb.summary["Target Accuracy"] = accuracy
+        
+        # format values with units (KB, MB)
+        upload_str = f"{upload_per_round/1024:.2f} KB"
+        download_str = f"{download_per_round/1024:.2f} KB"
+        
+        if one_time_upload > 1024 * 1024:
+            one_time_str = f"{one_time_upload/1024/1024:.2f} MB"
+        else:
+            one_time_str = f"{one_time_upload/1024:.2f} KB"
+        
+        method_name = str(self.args.fl_algorithm).upper() if self.args.fl_algorithm else "Unknown"
+        
+        # format as requested
+        print(f"Method/Upload per round/Download per round/One-time upload/Extra client compute/Extra server compute/Accuracy")
+        print(f"{method_name}/{upload_str}/{download_str}/{one_time_str}/{extra_client_compute:.4f}s/{extra_server_compute:.4f}s/{accuracy:.4f}")
+
         self.logger.save()
         wandb.finish()
+
         
         
         
