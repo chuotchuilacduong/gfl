@@ -32,7 +32,7 @@ supported_fl_algorithm = ["isolate", "fedavg", "fedprox",
                           "fedtgp", "fedpub", "fedstar", "fedgta", "fedtad",
                           "gcfl_plus", "fedsage_plus", "adafgl", "feddep", "fggp",
                           "fgssl", "fedgl", "fedhgn3", "fedgm","fedrgd", "hyperion",
-                          "fedigl", "fedlog", "fedomg","fedaux","centralized","fedgvd"]
+                          "fedigl", "fedlog", "fedomg","fedaux","centralized","fedgvd","fedgkg","fedc4"]
 supported_metrics = ["accuracy", "precision", "f1", "recall", "auc", "ap", "clustering_accuracy", "nmi", "ari"]
 supported_evaluation_modes = ["global_model_on_local_data", "global_model_on_global_data", "local_model_on_local_data", "local_model_on_global_data"]
 supported_data_processing = ["raw", "random_feature_sparsity", "random_feature_noise", "random_topology_sparsity", "random_topology_noise", "random_label_sparsity", "random_label_noise"]
@@ -143,13 +143,14 @@ parser.add_argument("--log_root", type=str, default=None)
 parser.add_argument("--log_name", type=str, default=None)
 parser.add_argument("--comm_cost", type=bool, default=False)
 parser.add_argument("--model_param", type=bool, default=False)
+parser.add_argument("--ablation", type=lambda x: (str(x).lower() == 'true'), default=False, help="Ablation study flag")
 
 # FedRGD settings
 parser.add_argument("--num_global_syn_nodes", type=int, default=100)
 parser.add_argument("--server_condense_iters", type=int, default=50)
 parser.add_argument("--condense_iters", type=int, default=50)
 parser.add_argument("--local_epochs", type=int, default=3)
-parser.add_argument("--method", type=str, default="GCond", choices=["GCond", "SGDD"], help="Method for graph condensation in FedRGD")
+parser.add_argument("--method", type=str, default="GCond", choices=["GCond", "SGDD", "DosCond", "Doscond"], help="Method for graph condensation in FedRGD")
 
 # IGNR / SGDD settings
 parser.add_argument("--ep_ratio", type=float, default=0.5, help="Ratio for node feature in IGNR")

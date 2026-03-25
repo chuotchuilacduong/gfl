@@ -86,6 +86,9 @@ def load_client(args, client_id, data, data_dir, message_pool, device):
     elif args.fl_algorithm == "fedrgd":
         from flcore.fedrgd.client import FedRGDClient
         return FedRGDClient(args, client_id, data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedgkg":
+        from flcore.fedgkg.client import FedGKGClient
+        return FedGKGClient(args, client_id, data, data_dir, message_pool, device)
     elif args.fl_algorithm == "hyperion":
         from flcore.hyperion.client import HyperionClient
         return HyperionClient(args, client_id, data, data_dir, message_pool, device)
@@ -98,9 +101,15 @@ def load_client(args, client_id, data, data_dir, message_pool, device):
     elif args.fl_algorithm == "fedomg":
         from flcore.fedomg.client import FedOMGClient
         return FedOMGClient(args, client_id, data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedgvd":
+        from flcore.fedgvd.client import Feddgc1Client
+        return Feddgc1Client(args, client_id, data, data_dir, message_pool, device)
     elif args.fl_algorithm == "fedaux": # [Modified] Added FedAux loading
         from flcore.fedaux.client import FedAuxClient
         return FedAuxClient(args, client_id, data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedc4":
+        from flcore.fedc4.client import FedC4Client
+        return FedC4Client(args, client_id, data, data_dir, message_pool, device)
     elif args.fl_algorithm == "centralized":
         from flcore.centralized.client import CentralizedClient
         return CentralizedClient(args, client_id, data, data_dir, message_pool, device)
@@ -170,6 +179,9 @@ def load_server(args, global_data, data_dir, message_pool, device):
     elif args.fl_algorithm == "fedrgd":
         from flcore.fedrgd.server import FedRGDServer
         return FedRGDServer(args, global_data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedgkg":
+        from flcore.fedgkg.server import FedGKGServer
+        return FedGKGServer(args, global_data, data_dir, message_pool, device)
     elif args.fl_algorithm == "hyperion":
         from flcore.hyperion.server import HyperionServer
         return HyperionServer(args, global_data, data_dir, message_pool, device)
@@ -182,9 +194,15 @@ def load_server(args, global_data, data_dir, message_pool, device):
     elif args.fl_algorithm == "fedomg":
         from flcore.fedomg.server import FedOMGServer
         return FedOMGServer(args, global_data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedgvd":
+        from flcore.fedgvd.server import Feddgc1Server
+        return Feddgc1Server(args, global_data, data_dir, message_pool, device)
     elif args.fl_algorithm == "fedaux": # [Modified] Added FedAux loading
         from flcore.fedaux.server import FedAuxServer
         return FedAuxServer(args, global_data, data_dir, message_pool, device)
+    elif args.fl_algorithm == "fedc4":
+        from flcore.fedc4.server import FedC4Server
+        return FedC4Server(args, global_data, data_dir, message_pool, device)
     elif args.fl_algorithm == "centralized":
         from flcore.centralized.server import CentralizedServer
         return CentralizedServer(args, global_data, data_dir, message_pool, device)

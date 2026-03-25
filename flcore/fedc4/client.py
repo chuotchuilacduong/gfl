@@ -83,7 +83,15 @@ class FedC4Client(BaseClient):
                                              weight_decay=args.weight_decay,
                                              device=self.device))
         print(f"client {self.client_id} graph condensation")
+        import time
+        start_time = time.perf_counter()
+        
         self.fedgc_initialization()
+        
+        duration = time.perf_counter() - start_time
+        if f"client_{self.client_id}_extra_compute" not in self.message_pool:
+            self.message_pool[f"client_{self.client_id}_extra_compute"] = 0
+        self.message_pool[f"client_{self.client_id}_extra_compute"] += duration
         self.task.override_evaluate = self.get_override_evaluate()
         
 
@@ -99,7 +107,7 @@ class FedC4Client(BaseClient):
         input_x, input_adj, input_y = self.select_baseline(baseline="ours")
         # input_x = self.add_laplace_noise(input_x, scale=1)
 
-        adj_sparse = to_torch_sparse_tensor(self.uncompressed_graph_edge_index)
+        adj_sparse = to_torch_sparse_tensor(self.uncompressed_graph_edge_index, size=(self.uncompressed_graph_x.size(0), self.uncompressed_graph_x.size(0)))
         self.synchronize_with_server()
 
         loss_fn = torch.nn.CrossEntropyLoss()
@@ -243,7 +251,7 @@ class FedC4Client(BaseClient):
     def condense(self, splitted_data, verbose=True):
         syn_x, pge, syn_y = self.syn_x, self.pge, self.syn_y
 
-        real_x, real_adj, real_y = splitted_data["data"].x, to_torch_sparse_tensor(splitted_data["data"].edge_index), splitted_data["data"].y
+        real_x, real_adj, real_y = splitted_data["data"].x, to_torch_sparse_tensor(splitted_data["data"].edge_index, size=(splitted_data["data"].x.size(0), splitted_data["data"].x.size(0))), splitted_data["data"].y
         syn_class_indices = self.syn_class_indices
         if is_sparse_tensor(real_adj):
             real_adj_norm = normalize_adj_tensor(real_adj, sparse=True)
@@ -508,7 +516,7 @@ class FedC4Client(BaseClient):
         labels_train = self.task.splitted_data["data"].y[self.task.splitted_data["train_mask"]]
         feat_train = self.task.splitted_data["data"].x[self.task.splitted_data["train_mask"]]
 
-        adj_full = to_torch_sparse_tensor(self.task.splitted_data["data"].edge_index)
+        adj_full = to_torch_sparse_tensor(self.task.splitted_data["data"].edge_index, size=(self.task.splitted_data["data"].x.size(0), self.task.splitted_data["data"].x.size(0)))
 
         train_graph = get_subgraph_pyg_data(self.task.splitted_data["data"],
                                                                  node_list=self.task.splitted_data["train_mask"].nonzero().squeeze().tolist())
@@ -553,7 +561,7 @@ class FedC4Client(BaseClient):
                     assert name in splitted_data
             
             
-            real_adj = to_torch_sparse_tensor(splitted_data["data"].edge_index)
+            real_adj = to_torch_sparse_tensor(splitted_data["data"].edge_index, size=(splitted_data["data"].x.size(0), splitted_data["data"].x.size(0)))
         
             
             eval_output = {}
@@ -881,15 +889,15 @@ class FedC4Client(BaseClient):
                 print(f"Client {self.client_id}: Using rebuilt graph for training.")
                 graph_data = self.message_pool.get(f"client_{self.client_id}", {}).get("graph_data", None)
 
-                input_x = graph_data.get("features", None).detach().clone()
-                input_adj = graph_data.get("adjacency_matrix", None).detach().clone()
-                input_y = graph_data.get("labels", None).detach().clone()
+                input_x = graph_data.get("features", None).detach().clone().to(self.device)
+                input_adj = graph_data.get("adjacency_matrix", None).detach().clone().to(self.device)
+                input_y = graph_data.get("labels", None).detach().clone().to(self.device)
                 
             else:
 
-                input_x = self.syn_x.detach().clone()
-                input_adj = self.syn_adj.detach().clone()
-                input_y = self.syn_y.detach().clone()
+                input_x = self.syn_x.detach().clone().to(self.device)
+                input_adj = self.syn_adj.detach().clone().to(self.device)
+                input_y = self.syn_y.detach().clone().to(self.device)
                 self.use_compressed_graph += 1
                 # self.use_compressed_graph = False
                 print(f"Client {self.client_id} using compressed graph for training.")

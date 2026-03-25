@@ -203,6 +203,26 @@ class GCN_kipf(nn.Module):
             else:
                 self.adj_norm = normalize_adj_tensor(adj)
             return self.forward(self.features, self.adj_norm)
+    
+    @torch.no_grad()
+    def get_embeddings(self, x, adj):
+        self.eval()
+        if type(adj) is not torch.Tensor:
+            x, adj = to_tensor(x, adj, device=self.device)
+        
+        if is_sparse_tensor(adj):
+            adj_norm = normalize_adj_tensor(adj, sparse=True)
+        else:
+            adj_norm = normalize_adj_tensor(adj)
+            
+        for ix, layer in enumerate(self.layers):
+            if ix == len(self.layers) - 1:
+                return x
+            x = layer(x, adj_norm)
+            x = self.bns[ix](x) if self.with_bn else x
+            if self.with_relu:
+                x = F.relu(x)
+        return x
         
         
 

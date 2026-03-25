@@ -30,6 +30,8 @@ class FedC4Server(BaseServer):
         self.check_and_distribute()
 
     def execute(self):
+        import time
+        start_time = time.perf_counter()
 
         print(f"Starting weight aggregation for {self.args.num_clients} clients.")
         self.aggregate_weights()
@@ -43,6 +45,26 @@ class FedC4Server(BaseServer):
         adj_matrices, merged_labels, total_loss = self.graphrebuilder()
         
         self.send_graph_data_to_clients(adj_matrices)
+
+        duration = time.perf_counter() - start_time
+        if "extra_server_compute" not in self.message_pool:
+            self.message_pool["extra_server_compute"] = 0
+        self.message_pool["extra_server_compute"] += duration
+        
+        from utils.basic_utils import total_size
+        extra_dl = 0
+        for client_id in range(self.args.num_clients):
+            client_dict = self.message_pool.get(f"client_{client_id}", {})
+            if "embedding_distribution" in client_dict:
+                extra_dl += total_size(client_dict["embedding_distribution"])
+            if "average_embedding" in client_dict:
+                extra_dl += total_size(client_dict["average_embedding"])
+            if "graph_data" in client_dict:
+                extra_dl += total_size(client_dict["graph_data"])
+                
+        if "fedc4_extra_download_accumulator" not in self.message_pool:
+            self.message_pool["fedc4_extra_download_accumulator"] = 0
+        self.message_pool["fedc4_extra_download_accumulator"] += extra_dl
 
         print(f"Aggregation executed for {self.args.num_clients} clients.")
 
@@ -284,7 +306,13 @@ class FedC4Server(BaseServer):
             for i in range(self.args.num_clients)
         ]
 
-        target_mean_embedding = avg_embeddings[client_id].squeeze()
+        target_mean_embedding = avg_embeddings[client_id]
+        if target_mean_embedding is None:
+            # Fallback if average embedding is inexplicably missing
+            target_mean_embedding = torch.zeros_like(avg_embeddings[0]) if len(avg_embeddings) > 0 else torch.zeros(1)
+            
+        target_mean_embedding = target_mean_embedding.squeeze()
+        
         selected_node_features = []
         selected_node_labels = []
 
@@ -298,9 +326,12 @@ class FedC4Server(BaseServer):
 
                 for node_idx in range(len(other_client_embeddings)):
                     node_embedding = other_client_embeddings[node_idx]
+                    if node_embedding is None or target_mean_embedding is None:
+                        continue
+                        
                     similarity = 1 - cosine(
-                        target_mean_embedding.cpu().numpy(),
-                        node_embedding.cpu().numpy(),
+                        target_mean_embedding.cpu().detach().numpy(),
+                        node_embedding.cpu().detach().numpy(),
                     )
                     
                     if similarity > 0.4:
@@ -393,9 +424,18 @@ class FedC4Server(BaseServer):
                     lambda_similarity * similarity_loss +
                     lambda_sparsity * sparsity_loss
                 )
-                # print(client_loss)
+                
+                # Handling extremely large losses
+                if torch.isnan(client_loss) or torch.isinf(client_loss):
+                    print("Skipping iteration due to NaN client_loss")
+                    break
+                    
                 client_loss.backward()
+                torch.nn.utils.clip_grad_norm_([Z], max_norm=1.0)
                 optimizer.step()
+                
+                with torch.no_grad():
+                    Z.data = torch.nan_to_num(Z.data, nan=0.0, posinf=1.0, neginf=0.0)
 
                     
                 with torch.no_grad():
@@ -412,6 +452,7 @@ class FedC4Server(BaseServer):
                 D_inv_sqrt = torch.diag(1.0 / torch.sqrt(row_sum + 1e-10))
 
                 normalized_adj = torch.mm(D_inv_sqrt, torch.mm(Z, D_inv_sqrt))  # D^(-1/2) A D^(-1/2)
+                normalized_adj = torch.nan_to_num(normalized_adj, nan=0.0, posinf=1.0, neginf=0.0)
                 
             adj_matrices.append(normalized_adj.detach().cpu())
             total_loss += client_loss.item()

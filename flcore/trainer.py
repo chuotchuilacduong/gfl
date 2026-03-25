@@ -172,6 +172,21 @@ class FGLTrainer:
             download_per_round /= self.args.num_clients
             one_time_upload /= self.args.num_clients
             extra_client_compute /= self.args.num_clients
+            
+        elif self.args.fl_algorithm == 'fedc4':
+            num_steady_rounds = max(1, self.args.num_rounds - 1)
+            
+            upload_per_round = self.upload_bytes_accumulator / (num_steady_rounds * self.args.num_clients)
+            one_time_upload = self.one_time_upload_accumulator / self.args.num_clients
+            
+            extra_dl_bytes = self.message_pool.get("fedc4_extra_download_accumulator", 0)
+            download_per_round = (self.download_bytes_accumulator + extra_dl_bytes) / (num_steady_rounds * self.args.num_clients)
+            
+            for client in self.clients:
+                if f"client_{client.client_id}_extra_compute" in self.message_pool:
+                    extra_client_compute += self.message_pool[f"client_{client.client_id}_extra_compute"]
+            extra_client_compute /= self.args.num_clients
+            
         else:
             # Dynamically tracked metrics
             num_steady_rounds = max(1, self.args.num_rounds - 1)
